@@ -1,0 +1,11 @@
+[{"menuName":"Генерация примера XML для интеграции","menuURL":"?menu=EAI","menuType":"mainMenu"},
+{"menuName":"Создать папку и файл для Листа поставки","menuURL":"2","menuType":"mainMenu"},
+{"menuName":"Работы с srvmgr","menuURL":"3","menuType":"mainMenu"},
+{"menuName":"Вызвать sql скрипты","menuURL":"4","menuType":"mainMenu"},
+{"menuName":"Техническая информация","menuURL":"5","menuType":"mainMenu"},
+{"menuName":"LWS4","menuURL":"5","menuType":"eaiMenu"},
+{"menuName":"LWS2","menuURL":"5","menuType":"eaiMenu"},
+{"menuName":"LWS10","menuURL":"5","menuType":"eaiMenu"},
+{"menuName":"LWS8","menuURL":"5","menuType":"eaiMenu"},
+{"menuName":"S21","menuURL":"5","menuType":"eaiMenu"},
+{"menuName":"S12","menuURL":"5","menuType":"eaiMenu"}]
