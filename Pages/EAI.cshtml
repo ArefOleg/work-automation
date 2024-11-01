@@ -6,7 +6,8 @@
     
 }
 
-
-@foreach(var menu in Model.mainMenu.sortedMenus){
-    <a href="@menu.menuURL"><h5>@menu.menuName</h5></a>
+@foreach(var listItem in Model.lineItems){
+    <h5>@listItem.LineNumber</h5>
 }
+
+<partial name="EAI/LWS2"></partial>

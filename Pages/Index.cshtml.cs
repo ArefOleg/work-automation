@@ -17,8 +17,7 @@ public class IndexModel : PageModel
     public void OnGet(string? menu)
     {
         
-        //this.menu = menu ?? "";
-        //mainMenu.eaiMenu();
+        
         if(menu == "EAI"){mainMenu.eaiMenu();}
     }
 }
