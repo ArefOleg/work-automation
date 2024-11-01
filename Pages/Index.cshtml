@@ -1,12 +1,9 @@
-﻿@model IndexModel
-@using Work_Menu
+﻿@page
+@model IndexModel
 @{
-    
-    
+        
 }
 
 @foreach(var menu in Model.mainMenu.sortedMenus){
     <a href="@menu.menuURL"><h5>@menu.menuName</h5></a>
 }
-
-

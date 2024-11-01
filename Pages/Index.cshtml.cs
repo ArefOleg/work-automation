@@ -7,14 +7,8 @@ namespace work_automation.Pages;
 public class IndexModel : PageModel
 {   public Menu mainMenu;
     
-
-    public IndexModel(ILogger<IndexModel> logger)
-    {        
-        
-    }
-
     public void OnGet()
     {       
-        mainMenu = new Menu();
+       mainMenu = new Menu();
     }
 }

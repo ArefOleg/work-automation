@@ -18,12 +18,12 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\ov.arefev\Documents\Arena\work automation
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/ov.arefev/Documents/Arena/work automation/Pages/eai.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcZWFpLmNzaHRtbA==
+[C:/Users/ov.arefev/Documents/Arena/work automation/Pages/EAI.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRUFJLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ov.arefev/Documents/Arena/work automation/Pages/EAI_layout/LWS2.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRUFJX2xheW91dFxMV1MyLmNzaHRtbA==
+[C:/Users/ov.arefev/Documents/Arena/work automation/Pages/eai_generator/lws2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcZWFpX2dlbmVyYXRvclxsd3MyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ov.arefev/Documents/Arena/work automation/Pages/Error.cshtml]
