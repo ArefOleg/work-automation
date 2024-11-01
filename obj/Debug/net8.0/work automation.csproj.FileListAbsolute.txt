@@ -28,3 +28,4 @@ C:\Users\ov.arefev\Documents\Arena\work automation\obj\Debug\net8.0\refint\work 
 C:\Users\ov.arefev\Documents\Arena\work automation\obj\Debug\net8.0\work automation.pdb
 C:\Users\ov.arefev\Documents\Arena\work automation\obj\Debug\net8.0\work automation.genruntimeconfig.cache
 C:\Users\ov.arefev\Documents\Arena\work automation\obj\Debug\net8.0\ref\work automation.dll
+C:\Users\ov.arefev\Documents\Arena\work automation\obj\Debug\net8.0\work automation.sourcelink.json

@@ -3,9 +3,9 @@
 {"menuName":"Работы с srvmgr","menuURL":"3","menuType":"mainMenu"},
 {"menuName":"Вызвать sql скрипты","menuURL":"4","menuType":"mainMenu"},
 {"menuName":"Техническая информация","menuURL":"5","menuType":"mainMenu"},
-{"menuName":"LWS4","menuURL":"5","menuType":"eaiMenu"},
-{"menuName":"LWS2","menuURL":"5","menuType":"eaiMenu"},
-{"menuName":"LWS10","menuURL":"5","menuType":"eaiMenu"},
-{"menuName":"LWS8","menuURL":"5","menuType":"eaiMenu"},
-{"menuName":"S21","menuURL":"5","menuType":"eaiMenu"},
-{"menuName":"S12","menuURL":"5","menuType":"eaiMenu"}]
+{"menuName":"LWS4","menuURL":"LWS4","menuType":"eaiMenu"},
+{"menuName":"LWS2","menuURL":"LWS2","menuType":"eaiMenu"},
+{"menuName":"LWS10","menuURL":"LWS10","menuType":"eaiMenu"},
+{"menuName":"LWS8","menuURL":"LWS8","menuType":"eaiMenu"},
+{"menuName":"S21","menuURL":"S21","menuType":"eaiMenu"},
+{"menuName":"S12","menuURL":"S12","menuType":"eaiMenu"}]
