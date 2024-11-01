@@ -5,9 +5,7 @@
     ViewData["Title"] = "Home page";
     
 }
-
-@foreach(var listItem in Model.lineItems){
-    <h5>@listItem.LineNumber</h5>
-}
+@Model.Message;
+@Model.lineItems.Count()
 
 <partial name="EAI/LWS2"></partial>
