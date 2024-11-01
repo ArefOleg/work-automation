@@ -1,11 +1,7 @@
-@page
 @model EaiModel
 @using Work_Menu
-@{
-    ViewData["Title"] = "Home page";
-    
-}
+
 @Model.Message;
 @Model.lineItems.Count()
 
-<partial name="EAI/LWS2"></partial>
+<partial name="EAI_layout/LWS2"></partial>

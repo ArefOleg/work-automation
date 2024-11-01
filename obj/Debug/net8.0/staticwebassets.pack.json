@@ -249,6 +249,10 @@
       "PackagePath": "staticwebassets\\sources\\menu\\gule.json"
     },
     {
+      "Id": "C:\\Users\\ov.arefev\\Documents\\Arena\\work automation\\wwwroot\\sources\\menu\\line item.json",
+      "PackagePath": "staticwebassets\\sources\\menu\\line item.json"
+    },
+    {
       "Id": "C:\\Users\\ov.arefev\\Documents\\Arena\\work automation\\wwwroot\\sources\\menu\\main menu.json",
       "PackagePath": "staticwebassets\\sources\\menu\\main menu.json"
     },
