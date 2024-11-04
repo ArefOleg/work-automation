@@ -1,0 +1,18 @@
+@page
+@model TestModel
+@{
+        
+}
+<form method="post" >
+<h3>Заполнение позиции чека</h2>
+    <p>
+        <label>Введите порядковый номер колонки:</label><br />
+        <input type="text" name="lineItems.PumpNum" />
+    </p>
+    <p>
+        <label>Введите номер позиции:</label><br />
+        <input type="text" name="lineItems.LineNumber" />
+    </p>
+    
+    <input type="submit" value="Отправить" />
+</form>

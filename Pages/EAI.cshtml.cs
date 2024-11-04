@@ -33,7 +33,8 @@ public class EaiModel : PageModel
     //Создание чека
     public void OnPost(string lineItemAmount, string CardNumber, string OrderType,
     string Attrib1, string DiscountCUR, string TerminalId, string AcquiringId){
-
+        Order order = new Order(lineItemAmount, CardNumber, OrderType, Attrib1,
+        DiscountCUR, TerminalId, AcquiringId);
     }
 
 
@@ -60,9 +61,10 @@ public class EaiModel : PageModel
     }
     public async Task clearJSONFile(){
         using (FileStream fs = new FileStream("wwwroot/sources/menu/line item.json",
-             FileMode.OpenOrCreate)){
+            FileMode.OpenOrCreate)){
             fs.SetLength(0);
+            fs.Close();
         }
-        fs.Close();
+        
     }
 }
