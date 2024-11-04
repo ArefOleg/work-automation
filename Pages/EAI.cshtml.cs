@@ -23,14 +23,20 @@ public class EaiModel : PageModel
     {        
         Message = "OnGet";
     }
+    //Создание позиции чека
     public void OnPost(string? PumpNum, string? LineNumber, string? Product, string? NetPrice,
     string? QuantityRequested)    
-    {//нужно записывать json с продуктами в файл
-    //после заполнения чека, формировать итоговое сообщение
+    {
         Message = "OnPost";
         Task.WaitAll(fillLineItem(PumpNum, LineNumber, Product, NetPrice, QuantityRequested));
+    }
+    //Создание чека
+    public void OnPost(string lineItemAmount, string CardNumber, string OrderType,
+    string Attrib1, string DiscountCUR, string TerminalId, string AcquiringId){
 
     }
+
+
     public async Task fillLineItem(string? PumpNum, string? LineNumber, string? Product, string? NetPrice,
     string? QuantityRequested){
         using (FileStream fs = new FileStream("wwwroot/sources/menu/line item.json",
@@ -43,10 +49,7 @@ public class EaiModel : PageModel
                 lineItems.Add(lineItemsOne);                
             } else{                         
                 lineItems = await JsonSerializer.DeserializeAsync<List<LineItems>>(fs);         
-                using ( TextWriter writer = new StreamWriter( fs ) )
-                {
-                    writer.WriteLine( "" );
-                }
+                fs.SetLength(0);
                 lineItemsOne = new LineItems(PumpNum, LineNumber, Product,
                 NetPrice, QuantityRequested);
                 lineItems.Add(lineItemsOne);
