@@ -28,6 +28,12 @@ public class EaiModel : PageModel
     {//нужно записывать json с продуктами в файл
     //после заполнения чека, формировать итоговое сообщение
         Message = "OnPost";
+        using (FileStream fs = new FileStream("wwwroot/sources/menu/line item.json",
+             FileMode.OpenOrCreate)){
+            if(new FileInfo("wwwroot/sources/menu/line item.json").Length == 0){
+                Console.WriteLine("проверка пройдена");
+            }
+        }
     /*    if(PumpNum is not null){
             using (FileStream fs = new FileStream("wwwroot/sources/menu/line item.json",
              FileMode.OpenOrCreate)){
