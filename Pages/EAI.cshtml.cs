@@ -31,26 +31,28 @@ public class EaiModel : PageModel
         Task.WaitAll(fillLineItem(PumpNum, LineNumber, Product, NetPrice, QuantityRequested));
 
     }
-    public void Task fillLineItem(string PumpNum, string LineNumber, string Product, string NetPrice,
-    string QuantityRequested){
+    public async Task fillLineItem(string? PumpNum, string? LineNumber, string? Product, string? NetPrice,
+    string? QuantityRequested){
         using (FileStream fs = new FileStream("wwwroot/sources/menu/line item.json",
              FileMode.OpenOrCreate)){
             LineItems lineItemsOne;
-
+            lineItems = new List<LineItems>();
             if(new FileInfo("wwwroot/sources/menu/line item.json").Length == 0){
                 lineItemsOne = new LineItems(PumpNum, LineNumber, Product,
                 NetPrice, QuantityRequested);
                 lineItems.Add(lineItemsOne);                
-            } else{
-                lineItems = new List<LineItems>();                
-                lineItems = await JsonSerializer.DeserializeAsync<List<LineItems>>(fs);
-                byte[] buffer = Encoding.Default.GetBytes("");
-                await fs.WriteAsync(buffer, 0, buffer.Length);
+            } else{                         
+                lineItems = await JsonSerializer.DeserializeAsync<List<LineItems>>(fs);         
+                using ( TextWriter writer = new StreamWriter( fs ) )
+                {
+                    writer.WriteLine( "" );
+                }
                 lineItemsOne = new LineItems(PumpNum, LineNumber, Product,
                 NetPrice, QuantityRequested);
                 lineItems.Add(lineItemsOne);
             }
             await JsonSerializer.SerializeAsync<List<LineItems>>(fs, lineItems);
+            fs.Close();
         } 
     }
 }
