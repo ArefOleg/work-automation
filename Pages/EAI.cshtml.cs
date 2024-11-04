@@ -10,52 +10,42 @@ namespace work_automation.Pages;
 public class EaiModel : PageModel
 {   public Menu mainMenu;
     public List<LineItems> lineItems;
+    public LineItems lineItem{get; set;}
     private readonly ILogger<IndexModel> _logger;
     public string Message { get; private set; } = "";
-    public EaiModel(ILogger<IndexModel> logger)
-    {
-        Message = "Введите свое имя";
+    
+    public void OnGet()
+    {        
         
     }
-
-    public void OnGet(string? PumpNum, string? LineNumber, string? Product, string? NetPrice,
-    string? QuantityRequested)
-    {        
-        Message = "OnGet";
-    }
     //Создание позиции чека
-    public void OnPost(string? PumpNum, string? LineNumber, string? Product, string? NetPrice,
-    string? QuantityRequested)    
+    public void OnPost(LineItems lineItem)    
     {
         Message = "OnPost";
-        Task.WaitAll(fillLineItem(PumpNum, LineNumber, Product, NetPrice, QuantityRequested));
+        Console.WriteLine(lineItem.PumpNum);
+        Task.WaitAll(fillLineItem(lineItem));
     }
     //Создание чека
-    public void OnPost(string lineItemAmount, string CardNumber, string OrderType,
+    /*public void OnPost(string lineItemAmount, string CardNumber, string OrderType,
     string Attrib1, string DiscountCUR, string TerminalId, string AcquiringId){
         Order order = new Order(lineItemAmount, CardNumber, OrderType, Attrib1,
         DiscountCUR, TerminalId, AcquiringId);
-    }
+    }*/
 
 
-    public async Task fillLineItem(string? PumpNum, string? LineNumber, string? Product, string? NetPrice,
-    string? QuantityRequested){
+    public async Task fillLineItem(LineItems lineItem){
         using (FileStream fs = new FileStream("wwwroot/sources/menu/line item.json",
              FileMode.OpenOrCreate)){
-            LineItems lineItemsOne;
             lineItems = new List<LineItems>();
-            if(new FileInfo("wwwroot/sources/menu/line item.json").Length == 0){
-                lineItemsOne = new LineItems(PumpNum, LineNumber, Product,
-                NetPrice, QuantityRequested);
-                lineItems.Add(lineItemsOne);                
+            if(new FileInfo("wwwroot/sources/menu/line item.json").Length == 0){                
+                lineItems.Add(lineItem);                
             } else{                         
                 lineItems = await JsonSerializer.DeserializeAsync<List<LineItems>>(fs);         
-                fs.SetLength(0);
-                lineItemsOne = new LineItems(PumpNum, LineNumber, Product,
-                NetPrice, QuantityRequested);
-                lineItems.Add(lineItemsOne);
+                fs.SetLength(0);                
+                lineItems.Add(lineItem);
             }
             await JsonSerializer.SerializeAsync<List<LineItems>>(fs, lineItems);
+            //Написать сеттеры
             fs.Close();
         } 
     }

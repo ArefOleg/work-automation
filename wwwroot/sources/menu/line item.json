@@ -1,1 +1,1 @@
-[{"PumpNum":"1","AmountAdjusted":"1","LineNumber":"1","NetPrice":"1","Product":"1","QuantityRequested":"1"},{"PumpNum":"2","AmountAdjusted":"4","LineNumber":"2","NetPrice":"2","Product":"2","QuantityRequested":"2"},{"PumpNum":"3","AmountAdjusted":"9","LineNumber":"3","NetPrice":"3","Product":"3","QuantityRequested":"3"}]
+[{"PumpNum":"2","AmountAdjusted":null,"LineNumber":"1","NetPrice":"22","Product":"1","QuantityRequested":"1"},{"PumpNum":"3","AmountAdjusted":null,"LineNumber":"12","NetPrice":"11","Product":"22","QuantityRequested":"2"}]
