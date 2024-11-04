@@ -28,36 +28,29 @@ public class EaiModel : PageModel
     {//нужно записывать json с продуктами в файл
     //после заполнения чека, формировать итоговое сообщение
         Message = "OnPost";
+        Task.WaitAll(fillLineItem(PumpNum, LineNumber, Product, NetPrice, QuantityRequested));
+
+    }
+    public void Task fillLineItem(string PumpNum, string LineNumber, string Product, string NetPrice,
+    string QuantityRequested){
         using (FileStream fs = new FileStream("wwwroot/sources/menu/line item.json",
              FileMode.OpenOrCreate)){
-            if(new FileInfo("wwwroot/sources/menu/line item.json").Length == 0){
-                Console.WriteLine("проверка пройдена");
-            }
-        }
-    /*    if(PumpNum is not null){
-            using (FileStream fs = new FileStream("wwwroot/sources/menu/line item.json",
-             FileMode.OpenOrCreate)){
-                LineItems lineItemsOne;
-                try{
-                    lineItems = new List<LineItems>();                
-                    lineItems = await JsonSerializer.DeserializeAsync<List<LineItems>>(fs);
-                    byte[] buffer = Encoding.Default.GetBytes("");
-                    await fs.WriteAsync(buffer, 0, buffer.Length);
-                }
-                catch{
-                    lineItemsOne = new LineItems(PumpNum, LineNumber, Product,
-                    NetPrice, QuantityRequested);
-                    lineItems.Add(lineItemsOne);
-                    await JsonSerializer.SerializeAsync<List<LineItems>>(fs, lineItems); 
-                }
-                    lineItemsOne = new LineItems(PumpNum, LineNumber, Product,
-                    NetPrice, QuantityRequested);
-                    lineItems.Add(lineItemsOne);
-                    await JsonSerializer.SerializeAsync<List<LineItems>>(fs, lineItems); 
-                                
-             }            
-        }
-        */
+            LineItems lineItemsOne;
 
+            if(new FileInfo("wwwroot/sources/menu/line item.json").Length == 0){
+                lineItemsOne = new LineItems(PumpNum, LineNumber, Product,
+                NetPrice, QuantityRequested);
+                lineItems.Add(lineItemsOne);                
+            } else{
+                lineItems = new List<LineItems>();                
+                lineItems = await JsonSerializer.DeserializeAsync<List<LineItems>>(fs);
+                byte[] buffer = Encoding.Default.GetBytes("");
+                await fs.WriteAsync(buffer, 0, buffer.Length);
+                lineItemsOne = new LineItems(PumpNum, LineNumber, Product,
+                NetPrice, QuantityRequested);
+                lineItems.Add(lineItemsOne);
+            }
+            await JsonSerializer.SerializeAsync<List<LineItems>>(fs, lineItems);
+        } 
     }
 }
