@@ -58,4 +58,11 @@ public class EaiModel : PageModel
             fs.Close();
         } 
     }
+    public async Task clearJSONFile(){
+        using (FileStream fs = new FileStream("wwwroot/sources/menu/line item.json",
+             FileMode.OpenOrCreate)){
+            fs.SetLength(0);
+        }
+        fs.Close();
+    }
 }
