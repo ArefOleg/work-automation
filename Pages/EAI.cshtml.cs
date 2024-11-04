@@ -18,7 +18,8 @@ public class EaiModel : PageModel
         
     }
 
-    public void OnGet()
+    public void OnGet(string? PumpNum, string? LineNumber, string? Product, string? NetPrice,
+    string? QuantityRequested)
     {        
         Message = "OnGet";
     }
