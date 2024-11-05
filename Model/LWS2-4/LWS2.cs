@@ -122,3 +122,45 @@ public class LWS2{
         public Body body;        
 
     }
+
+public static class generateLWS2XML{
+    public static string generate(Order order){
+        ListOfJetorderaccrualredemptionrequest listOfJetorderaccrualredemptionrequest =
+            new ListOfJetorderaccrualredemptionrequest();
+            listOfJetorderaccrualredemptionrequest.order = order;
+            JETLWS2OrderAccrualRedemption_1_Input jETLWS2OrderAccrualRedemption_1_Input = 
+            new JETLWS2OrderAccrualRedemption_1_Input();
+            jETLWS2OrderAccrualRedemption_1_Input.listOfJetorderaccrualredemptionrequest =
+            listOfJetorderaccrualredemptionrequest;
+            Body body = new Body();
+            body.jETLWS2OrderAccrualRedemption_1_Input = 
+            jETLWS2OrderAccrualRedemption_1_Input;
+            Header_LWS header = new Header_LWS("TEBOIL_INT", "TEBOIL_INT", "None");
+            LWS2 lWS2 = new LWS2();
+            lWS2.body = body;
+            lWS2.header = header;
+            
+            Task.WaitAll(LWSGenerator.generateXML(lWS2));
+            var xmlTask = Task.Run(async () => await LWSGenerator.getXML());
+            xmlTask.Wait();
+            return xmlTask.Result;
+    }
+}
+public static class LWSGenerator{
+    public static async Task generateXML(LWS2 lws2){
+        XmlSerializerNamespaces ns = new XmlSerializerNamespaces();
+        ns.Add("cus", "cusE");
+        ns.Add("soapenv", "soapenvE");
+        ns.Add("jet", "jetE");
+        XmlSerializer xmlSerializer = new XmlSerializer(typeof(LWS2));        
+        using (FileStream fs = new FileStream("wwwroot/sources/menu/xml.xml", FileMode.OpenOrCreate))
+        {
+            xmlSerializer.Serialize(fs, lws2, ns);            
+        }
+    }
+
+    public static async Task <string> getXML(){
+        string fileText = await File.ReadAllTextAsync("wwwroot/sources/menu/xml.xml");
+        return fileText;
+    }
+}

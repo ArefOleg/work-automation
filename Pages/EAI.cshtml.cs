@@ -35,28 +35,7 @@ public class EaiModel : PageModel
             List<LineItems> lineItemsInner = task.Result;
             order.setFields(lineItemsInner);
             Task.WaitAll(clearJSONFile());
-            foreach(LineItems lli in lineItemsInner){
-                Console.WriteLine(lli.LineNumber);
-            }
-            ListOfJetorderaccrualredemptionrequest listOfJetorderaccrualredemptionrequest =
-            new ListOfJetorderaccrualredemptionrequest();
-            listOfJetorderaccrualredemptionrequest.order = order;
-            JETLWS2OrderAccrualRedemption_1_Input jETLWS2OrderAccrualRedemption_1_Input = 
-            new JETLWS2OrderAccrualRedemption_1_Input();
-            jETLWS2OrderAccrualRedemption_1_Input.listOfJetorderaccrualredemptionrequest =
-            listOfJetorderaccrualredemptionrequest;
-            Body body = new Body();
-            body.jETLWS2OrderAccrualRedemption_1_Input = 
-            jETLWS2OrderAccrualRedemption_1_Input;
-            Header_LWS header = new Header_LWS("TEBOIL_INT", "TEBOIL_INT", "None");
-            LWS2 lWS2 = new LWS2();
-            lWS2.body = body;
-            lWS2.header = header;
-            
-            Task.WaitAll(LWSGenerator.generateXML(lWS2));
-            var xmlTask = Task.Run(async () => await LWSGenerator.getXML());
-            xmlTask.Wait();
-            Message = xmlTask.Result.Replace("cusE", "http://siebel.com/CustomUI")
+            Message = generateLWS2XML.generate(order).Replace("cusE", "http://siebel.com/CustomUI")
             .Replace("soapenvE", "http://schemas.xmlsoap.org/soap/envelope/")
             .Replace("jetE", "http://www.siebel.com/xml/JETOrderAccrualRedemptionRequest");
             
