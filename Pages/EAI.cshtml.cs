@@ -23,19 +23,23 @@ public class EaiModel : PageModel
     //Создание позиции чека
     public void OnPost(String Action, LineItems? lineItem, Order? order)    
     {
-        Console.WriteLine(Action);
-        Message = "OnPost";
-        lineItem.setAmountAdjusted();
-        Task.WaitAll(fillLineItem(lineItem));
-
-        Task.WaitAll(clearJSONFile());
+        
+        if(Action.Equals("LineItem")){
+            lineItem.setAmountAdjusted();
+            Task.WaitAll(fillLineItem(lineItem));
+        } else {
+            var task = Task.Run(async () => await getAllLineItemsForOrderAsync());
+            task.Wait();
+            List<LineItems> lineItemsInner = task.Result;
+            order.setFields(lineItemsInner);
+            Console.WriteLine(order);
+            Task.WaitAll(clearJSONFile());
+            foreach(LineItems lli in lineItemsInner){
+                Console.WriteLine(lli.LineNumber);
+            }
+        }
+         
     }
-    //Создание чека
-    /*public void OnPost(string lineItemAmount, string CardNumber, string OrderType,
-    string Attrib1, string DiscountCUR, string TerminalId, string AcquiringId){
-        Order order = new Order(lineItemAmount, CardNumber, OrderType, Attrib1,
-        DiscountCUR, TerminalId, AcquiringId);
-    }*/
 
 
     public async Task fillLineItem(LineItems lineItem){
@@ -59,10 +63,15 @@ public class EaiModel : PageModel
         List<LineItems> lli;
         using (FileStream fs = new FileStream("wwwroot/sources/menu/line item.json",
             FileMode.OpenOrCreate)){
-            lli = await JsonSerializer.DeserializeAsync<List<LineItems>>(fs);
-            Task.WaitAll(clearJSONFile());            
+            lli = await JsonSerializer.DeserializeAsync<List<LineItems>>(fs);                        
         }
         return lli;
+    }
+
+    public List<LineItems> getAllLineItemsForOrder(){
+        var task = Task.Run(async () => await getAllLineItemsForOrderAsync());
+        task.Wait();
+        return task.Result;
     }
     public async Task clearJSONFile(){
         using (FileStream fs = new FileStream("wwwroot/sources/menu/line item.json",

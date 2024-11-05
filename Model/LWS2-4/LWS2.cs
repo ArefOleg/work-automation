@@ -69,6 +69,12 @@ public class Order{
     [XmlElement("LineItems", Namespace = "jetE")]
     public List<LineItems> lineItems = new List<LineItems>();
     public Order(){}
+    public void setFields(List<LineItems> lineItems){
+        this.OrderNumber = "OV" + DateTime.Now.ToString("h:mm:ss dd");
+        this.OrderDate = Utilities.DateUtilities.getReverseDate(); 
+        this.RRN = this.OrderNumber;
+        this.lineItems = lineItems;
+    }
     public Order(string lineItemAmount, string CardNumber, string OrderType,
     string Attrib1, string DiscountCUR, string TerminalId, string AcquiringId){        
         this.OrderNumber = "OV" + DateTime.Now.ToString("h:mm:ss dd");
