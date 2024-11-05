@@ -9,8 +9,10 @@ namespace work_automation.Pages;
 
 public class EaiModel : PageModel
 {   public Menu mainMenu;
+    public string Action{get; set;}
     public List<LineItems> lineItems;
     public LineItems lineItem{get; set;}
+    public Order order{get; set;}
     private readonly ILogger<IndexModel> _logger;
     public string Message { get; private set; } = "";
     
@@ -19,11 +21,14 @@ public class EaiModel : PageModel
         
     }
     //Создание позиции чека
-    public void OnPost(LineItems lineItem)    
+    public void OnPost(String Action, LineItems? lineItem, Order? order)    
     {
+        Console.WriteLine(Action);
         Message = "OnPost";
         lineItem.setAmountAdjusted();
         Task.WaitAll(fillLineItem(lineItem));
+
+        Task.WaitAll(clearJSONFile());
     }
     //Создание чека
     /*public void OnPost(string lineItemAmount, string CardNumber, string OrderType,
@@ -50,8 +55,8 @@ public class EaiModel : PageModel
         } 
     }
 
-    public List<LineItem> getAllLineItemsForOrder(){
-        List<LineItem> lli;
+    public async Task<List<LineItems>> getAllLineItemsForOrderAsync(){
+        List<LineItems> lli;
         using (FileStream fs = new FileStream("wwwroot/sources/menu/line item.json",
             FileMode.OpenOrCreate)){
             lli = await JsonSerializer.DeserializeAsync<List<LineItems>>(fs);
