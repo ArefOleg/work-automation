@@ -29,17 +29,14 @@ public class EaiModel : PageModel
         if(Action.Equals("LineItem")){
             lineItem.setAmountAdjusted();
             Task.WaitAll(fillLineItem(lineItem));
-        } else {
+        } else if(Action.Equals("Order")){
             var task = Task.Run(async () => await getAllLineItemsForOrderAsync());
             task.Wait();
             List<LineItems> lineItemsInner = task.Result;
             order.setFields(lineItemsInner);
             Task.WaitAll(clearJSONFile());
-            Message = generateLWS2XML.generate(order).Replace("cusE", "http://siebel.com/CustomUI")
-            .Replace("soapenvE", "http://schemas.xmlsoap.org/soap/envelope/")
-            .Replace("jetE", "http://www.siebel.com/xml/JETOrderAccrualRedemptionRequest");
-            
-        }
+            Message = generateLWS2XML.generate(order);            
+        } else {}
          
     }
 
@@ -55,7 +52,6 @@ public class EaiModel : PageModel
                 lineItems.Add(lineItem);
             }
             await JsonSerializer.SerializeAsync<List<LineItems>>(fs, lineItems);
-            //Написать сеттеры
             fs.Close();
         } 
     }
