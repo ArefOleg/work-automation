@@ -10,47 +10,61 @@ namespace work_automation.Pages;
 public class EaiModel : PageModel
 {   public Menu mainMenu;
     public List<LineItems> lineItems;
+    public LineItems lineItem{get; set;}
     private readonly ILogger<IndexModel> _logger;
     public string Message { get; private set; } = "";
-    public EaiModel(ILogger<IndexModel> logger)
-    {
-        Message = "Введите свое имя";
-        
-    }
-
+    
     public void OnGet()
     {        
-        Message = "OnGet";
+        
     }
-    public void OnPost(string? PumpNum, string? LineNumber, string? Product, string? NetPrice,
-    string? QuantityRequested)    
-    {//нужно записывать json с продуктами в файл
-    //после заполнения чека, формировать итоговое сообщение
+    //Создание позиции чека
+    public void OnPost(LineItems lineItem)    
+    {
         Message = "OnPost";
-    /*    if(PumpNum is not null){
-            using (FileStream fs = new FileStream("wwwroot/sources/menu/line item.json",
-             FileMode.OpenOrCreate)){
-                LineItems lineItemsOne;
-                try{
-                    lineItems = new List<LineItems>();                
-                    lineItems = await JsonSerializer.DeserializeAsync<List<LineItems>>(fs);
-                    byte[] buffer = Encoding.Default.GetBytes("");
-                    await fs.WriteAsync(buffer, 0, buffer.Length);
-                }
-                catch{
-                    lineItemsOne = new LineItems(PumpNum, LineNumber, Product,
-                    NetPrice, QuantityRequested);
-                    lineItems.Add(lineItemsOne);
-                    await JsonSerializer.SerializeAsync<List<LineItems>>(fs, lineItems); 
-                }
-                    lineItemsOne = new LineItems(PumpNum, LineNumber, Product,
-                    NetPrice, QuantityRequested);
-                    lineItems.Add(lineItemsOne);
-                    await JsonSerializer.SerializeAsync<List<LineItems>>(fs, lineItems); 
-                                
-             }            
-        }
-        */
+        lineItem.setAmountAdjusted();
+        Task.WaitAll(fillLineItem(lineItem));
+    }
+    //Создание чека
+    /*public void OnPost(string lineItemAmount, string CardNumber, string OrderType,
+    string Attrib1, string DiscountCUR, string TerminalId, string AcquiringId){
+        Order order = new Order(lineItemAmount, CardNumber, OrderType, Attrib1,
+        DiscountCUR, TerminalId, AcquiringId);
+    }*/
 
+
+    public async Task fillLineItem(LineItems lineItem){
+        using (FileStream fs = new FileStream("wwwroot/sources/menu/line item.json",
+             FileMode.OpenOrCreate)){
+            lineItems = new List<LineItems>();
+            if(new FileInfo("wwwroot/sources/menu/line item.json").Length == 0){                
+                lineItems.Add(lineItem);                
+            } else{                         
+                lineItems = await JsonSerializer.DeserializeAsync<List<LineItems>>(fs);     
+                fs.SetLength(0);                
+                lineItems.Add(lineItem);
+            }
+            await JsonSerializer.SerializeAsync<List<LineItems>>(fs, lineItems);
+            //Написать сеттеры
+            fs.Close();
+        } 
+    }
+
+    public List<LineItem> getAllLineItemsForOrder(){
+        List<LineItem> lli;
+        using (FileStream fs = new FileStream("wwwroot/sources/menu/line item.json",
+            FileMode.OpenOrCreate)){
+            lli = await JsonSerializer.DeserializeAsync<List<LineItems>>(fs);
+            Task.WaitAll(clearJSONFile());            
+        }
+        return lli;
+    }
+    public async Task clearJSONFile(){
+        using (FileStream fs = new FileStream("wwwroot/sources/menu/line item.json",
+            FileMode.OpenOrCreate)){
+            fs.SetLength(0);
+            fs.Close();
+        }
+        
     }
 }

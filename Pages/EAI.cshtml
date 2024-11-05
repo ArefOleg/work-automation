@@ -1,8 +1,7 @@
-@page "{PumpNum?}/{LineNumber?}/{Product?}/{NetPrice?}/{QuantityRequested?}"
+@page
 @model EaiModel
 @using Work_Menu
 
 @Model.Message;
-@Model.lineItems.Count()
 
-<partial name="EAI_layout/LWS2"></partial>
+<partial name="eai_generator/LWS2"></partial>

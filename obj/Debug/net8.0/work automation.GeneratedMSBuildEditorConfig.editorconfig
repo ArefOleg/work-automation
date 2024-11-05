@@ -9,47 +9,51 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = work_automation
 build_property.RootNamespace = work_automation
-build_property.ProjectDir = C:\Users\ov.arefev\Documents\Arena\work automation\
+build_property.ProjectDir = /media/oleg/USB-FLESH-N/work-automation/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\ov.arefev\Documents\Arena\work automation
+build_property.MSBuildProjectDirectory = /media/oleg/USB-FLESH-N/work-automation
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/ov.arefev/Documents/Arena/work automation/Pages/EAI.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRUFJLmNzaHRtbA==
+[/media/oleg/USB-FLESH-N/work-automation/Pages/EAI.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRUFJLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ov.arefev/Documents/Arena/work automation/Pages/eai_generator/lws2.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcZWFpX2dlbmVyYXRvclxsd3MyLmNzaHRtbA==
+[/media/oleg/USB-FLESH-N/work-automation/Pages/eai_generator/lws2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvZWFpX2dlbmVyYXRvci9sd3MyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ov.arefev/Documents/Arena/work automation/Pages/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+[/media/oleg/USB-FLESH-N/work-automation/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ov.arefev/Documents/Arena/work automation/Pages/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+[/media/oleg/USB-FLESH-N/work-automation/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ov.arefev/Documents/Arena/work automation/Pages/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+[/media/oleg/USB-FLESH-N/work-automation/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ov.arefev/Documents/Arena/work automation/Pages/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+[/media/oleg/USB-FLESH-N/work-automation/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ov.arefev/Documents/Arena/work automation/Pages/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+[/media/oleg/USB-FLESH-N/work-automation/Pages/test.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvdGVzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ov.arefev/Documents/Arena/work automation/Pages/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+[/media/oleg/USB-FLESH-N/work-automation/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ov.arefev/Documents/Arena/work automation/Pages/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-di4kqrbyk8
+[/media/oleg/USB-FLESH-N/work-automation/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/media/oleg/USB-FLESH-N/work-automation/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-j2120qk57a
