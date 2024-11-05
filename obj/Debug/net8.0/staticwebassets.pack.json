@@ -257,6 +257,10 @@
       "PackagePath": "staticwebassets\\sources\\menu\\main menu.json"
     },
     {
+      "Id": "C:\\Users\\ov.arefev\\Documents\\Arena\\work automation\\wwwroot\\sources\\menu\\xml.xml",
+      "PackagePath": "staticwebassets\\sources\\menu\\xml.xml"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.work automation.props",
       "PackagePath": "build\\work automation.props"
     },
