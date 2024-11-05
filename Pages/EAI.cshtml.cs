@@ -22,7 +22,7 @@ public class EaiModel : PageModel
     public void OnPost(LineItems lineItem)    
     {
         Message = "OnPost";
-        Console.WriteLine(lineItem.PumpNum);
+        lineItem.setAmountAdjusted();
         Task.WaitAll(fillLineItem(lineItem));
     }
     //Создание чека
@@ -40,7 +40,7 @@ public class EaiModel : PageModel
             if(new FileInfo("wwwroot/sources/menu/line item.json").Length == 0){                
                 lineItems.Add(lineItem);                
             } else{                         
-                lineItems = await JsonSerializer.DeserializeAsync<List<LineItems>>(fs);         
+                lineItems = await JsonSerializer.DeserializeAsync<List<LineItems>>(fs);     
                 fs.SetLength(0);                
                 lineItems.Add(lineItem);
             }
@@ -48,6 +48,16 @@ public class EaiModel : PageModel
             //Написать сеттеры
             fs.Close();
         } 
+    }
+
+    public List<LineItem> getAllLineItemsForOrder(){
+        List<LineItem> lli;
+        using (FileStream fs = new FileStream("wwwroot/sources/menu/line item.json",
+            FileMode.OpenOrCreate)){
+            lli = await JsonSerializer.DeserializeAsync<List<LineItems>>(fs);
+            Task.WaitAll(clearJSONFile());            
+        }
+        return lli;
     }
     public async Task clearJSONFile(){
         using (FileStream fs = new FileStream("wwwroot/sources/menu/line item.json",

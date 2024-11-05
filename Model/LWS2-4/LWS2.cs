@@ -32,6 +32,9 @@ public class LineItems{
         this.AmountAdjusted = Convert.ToString(Convert.ToInt32(this.QuantityRequested) * Convert.ToInt32(this.NetPrice));
         //Console.WriteLine($"Итоговая цена за всю позицию: {this.AmountAdjusted}");                
     }
+    public void setAmountAdjusted(){
+        this.AmountAdjusted = Convert.ToString(Convert.ToInt32(this.QuantityRequested) * Convert.ToInt32(this.NetPrice));
+    }
     public LineItems(){}
 }
 
