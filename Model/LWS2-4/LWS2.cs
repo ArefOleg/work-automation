@@ -138,17 +138,16 @@ public static class generateLWS2XML{
             Header_LWS header = new Header_LWS("TEBOIL_INT", "TEBOIL_INT", "None");
             LWS2 lWS2 = new LWS2();
             lWS2.body = body;
-            lWS2.header = header;
-            
-            Task.WaitAll(LWSGenerator.generateXML(lWS2));
-            var xmlTask = Task.Run(async () => await LWSGenerator.getXML());
+            lWS2.header = header;            
+            Task.WaitAll(LWS2Generator.generateXML(lWS2));
+            var xmlTask = Task.Run(async () => await Utilities.Utilities.getXML());
             xmlTask.Wait();            
             return xmlTask.Result.Replace("cusE", "http://siebel.com/CustomUI")
             .Replace("soapenvE", "http://schemas.xmlsoap.org/soap/envelope/")
             .Replace("jetE", "http://www.siebel.com/xml/JETOrderAccrualRedemptionRequest");
     }
 }
-public static class LWSGenerator{
+public static class LWS2Generator{
     public static async Task generateXML(LWS2 lws2){
         XmlSerializerNamespaces ns = new XmlSerializerNamespaces();
         ns.Add("cus", "cusE");
@@ -159,10 +158,5 @@ public static class LWSGenerator{
         {
             xmlSerializer.Serialize(fs, lws2, ns);            
         }
-    }
-
-    public static async Task <string> getXML(){
-        string fileText = await File.ReadAllTextAsync("wwwroot/sources/menu/xml.xml");
-        return fileText;
-    }
+    }    
 }

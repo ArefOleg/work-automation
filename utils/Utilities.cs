@@ -18,3 +18,10 @@ static public class OrderUtilities{
         return Convert.ToString(tmp);
     }
 }
+
+static public class Utilities{
+public static async Task <string> getXML(){
+        string fileText = await File.ReadAllTextAsync("wwwroot/sources/menu/xml.xml");
+        return fileText;
+    }
+}
