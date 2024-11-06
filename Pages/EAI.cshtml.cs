@@ -34,13 +34,15 @@ public class EaiModel : PageModel
         if(Action.Equals("LineItem")){
             lineItem.setAmountAdjusted();
             Task.WaitAll(fillLineItem(lineItem));
+            service = "LWS2";
         } else if(Action.Equals("Order")){
             var task = Task.Run(async () => await getAllLineItemsForOrderAsync());
             task.Wait();
             List<LineItems> lineItemsInner = task.Result;
             order.setFields(lineItemsInner);
             Task.WaitAll(clearJSONFile());
-            Message = generateLWS2XML.generate(order);            
+            Message = generateLWS2XML.generate(order); 
+            service = "LWS2";           
         } else if(Action.Equals("LWS4")){
 
         }
