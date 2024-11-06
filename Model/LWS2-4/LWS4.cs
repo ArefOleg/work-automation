@@ -40,12 +40,11 @@ public static class generateLWS4XML{
         lWS4.body = body;
         Header_LWS header = new Header_LWS("TEBOIL_INT", "TEBOIL_INT", "None");
         lWS4.header = header;                
-        Task.WaitAll(LWS2Generator.generateXML(lWS2));
+        Task.WaitAll(LWS4Generator.generateXML(lWS4));
         var xmlTask = Task.Run(async () => await Utilities.Utilities.getXML());
         xmlTask.Wait();            
         return xmlTask.Result.Replace("cusE", "http://siebel.com/CustomUI")
-        .Replace("soapenvE", "http://schemas.xmlsoap.org/soap/envelope/")
-        .Replace("jetE", "http://www.siebel.com/xml/JETOrderAccrualRedemptionRequest");
+        .Replace("soapenvE", "http://schemas.xmlsoap.org/soap/envelope/");
     }
 }
 public static class LWS4Generator{
@@ -54,10 +53,10 @@ public static class LWS4Generator{
         ns.Add("cus", "cusE");
         ns.Add("soapenv", "soapenvE");
         ns.Add("jet", "jetE");
-        XmlSerializer xmlSerializer = new XmlSerializer(typeof(LWS2));        
+        XmlSerializer xmlSerializer = new XmlSerializer(typeof(LWS4));        
         using (FileStream fs = new FileStream("wwwroot/sources/menu/xml.xml", FileMode.OpenOrCreate))
         {
-            xmlSerializer.Serialize(fs, lws2, ns);            
+            xmlSerializer.Serialize(fs, lWS4, ns);            
         }
     }    
 }
