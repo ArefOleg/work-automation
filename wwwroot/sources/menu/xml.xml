@@ -13,7 +13,7 @@
           <jet:OrderCurrency>643</jet:OrderCurrency>
           <jet:CardAcceptorId>CardAcceptorId</jet:CardAcceptorId>
           <jet:LineItems>
-            <jet:PumpNum>2</jet:PumpNum>
+            <jet:PumpNum>1</jet:PumpNum>
             <jet:AmountAdjusted>1</jet:AmountAdjusted>
             <jet:LineNumber>1</jet:LineNumber>
             <jet:NetPrice>1</jet:NetPrice>
@@ -22,18 +22,18 @@
           </jet:LineItems>
           <jet:LineItems>
             <jet:PumpNum>1</jet:PumpNum>
-            <jet:AmountAdjusted>2</jet:AmountAdjusted>
-            <jet:LineNumber>2</jet:LineNumber>
-            <jet:NetPrice>2</jet:NetPrice>
+            <jet:AmountAdjusted>1</jet:AmountAdjusted>
+            <jet:LineNumber>1</jet:LineNumber>
+            <jet:NetPrice>1</jet:NetPrice>
             <jet:Product>1</jet:Product>
             <jet:QuantityRequested>1</jet:QuantityRequested>
           </jet:LineItems>
-          <jet:OrderNumber>OV4:20:37 05</jet:OrderNumber>
+          <jet:OrderNumber>OV12:05:37 06</jet:OrderNumber>
           <jet:CardNumber>1</jet:CardNumber>
-          <jet:OrderDate>242005042037</jet:OrderDate>
+          <jet:OrderDate>240506120537</jet:OrderDate>
           <jet:OrderType>1</jet:OrderType>
           <jet:Attrib1>1</jet:Attrib1>
-          <jet:RRN>OV4:20:37 05</jet:RRN>
+          <jet:RRN>OV12:05:37 06</jet:RRN>
           <jet:DiscountCUR>1</jet:DiscountCUR>
           <jet:TerminalId>1</jet:TerminalId>
           <jet:AcquiringId>1</jet:AcquiringId>

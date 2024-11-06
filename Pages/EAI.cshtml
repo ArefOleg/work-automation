@@ -2,9 +2,10 @@
 @model EaiModel
 @using Work_Menu
 
-<h4>@Model.Message</h4>
-@if(Model.service.Equals("LWS2")){
+<label>@Model.Message</label>
+@if(Model.integrationService.Equals("LWS2")){
     <partial name="eai_generator/LWS2"></partial>
-}else if(Model.service.Equals("LWS4")){
+} else if (Model.integrationService.Equals("LWS4")){
     <partial name="eai_generator/LWS4"></partial>
 }
+

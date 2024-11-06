@@ -13,7 +13,7 @@ namespace work_automation.Pages;
 public class EaiModel : PageModel
 {   public Menu mainMenu;
     public string Action{get; set;}
-    public string service{get; set;}
+    public string integrationService{get; set;} 
     public List<LineItems> lineItems;
     public LineItems lineItem{get; set;}
     public Order order{get; set;}
@@ -24,27 +24,27 @@ public class EaiModel : PageModel
     
     public void OnGet(string service)
     {        
-        this.service = service;
+        integrationService = service;
     }
     //Создание позиции чека
     public void OnPost(string service, String Action, LineItems? lineItem, Order? order,
     JETLWS4OrderCancel_Input? jETLWS4OrderCancel_Input)    
-    {
+    {   integrationService = service;
         
         if(Action.Equals("LineItem")){
             lineItem.setAmountAdjusted();
             Task.WaitAll(fillLineItem(lineItem));
-            service = "LWS2";
         } else if(Action.Equals("Order")){
             var task = Task.Run(async () => await getAllLineItemsForOrderAsync());
             task.Wait();
             List<LineItems> lineItemsInner = task.Result;
             order.setFields(lineItemsInner);
             Task.WaitAll(clearJSONFile());
+            Task.WaitAll(clearXML());
             Message = generateLWS2XML.generate(order); 
             service = "LWS2";           
         } else if(Action.Equals("LWS4")){
-
+            
         }
          
     }
@@ -84,7 +84,15 @@ public class EaiModel : PageModel
             FileMode.OpenOrCreate)){
             fs.SetLength(0);
             fs.Close();
-        }
-        
+        }        
     }
+
+    public async Task clearXML(){
+        using (FileStream fs = new FileStream("wwwroot/sources/menu/xml.xml",
+            FileMode.OpenOrCreate)){
+            fs.SetLength(0);
+            fs.Close();
+        }        
+    }
+
 }
