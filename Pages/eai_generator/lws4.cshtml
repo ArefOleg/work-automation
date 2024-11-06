@@ -4,29 +4,26 @@
 <form method="post" >
 <h3>Заполнение позиции чека</h2>
     <p>
-        <label>Введите порядковый номер колонки:</label><br />
-        <input type="text" name="lineItem.PumpNum" />
+        <label>Введите номер карты:</label><br />
+        <input type="text" name="jETLWS4OrderCancel_Input.cardNumber" />
     </p>
     <p>
-        <label>Введите номер позиции:</label><br />
-        <input type="text" name="lineItem.LineNumber" />
+        <label>Введите номер терминала:</label><br />
+        <input type="text" name="jETLWS4OrderCancel_Input.terminalId" />
     </p>
     <p>
-        <label>Введите продукт</label><br />
-        <label>Топливо 51ff4750-d485-11e5-8102-00155d0d2201</label><br />
-        <label>Топливо + e0d8dfdb-958f-11ec-8470-000c290469ea</label><br />
-        <label>НТУ 079b7231-d4ec-11eb-845c-000c290469ea</label><br />
-        <input type="text" name="lineItem.Product" />
+        <label>Введите RRN</label><br />        
+        <input type="text" name="jETLWS4OrderCancel_Input.RRN" />
     </p>
     <p>
-        <label>Стоимость за единицу товара</label><br />
-        <input type="text" name="lineItem.NetPrice" />
+        <label>Введите эквайринговую сеть</label><br />
+        <input type="text" name="jETLWS4OrderCancel_Input.acquiringId" />
     </p>
     <p>
-        <label>Количество товара</label><br />
-        <input type="text" name="lineItem.QuantityRequested" />
+        <label>Введите применик карт</label><br />
+        <input type="text" name="jETLWS4OrderCancel_Input.cardAcceptorId" value = "CardAcceptorId" />
     </p>
-    <input type="hidden" name="Action" value="LineItem" />
+    
+    <input type="hidden" name="Action" value="LWS4" />
     <input type="submit" value="Отправить" />
 </form>
-<form method="post" >

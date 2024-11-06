@@ -143,7 +143,9 @@ public static class generateLWS2XML{
             Task.WaitAll(LWSGenerator.generateXML(lWS2));
             var xmlTask = Task.Run(async () => await LWSGenerator.getXML());
             xmlTask.Wait();
-            return xmlTask.Result.Replace("cusE", "http://siebel.com/CustomUI")
+            System.Xml.Linq.XDocument xdoc = System.Xml.Linq.XDocument.Load("wwwroot/sources/menu/xml.xml");
+            string xml = xdoc.ToString();
+            return xml.Replace("cusE", "http://siebel.com/CustomUI")
             .Replace("soapenvE", "http://schemas.xmlsoap.org/soap/envelope/")
             .Replace("jetE", "http://www.siebel.com/xml/JETOrderAccrualRedemptionRequest");
     }

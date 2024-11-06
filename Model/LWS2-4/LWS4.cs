@@ -14,19 +14,7 @@ namespace XML_LWS4
         public string acquiringId = "AcquiringId";
         [XmlElement("RRN", Namespace = "cusE")]
         public string RRN;
-        public JETLWS4OrderCancel_Input(){
-            Console.WriteLine("Введите номер карты");
-            Console.WriteLine("DEV 7030040020000577\nTEST 7030040020015959\nPRE 7030040016723301");
-            string? cardNumber = Console.ReadLine();
-            this.cardNumber = cardNumber;
-            Console.WriteLine("Введите номер терминала");
-            Console.WriteLine("DEV 0000549309031095\nTEST 0001187072026239\nPRE 0000749595042549");
-            string? terminalId = Console.ReadLine();
-            this.terminalId = terminalId;
-            Console.WriteLine("Введите RRN");
-            string? RRN = Console.ReadLine();
-            this.RRN = RRN;
-        }
+        public JETLWS4OrderCancel_Input(){}
     }
     public class Body{
         [XmlElement("JETLWS4OrderCancel_Input", Namespace = "cusE")]

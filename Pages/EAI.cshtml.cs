@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Work_Menu;
 using XML_Header;
 using XML_LWS2;
+using XML_LWS4;
 
 namespace work_automation.Pages;
 
@@ -16,15 +17,17 @@ public class EaiModel : PageModel
     public List<LineItems> lineItems;
     public LineItems lineItem{get; set;}
     public Order order{get; set;}
+    public JETLWS4OrderCancel_Input jETLWS4OrderCancel_Input{get; set;}
     private readonly ILogger<IndexModel> _logger;
     public string Message { get; private set; } = "";
+    public string URL{get; set;} = "";
     
     public void OnGet(string service)
     {        
         this.service = service;
     }
     //Создание позиции чека
-    public void OnPost(String Action, LineItems? lineItem, Order? order,
+    public void OnPost(string service, String Action, LineItems? lineItem, Order? order,
     JETLWS4OrderCancel_Input? jETLWS4OrderCancel_Input)    
     {
         
