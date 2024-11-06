@@ -12,18 +12,20 @@ namespace work_automation.Pages;
 public class EaiModel : PageModel
 {   public Menu mainMenu;
     public string Action{get; set;}
+    public string service{get; set;}
     public List<LineItems> lineItems;
     public LineItems lineItem{get; set;}
     public Order order{get; set;}
     private readonly ILogger<IndexModel> _logger;
     public string Message { get; private set; } = "";
     
-    public void OnGet()
+    public void OnGet(string service)
     {        
-        
+        this.service = service;
     }
     //Создание позиции чека
-    public void OnPost(String Action, LineItems? lineItem, Order? order)    
+    public void OnPost(String Action, LineItems? lineItem, Order? order,
+    JETLWS4OrderCancel_Input? jETLWS4OrderCancel_Input)    
     {
         
         if(Action.Equals("LineItem")){
@@ -36,7 +38,9 @@ public class EaiModel : PageModel
             order.setFields(lineItemsInner);
             Task.WaitAll(clearJSONFile());
             Message = generateLWS2XML.generate(order);            
-        } else {}
+        } else if(Action.Equals("LWS4")){
+
+        }
          
     }
 
