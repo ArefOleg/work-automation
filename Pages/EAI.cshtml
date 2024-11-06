@@ -3,5 +3,6 @@
 @using Work_Menu
 
 <h4>@Model.Message</h4>
-
-<partial name="eai_generator/LWS2"></partial>
+@if(@Model.service.Equals("LWS2")){
+    <partial name="eai_generator/LWS2"></partial>
+}
