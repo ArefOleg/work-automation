@@ -6,8 +6,9 @@
     int tagStart;
     int tagEnd;
     tagStart = Model.Message.IndexOf('<');
-    tagEnd = Model.Message.IndexOf('>');
-    string text = Model.Message.Substring(tagStart + 1, tagEnd);
+    tagEnd = Model.Message.IndexOf('>') + 1;
+    string? text = "begin";
+    if(tagStart >= 0 && tagEnd > 0) text = Model.Message.Substring(tagStart, tagEnd);
 }
 <label>@text</label>
 
