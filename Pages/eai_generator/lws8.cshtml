@@ -1,0 +1,29 @@
+@page
+@model EaiModel
+<h2>Получение информации по транзакциям</h2>
+<form method="post" >
+    <p>
+        <label>Введите номер карты:</label><br />
+        <label>DEV 7030040020000577</label><br />
+        <label>TEST 7030040020015959</label><br />
+        <label>PRE 7030040016723301</label><br />
+        <input type="text" name="jETLWS8GetTransactions_1_Input.cardNumber" />
+    </p>
+    <p>
+        <label>Введите количество записей, которое хотите увидеть:</label><br />
+        <input type="text" name="jETLWS8GetTransactions_1_Input.PageSize" />
+    </p>
+    <p>
+        <label>Введите начальный промежуток даты транзакций</label><br />
+        <label>Например 10/15/2023 ММ/ДД/Год</label><br />     
+        <input type="text" name="jETLWS8GetTransactions_1_Input.StartDate" />
+    </p>
+    <p>
+        <label>Введите конечный промежуток даты транзакций</label><br />
+        <label>Например 10/15/2025 ММ/ДД/Год</label><br />
+        <input type="text" name="jETLWS8GetTransactions_1_Input.EndDate" />
+    </p>  
+    
+    <input type="hidden" name="Action" value="LWS8" />
+    <input type="submit" value="Отправить" />
+</form>
