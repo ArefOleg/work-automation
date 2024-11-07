@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "tVcQIx7eRl/BRiAIwDrVm6qc1q3AsahnmRhomwlxB+0=",
+  "Hash": "YPNwQ/p6nINT867YSzuVAJZ/uq+qqj+Uvfe0zs2FLpw=",
   "Source": "work automation",
   "BasePath": "_content/work automation",
   "Mode": "Default",
@@ -1250,6 +1250,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\sources\\menu\\main menu.json"
+    },
+    {
+      "Identity": "C:\\Users\\ov.arefev\\Documents\\Arena\\work automation\\wwwroot\\sources\\menu\\xml.txt",
+      "SourceId": "work automation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ov.arefev\\Documents\\Arena\\work automation\\wwwroot\\",
+      "BasePath": "_content/work automation",
+      "RelativePath": "sources/menu/xml.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\sources\\menu\\xml.txt"
     },
     {
       "Identity": "C:\\Users\\ov.arefev\\Documents\\Arena\\work automation\\wwwroot\\sources\\menu\\xml.xml",

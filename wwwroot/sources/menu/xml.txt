@@ -13,9 +13,9 @@
       <cus:Source>МП</cus:Source>
       <cus:StartRowNum>1</cus:StartRowNum>
       <cus:CardNumber>7030040020000577</cus:CardNumber>
-      <cus:PageSize>1</cus:PageSize>
-      <cus:StartDate>10/15/2023</cus:StartDate>
-      <cus:EndDate>10/15/2023</cus:EndDate>
+      <cus:PageSize>7030040020000577</cus:PageSize>
+      <cus:StartDate>7030040020000577</cus:StartDate>
+      <cus:EndDate>7030040020000577</cus:EndDate>
     </cus:JETLWS8GetTransactions_1_Input>
   </soapenv:Body>
 </soapenv:Envelope>

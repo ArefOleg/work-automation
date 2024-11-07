@@ -1,8 +1,16 @@
 @page
 @model EaiModel
 @using Work_Menu
+@{
+    List<string> collection = new List<string>();
+    int tagStart;
+    int tagEnd;
+    tagStart = Model.Message.IndexOf('<');
+    tagEnd = Model.Message.IndexOf('>');
+    string text = Model.Message.Substring(tagStart + 1, tagEnd);
+}
+<label>@text</label>
 
-<label>@Model.Message</label>
 @if(Model.integrationService.Equals("LWS2")){
     <partial name="eai_generator/LWS2"></partial>
 } else if (Model.integrationService.Equals("LWS4")){
