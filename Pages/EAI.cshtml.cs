@@ -44,7 +44,9 @@ public class EaiModel : PageModel
             Message = generateLWS2XML.generate(order); 
             service = "LWS2";           
         } else if(Action.Equals("LWS4")){
-            
+            Task.WaitAll(clearXML());
+            Message = generateLWS4XML.generate(jETLWS4OrderCancel_Input);
+            service = "LWS4";
         }
          
     }

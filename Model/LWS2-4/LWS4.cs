@@ -52,7 +52,6 @@ public static class LWS4Generator{
         XmlSerializerNamespaces ns = new XmlSerializerNamespaces();
         ns.Add("cus", "cusE");
         ns.Add("soapenv", "soapenvE");
-        ns.Add("jet", "jetE");
         XmlSerializer xmlSerializer = new XmlSerializer(typeof(LWS4));        
         using (FileStream fs = new FileStream("wwwroot/sources/menu/xml.xml", FileMode.OpenOrCreate))
         {
