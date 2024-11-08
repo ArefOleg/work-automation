@@ -47,10 +47,11 @@ public class EaiModel : PageModel
             Task.WaitAll(clearXML());
             Message = generateLWS2XML.generate(order); 
             service = "LWS2";
-            URL = "DEV https://msk03-sbldev2.licard.com/siebel/app/eai_teboil/rus?SWEExtSource=WebService&SWEExtCmd=Execute&WSSOAP=1<p>"
-            + "TEST https://msk03-sbl2-tt1.licard.com/siebel/app/eai/enu?SWEExtSource=WebService&SWEExtCmd=Execute&WSSOAP=1"
+            URL = "DEV https://msk03-sbldev2.licard.com/siebel/app/eai_teboil/rus?SWEExtSource=WebService&SWEExtCmd=Execute&WSSOAP=1\n"
+            + "TEST https://msk03-sbl2-tt1.licard.com/siebel/app/eai/enu?SWEExtSource=WebService&SWEExtCmd=Execute&WSSOAP=1\n"
             + "PRE https://msk03-sw3-pre.licard.com:9001/siebel/app/eai/enu?SWEExtSource=WebService&SWEExtCmd=Execute&WSSOAP=1";
-               
+            
+
         } else if(Action.Equals("LWS4")){
             Task.WaitAll(clearXML());
             Message = generateLWS4XML.generate(jETLWS4OrderCancel_Input);
