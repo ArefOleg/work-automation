@@ -14,18 +14,18 @@
           <jet:CardAcceptorId>CardAcceptorId</jet:CardAcceptorId>
           <jet:LineItems>
             <jet:PumpNum>1</jet:PumpNum>
-            <jet:AmountAdjusted>11</jet:AmountAdjusted>
+            <jet:AmountAdjusted>1</jet:AmountAdjusted>
             <jet:LineNumber>1</jet:LineNumber>
-            <jet:NetPrice>11</jet:NetPrice>
-            <jet:Product>2</jet:Product>
+            <jet:NetPrice>1</jet:NetPrice>
+            <jet:Product>1</jet:Product>
             <jet:QuantityRequested>1</jet:QuantityRequested>
           </jet:LineItems>
-          <jet:OrderNumber>OV8:46:34 08</jet:OrderNumber>
+          <jet:OrderNumber>OV8:57:30 08</jet:OrderNumber>
           <jet:CardNumber>1</jet:CardNumber>
-          <jet:OrderDate>244608084634</jet:OrderDate>
+          <jet:OrderDate>245708085730</jet:OrderDate>
           <jet:OrderType>1</jet:OrderType>
           <jet:Attrib1>1</jet:Attrib1>
-          <jet:RRN>OV8:46:34 08</jet:RRN>
+          <jet:RRN>OV8:57:30 08</jet:RRN>
           <jet:DiscountCUR>1</jet:DiscountCUR>
           <jet:TerminalId>1</jet:TerminalId>
           <jet:AcquiringId>1</jet:AcquiringId>
