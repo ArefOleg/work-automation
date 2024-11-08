@@ -9,7 +9,7 @@ using XML_Header;
 using XML_LWS2;
 using XML_LWS4;
 using XML_LWS8;
-
+using Utilities;
 namespace work_automation.Pages;
 
 public class EaiModel : PageModel
@@ -47,19 +47,19 @@ public class EaiModel : PageModel
             Task.WaitAll(clearXML());
             Message = generateLWS2XML.generate(order); 
             service = "LWS2";
-            URL = "DEV https://msk03-sbldev2.licard.com/siebel/app/eai_teboil/rus?SWEExtSource=WebService&SWEExtCmd=Execute&WSSOAP=1\n"
-            + "TEST https://msk03-sbl2-tt1.licard.com/siebel/app/eai/enu?SWEExtSource=WebService&SWEExtCmd=Execute&WSSOAP=1\n"
-            + "PRE https://msk03-sw3-pre.licard.com:9001/siebel/app/eai/enu?SWEExtSource=WebService&SWEExtCmd=Execute&WSSOAP=1";
+            URL = Utilities.Utilities.getURL("LWS2");
             
 
         } else if(Action.Equals("LWS4")){
             Task.WaitAll(clearXML());
             Message = generateLWS4XML.generate(jETLWS4OrderCancel_Input);
             service = "LWS4";
+            URL = Utilities.Utilities.getURL("LWS2");
         } else if(Action.Equals("LWS8")){
             Task.WaitAll(clearXML());
             Message = generateLWS8XML.generate(jETLWS8GetTransactions_1_Input);
             service = "LWS8";
+            URL = Utilities.Utilities.getURL("LWS8");
         }
          
     }
