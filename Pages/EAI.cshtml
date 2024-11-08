@@ -2,15 +2,14 @@
 @model EaiModel
 @using Work_Menu
 @{
-    List<string> collection = new List<string>();
-    int tagStart;
-    int tagEnd;
-    tagStart = Model.Message.IndexOf('<');
-    tagEnd = Model.Message.IndexOf('>') + 1;
-    string? text = "begin";
-    if(tagStart >= 0 && tagEnd > 0) text = Model.Message.Substring(tagStart, tagEnd);
+         
 }
-<label>@text</label>
+</br>
+@Model.Message
+</br>
+<h4>Ссылка для SOAP</h4>
+@Model.URL
+
 
 @if(Model.integrationService.Equals("LWS2")){
     <partial name="eai_generator/LWS2"></partial>

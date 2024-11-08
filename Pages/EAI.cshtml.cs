@@ -1,5 +1,6 @@
 using System.Text;
 using System.Text.Json;
+using System.Web;
 using System.Xml.Serialization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -21,7 +22,7 @@ public class EaiModel : PageModel
     public JETLWS4OrderCancel_Input jETLWS4OrderCancel_Input{get; set;}
     public JETLWS8GetTransactions_1_Input jETLWS8GetTransactions_1_Input{get; set;}
     private readonly ILogger<IndexModel> _logger;
-    public string Message { get; private set; } = "";
+    public string Message { get; set; } = "";
     public string URL{get; set;} = "";
     
     public void OnGet(string service)
@@ -45,7 +46,11 @@ public class EaiModel : PageModel
             Task.WaitAll(clearJSONFile());
             Task.WaitAll(clearXML());
             Message = generateLWS2XML.generate(order); 
-            service = "LWS2";           
+            service = "LWS2";
+            URL = "DEV https://msk03-sbldev2.licard.com/siebel/app/eai_teboil/rus?SWEExtSource=WebService&SWEExtCmd=Execute&WSSOAP=1"
+            + "TEST https://msk03-sbl2-tt1.licard.com/siebel/app/eai/enu?SWEExtSource=WebService&SWEExtCmd=Execute&WSSOAP=1"
+            + "PRE https://msk03-sw3-pre.licard.com:9001/siebel/app/eai/enu?SWEExtSource=WebService&SWEExtCmd=Execute&WSSOAP=1";
+               
         } else if(Action.Equals("LWS4")){
             Task.WaitAll(clearXML());
             Message = generateLWS4XML.generate(jETLWS4OrderCancel_Input);
