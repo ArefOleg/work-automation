@@ -11,6 +11,7 @@ using XML_LWS4;
 using XML_LWS8;
 using XML_LWS10;
 using Utilities;
+using S21_XML;
 namespace work_automation.Pages;
 
 public class EaiModel : PageModel
@@ -20,6 +21,7 @@ public class EaiModel : PageModel
     public List<LineItems> lineItems;
     public LineItems lineItem{get; set;}
     public Order order{get; set;}
+    public JET_S21_Get_Client_Info_Input jET_S21_Get_Client_Info_Input{get; set;}
     public JET_spcLWS10_spc_Input jET_SpcLWS10_Spc_Input{get; set;}
     public JETLWS4OrderCancel_Input jETLWS4OrderCancel_Input{get; set;}
     public JETLWS8GetTransactions_1_Input jETLWS8GetTransactions_1_Input{get; set;}
@@ -35,7 +37,8 @@ public class EaiModel : PageModel
     public void OnPost(string service, String Action, LineItems? lineItem, Order? order,
     JETLWS4OrderCancel_Input? jETLWS4OrderCancel_Input,
     JETLWS8GetTransactions_1_Input? jETLWS8GetTransactions_1_Input,
-    JET_spcLWS10_spc_Input? jET_SpcLWS10_Spc_Input)    
+    JET_spcLWS10_spc_Input? jET_SpcLWS10_Spc_Input,
+    JET_S21_Get_Client_Info_Input? jET_S21_Get_Client_Info_Input)    
     {   integrationService = service;
         
         if(Action.Equals("LineItem")){
@@ -68,6 +71,12 @@ public class EaiModel : PageModel
             Message = generateLWS10XML.generate(jET_SpcLWS10_Spc_Input);
             service = "LWS10";
             URL = Utilities.Utilities.getURL("LWS10");
+        }
+        else if(Action.Equals("S21")){
+            Task.WaitAll(clearXML());
+            Message = generateS21XML.generate(jET_S21_Get_Client_Info_Input);
+            service = "S21";
+            URL = Utilities.Utilities.getURL("S21");
         }
          
     }

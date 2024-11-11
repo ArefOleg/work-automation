@@ -1,0 +1,16 @@
+@page
+@model EaiModel
+<h2>Получение информации по клиенту</h2>
+<form method="post" >
+    <p>
+        <label>Введите номер карты:</label><br />
+        <label>DEV 7030040020000577</label><br />
+        <label>TEST 7030040020015959</label><br />
+        <label>PRE 7030040016723301</label><br />
+        <input type="text" name="jET_S21_Get_Client_Info_Input.LoginLK" />
+    </p>
+    
+    
+    <input type="hidden" name="Action" value="S21" />
+    <input type="submit" value="Отправить" />
+</form>
