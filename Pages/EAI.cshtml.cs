@@ -9,6 +9,7 @@ using XML_Header;
 using XML_LWS2;
 using XML_LWS4;
 using XML_LWS8;
+using XML_LWS10;
 using Utilities;
 namespace work_automation.Pages;
 
@@ -33,7 +34,8 @@ public class EaiModel : PageModel
     //Создание позиции чека
     public void OnPost(string service, String Action, LineItems? lineItem, Order? order,
     JETLWS4OrderCancel_Input? jETLWS4OrderCancel_Input,
-    JETLWS8GetTransactions_1_Input? jETLWS8GetTransactions_1_Input)    
+    JETLWS8GetTransactions_1_Input? jETLWS8GetTransactions_1_Input,
+    JET_spcLWS10_spc_Input? jET_SpcLWS10_Spc_Input)    
     {   integrationService = service;
         
         if(Action.Equals("LineItem")){

@@ -9,13 +9,12 @@
     </wsse:Security>
   </soapenv:Header>
   <soapenv:Body>
-    <cus:JETLWS8GetTransactions_1_Input>
-      <cus:Source>МП</cus:Source>
-      <cus:StartRowNum>1</cus:StartRowNum>
-      <cus:CardNumber>1</cus:CardNumber>
-      <cus:PageSize>1</cus:PageSize>
-      <cus:StartDate>11</cus:StartDate>
-      <cus:EndDate>1</cus:EndDate>
-    </cus:JETLWS8GetTransactions_1_Input>
+    <cus:JET_spcLWS10_spc-_spcAccrual_spcPoints_spcFor_spcAction_Input>
+      <cus:ProgramName>Teboil</cus:ProgramName>
+      <cus:CardNumber>7030040020000577</cus:CardNumber>
+      <cus:Attrib1>Teboil - Abonement2000_cars Power</cus:Attrib1>
+      <cus:Attrib2>1</cus:Attrib2>
+      <cus:ActionName>IssueQRAction</cus:ActionName>
+    </cus:JET_spcLWS10_spc-_spcAccrual_spcPoints_spcFor_spcAction_Input>
   </soapenv:Body>
 </soapenv:Envelope>
