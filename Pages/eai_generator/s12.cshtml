@@ -1,0 +1,66 @@
+@page 
+@model EaiModel
+<h2>Регистрация клиента</h2>
+<form method="post" >
+<h3>Заполнение адреса</h2>
+    <p>
+        <label>Введите порядковый номер колонки:</label><br />
+        <input type="text" name="s12_PersonalAddress.PumpNum" />
+    </p>
+    <p>
+        <label>Введите номер позиции:</label><br />
+        <input type="text" name="s12_PersonalAddress.LineNumber" />
+    </p>
+    <p>
+        <label>Введите продукт</label><br />
+        <label>Топливо 51ff4750-d485-11e5-8102-00155d0d2201</label><br />
+        <label>Топливо + e0d8dfdb-958f-11ec-8470-000c290469ea</label><br />
+        <label>НТУ 079b7231-d4ec-11eb-845c-000c290469ea</label><br />
+        <input type="text" name="s12_PersonalAddress.Product" />
+    </p>
+    <p>
+        <label>Стоимость за единицу товара</label><br />
+        <input type="text" name="lineItem.NetPrice" />
+    </p>
+    <p>
+        <label>Количество товара</label><br />
+        <input type="text" name="lineItem.QuantityRequested" />
+    </p>
+    <input type="hidden" name="Action" value="LineItem" />
+    <input type="submit" value="Отправить" />
+</form>
+<form method="post" >
+<h3>Заполнение информации по чеку</h2>
+    <p>
+        <label>Введите номер карты:</label><br />
+        <label>DEV 7030040020000577</label><br />
+        <label>TEST 7030040020015959</label><br />
+        <label>PRE 7030040016723301</label><br />
+        <input type="text" name="order.CardNumber" />
+    </p>
+    <p>
+        <label>Введите тип чека, например QR-code:</label><br />
+        <input type="text" name="order.OrderType" />
+    </p>
+    <p>       
+        <label>Введите Аттрибут 1</label><br />
+        <input type="text" name="order.Attrib1" />
+    </p>
+    <p>
+        <label>Введите скидку</label><br />
+        <input type="text" name="order.DiscountCUR" />
+    </p>
+    <p>
+        <label>Введите терминал</label><br />
+        <label>DEV 0000549309031095</label><br />
+        <label>TEST 0001187072026239</label><br />
+        <label>PRE 0000749595042549</label><br />
+        <input type="text" name="order.TerminalId" />
+    </p>
+    <p>
+        <label>Введите идентификатор экварианговой сети</label><br />
+        <input type="text" name="order.AcquiringId" />
+    </p>
+    <input type="hidden" name="Action" value="Order" />    
+    <input type="submit" value="Отправить" />
+</form>
