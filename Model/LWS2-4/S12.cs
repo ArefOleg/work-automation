@@ -21,7 +21,7 @@ public class S12_PersonalAddress{
     [XmlElement("Country", Namespace = "jetE")]
     public string Country{get; set;}
     [XmlElement("Type", Namespace = "jetE")]
-    public string Type = "Домашний"
+    public string Type = "Домашний";
    /* [XmlElement("Id", Namespace = "jetE")]
     public string Id{get; set;}*/
     public S12_PersonalAddress(){}

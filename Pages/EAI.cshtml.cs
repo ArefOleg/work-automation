@@ -12,6 +12,7 @@ using XML_LWS8;
 using XML_LWS10;
 using Utilities;
 using S21_XML;
+using XML_S12;
 namespace work_automation.Pages;
 
 public class EaiModel : PageModel
@@ -26,6 +27,7 @@ public class EaiModel : PageModel
     public JETLWS4OrderCancel_Input jETLWS4OrderCancel_Input{get; set;}
     public JETLWS8GetTransactions_1_Input jETLWS8GetTransactions_1_Input{get; set;}
     public S12_PersonalAddress s12_PersonalAddress{get; set;}
+    public S12_Contact s12_Contact{get; set;}
     private readonly ILogger<IndexModel> _logger;
     public string Message { get; set; } = "";
     public string URL{get; set;} = "";
@@ -82,7 +84,15 @@ public class EaiModel : PageModel
             service = "Address";
         }
         else if(Action.Equals("S12")){
-
+            var task = Task.Run(async () => await getAddress());
+            task.Wait();
+            ListOfPersonalAddress listOfPersonalAddress = task.Result;
+            s12_Contact.listOfPersonalAddress = listOfPersonalAddress;
+            Task.WaitAll(clearJSONFile());
+            Task.WaitAll(clearXML());
+            Message = generateS12XML.generate(order); 
+            service = "S12";
+            URL = Utilities.Utilities.getURL("S12");
         }
          
     }
@@ -95,13 +105,15 @@ public class EaiModel : PageModel
         } 
     }
 
-    public async Task<S12_PersonalAddress> getAddress(){
+    public async Task<ListOfPersonalAddress> getAddress(){
         S12_PersonalAddress S12AP;
         using (FileStream fs = new FileStream("wwwroot/sources/menu/line item.json",
             FileMode.OpenOrCreate)){
             S12AP = await JsonSerializer.DeserializeAsync<S12_PersonalAddress>(fs);                        
         }
-        return S12AP;
+        ListOfPersonalAddress listOfPersonalAddress = new ListOfPersonalAddress();
+        listOfPersonalAddress.s12_PersonalAddress = S12AP;
+        return listOfPersonalAddress;
     }
 
     public async Task fillLineItem(LineItems lineItem){
