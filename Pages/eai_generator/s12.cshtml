@@ -12,55 +12,99 @@
         <input type="text" name="s12_PersonalAddress.Region" />
     </p>
     <p>
-        <label>Введите продукт</label><br />
-        <label>Топливо 51ff4750-d485-11e5-8102-00155d0d2201</label><br />
-        <label>Топливо + e0d8dfdb-958f-11ec-8470-000c290469ea</label><br />
-        <label>НТУ 079b7231-d4ec-11eb-845c-000c290469ea</label><br />
-        <input type="text" name="s12_PersonalAddress.Product" />
+        <label>Введите город:</label><br />
+        <input type="text" name="s12_PersonalAddress.City" />
     </p>
     <p>
-        <label>Стоимость за единицу товара</label><br />
-        <input type="text" name="lineItem.NetPrice" />
+        <label>Введите индекс:</label><br />
+        <input type="text" name="s12_PersonalAddress.Index" />
     </p>
     <p>
-        <label>Количество товара</label><br />
-        <input type="text" name="lineItem.QuantityRequested" />
+        <label>Введите район:</label><br />
+        <input type="text" name="s12_PersonalAddress.District" />
     </p>
-    <input type="hidden" name="Action" value="LineItem" />
+    <p>
+        <label>Введите улицу:</label><br />
+        <input type="text" name="s12_PersonalAddress.Street" />
+    </p>
+    <p>
+        <label>Введите дом:</label><br />
+        <input type="text" name="s12_PersonalAddress.House" />
+    </p>
+    <p>
+        <label>Введите корпус:</label><br />
+        <input type="text" name="s12_PersonalAddress.Corps" />
+    </p>
+     <p>
+        <label>Введите квартиру:</label><br />
+        <input type="text" name="s12_PersonalAddress.Flat" />
+    </p>
+    
+    <input type="hidden" name="Action" value="Address" />
     <input type="submit" value="Отправить" />
 </form>
 <form method="post" >
-<h3>Заполнение информации по чеку</h2>
+<h3>Заполнение информации по пользователю</h2>    
     <p>
-        <label>Введите номер карты:</label><br />
-        <label>DEV 7030040020000577</label><br />
-        <label>TEST 7030040020015959</label><br />
-        <label>PRE 7030040016723301</label><br />
-        <input type="text" name="order.CardNumber" />
-    </p>
-    <p>
-        <label>Введите тип чека, например QR-code:</label><br />
-        <input type="text" name="order.OrderType" />
+        <label>Введите номер карты для регистрации, для этого нужна карта в статусе Новая:</label><br />
+        <input type="text" name="s12_Contact.NewCardNumber" />
     </p>
     <p>       
-        <label>Введите Аттрибут 1</label><br />
-        <input type="text" name="order.Attrib1" />
+        <label>Введите Логин</label><br />
+        <input type="text" name="s12_Contact.YlUserName" />
+    </p>
+    <p>       
+        <label>Введите пароль</label><br />
+        <input type="text" name="s12_Contact.YlPassword" />
     </p>
     <p>
-        <label>Введите скидку</label><br />
-        <input type="text" name="order.DiscountCUR" />
+        <label>Введите имя</label><br />
+        <input type="text" name="s12_Contact.FirstName" />
     </p>
     <p>
-        <label>Введите терминал</label><br />
-        <label>DEV 0000549309031095</label><br />
-        <label>TEST 0001187072026239</label><br />
-        <label>PRE 0000749595042549</label><br />
-        <input type="text" name="order.TerminalId" />
+        <label>Введите фамилию</label><br />
+        <input type="text" name="s12_Contact.LastName" />
     </p>
     <p>
-        <label>Введите идентификатор экварианговой сети</label><br />
-        <input type="text" name="order.AcquiringId" />
+        <label>Введите отчество</label><br />
+        <input type="text" name="s12_Contact.MiddleName" />
     </p>
-    <input type="hidden" name="Action" value="Order" />    
+    <p>
+        <label>Введите рабочий телефон или можно использовать </label><br />
+        <input type="text" name="s12_Contact.WorkPhone" value="+7" />
+    </p>
+    <p>
+        <label>Наличие подписи в анкете Y/N</label><br />
+        <input type="text" name="s12_Contact.JETSignFlag" />
+    </p>
+    <p>
+        <label>Согласие на маркетинговые рассылки Y/N</label><br />
+        <input type="text" name="s12_Contact.JETMarketingCampaignAgreement" />
+    </p>
+    <p>
+        <label>Введите почту</label><br />
+        <input type="text" name="s12_Contact.EmailAddress" />
+    </p>
+    <p>
+        <label>Введите мобильный телефон или можно использовать </label><br />
+        <input type="text" name="s12_Contact.CellularPhone" value = "+7" />
+    </p>
+    <p>
+        <label>Введите дату рождения например 08/15/1992 ММ/ДД/Год </label><br />
+        <input type="text" name="s12_Contact.EmailAddress" value = "12/04/1992" />
+    </p>
+    <p>
+        <label>Введите пол</label><br />
+        <input type="text" name="s12_Contact.MF"/>
+    </p>
+    <p>
+        <label>Введите дату участия например 10/15/2023 ММ/ДД/Год</label><br />
+        <input type="text" name="s12_Contact.SinceDate"/>
+    </p>
+    <p>
+        <label>Кодовое слово</label><br />
+        <input type="text" name="s12_Contact.SecurityAnswer"/>
+    </p>
+    <input type="hidden" name="Action" value="S12" />    
     <input type="submit" value="Отправить" />
 </form>

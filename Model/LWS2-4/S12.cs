@@ -21,31 +21,10 @@ public class S12_PersonalAddress{
     [XmlElement("Country", Namespace = "jetE")]
     public string Country{get; set;}
     [XmlElement("Type", Namespace = "jetE")]
-    public string Type{get; set;}
-    [XmlElement("Id", Namespace = "jetE")]
-    public string Id{get; set;}
-    public S12_PersonalAddress(){
-        Console.WriteLine("Адрес");
-        Console.WriteLine("Введите страну");
-        this.Country = Console.ReadLine();
-        Console.WriteLine("Введите регион");
-        this.Region = Console.ReadLine();
-        Console.WriteLine("Введите город");
-        this.City = Console.ReadLine();
-        Console.WriteLine("Введите индекс");
-        this.Index = Console.ReadLine();
-        Console.WriteLine("Введите район");
-        this.District = Console.ReadLine();
-        Console.WriteLine("Введите улицу");
-        this.Street = Console.ReadLine();
-        Console.WriteLine("Введите дом");
-        this.House = Console.ReadLine();
-        Console.WriteLine("Введите корпус");
-        this.Corps = Console.ReadLine();
-        Console.WriteLine("Введите квартиру");
-        this.Flat = Console.ReadLine();
-        this.Type = "Домашний";
-    }
+    public string Type = "Домашний"
+   /* [XmlElement("Id", Namespace = "jetE")]
+    public string Id{get; set;}*/
+    public S12_PersonalAddress(){}
 }
 
 public class ListOfPersonalAddress{
@@ -93,40 +72,7 @@ public class S12_Contact{
     public string MF{get; set;}
     [XmlElement("ListOfPersonalAddress", Namespace = "jetE")]
     public ListOfPersonalAddress listOfPersonalAddress;
-    public S12_Contact(){
-        Console.WriteLine("Введите номер карты для регистрации, для этого нужна карта в статусе Новая");        
-        this.NewCardNumber = Console.ReadLine();
-        Console.WriteLine("Введите Логин");        
-        this.YlUserName = Console.ReadLine();
-        Console.WriteLine("Введите пароль");        
-        this.YlPassword = Console.ReadLine();
-        Console.WriteLine("Введите имя");        
-        this.FirstName = Console.ReadLine();
-        Console.WriteLine("Введите фамилию");        
-        this.LastName = Console.ReadLine();
-        Console.WriteLine("Введите отчество");        
-        this.MiddleName = Console.ReadLine();
-        Console.WriteLine("Введите рабочий телефон или можно использовать " +
-        "+7" + DateTime.Now.ToString("mmddhhmmss"));      
-        this.WorkPhone = Console.ReadLine();
-        Console.WriteLine("Наличие подписи в анкете Y/N");        
-        this.JETSignFlag = Console.ReadLine();
-        Console.WriteLine("Согласие на маркетинговые рассылки Y/N");   
-        this.JETMarketingCampaignAgreement = Console.ReadLine();
-        Console.WriteLine("Введите почту");   
-        this.EmailAddress = Console.ReadLine();
-        Console.WriteLine("Введите мобильный телефон или можно использовать " +
-        "+7" + DateTime.Now.ToString("mmddhhmmss"));  
-        this.CellularPhone = Console.ReadLine();
-        Console.WriteLine("Введите дату рождения например 08/15/1992 ММ/ДД/Год");   
-        this.BirthDate = Console.ReadLine();
-        Console.WriteLine("Введите пол");   
-        this.MF = Console.ReadLine();
-        Console.WriteLine("Введите дату участия например 10/15/2023 ММ/ДД/Год");   
-        this.SinceDate = Console.ReadLine();
-        Console.WriteLine("Кодовое слово");   
-        this.SecurityAnswer = Console.ReadLine();
-    }
+    public S12_Contact(){}
 }
 
 public class ListOfContact{    
