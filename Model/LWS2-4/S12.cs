@@ -101,3 +101,52 @@ public class S12{
     public JET_spcS12_Body jET_SpcS12_Body;
     
 }
+
+
+
+public static class generateS12XML{
+    public static string generate(S12_Contact s12_Contact){
+        ListOfContact listOfContact = new ListOfContact();
+        listOfContact.s12_Contact = s12_Contact;
+        JET_spcS12_spcCreate_spcAnketa jET_SpcS12_SpcCreate_SpcAnketa = new JET_spcS12_spcCreate_spcAnketa();
+        jET_SpcS12_SpcCreate_SpcAnketa.listOfContact = listOfContact;
+        JET_spcS12_Body body = new JET_spcS12_Body();
+        body.jET_SpcS12_SpcCreate_SpcAnketa = jET_SpcS12_SpcCreate_SpcAnketa;
+        S12 s12 = new S12();
+        s12.jET_SpcS12_Body = body;        
+        Header_Eai_Anon_UserName_Token header = new Header_Eai_Anon_UserName_Token();
+        s12.header_Eai_Anon_UserName_Token = header; 
+        UsernameToken usernameToken = new UsernameToken();
+        Security security = new Security();
+        security.usernameToken = usernameToken;
+        header.security = security;
+        Task.WaitAll(S12Generator.generateXML(s12));
+        var xmlTask = Task.Run(async () => await Utilities.Utilities.getXML());
+        xmlTask.Wait();            
+        return xmlTask.Result
+        .Replace("soapenvE", "http://schemas.xmlsoap.org/soap/envelope/")
+        .Replace("<wsse:Password>JET_INT", "<wsse:Password Type=\"wsse:PasswordText\">JET_INT")
+        .Replace("xmlns:wsse=\"wsseE\"", "")
+        .Replace("<wsse:Security>",
+            "<wsse:Security xmlns:wsse=\"http://schemas.xmlsoap.org/ws/2002/07/secext\">")
+        .Replace("<wsse:UsernameToken>",
+            "<wsse:UsernameToken xmlns:wsu=\"http://schemas.xmlsoap.org/ws/2002/07/utility\">")
+        .Replace("xmlns:cus=\"cusE\"", "xmlns:cus=\"http://siebel.com/CustomUI\"")
+        .Replace("jetE", "http://www.siebel.com/xml/JETOrderAccrualRedemptionRequest");
+        
+    }
+}
+public static class S12Generator{
+    public static async Task generateXML(S12 s12){
+        XmlSerializerNamespaces ns = new XmlSerializerNamespaces();
+        ns.Add("cus", "cusE");
+        ns.Add("soapenv", "soapenvE");
+        ns.Add("wsse", "wsseE");
+        ns.Add("jet", "jetE");
+        XmlSerializer xmlSerializer = new XmlSerializer(typeof(S12));        
+        using (FileStream fs = new FileStream("wwwroot/sources/menu/xml.xml", FileMode.OpenOrCreate))
+        {
+            xmlSerializer.Serialize(fs, s12, ns);            
+        }
+    }    
+}

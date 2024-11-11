@@ -42,7 +42,8 @@ public class EaiModel : PageModel
     JETLWS8GetTransactions_1_Input? jETLWS8GetTransactions_1_Input,
     JET_spcLWS10_spc_Input? jET_SpcLWS10_Spc_Input,
     JET_S21_Get_Client_Info_Input? jET_S21_Get_Client_Info_Input,
-    S12_PersonalAddress? s12_PersonalAddress)    
+    S12_PersonalAddress? s12_PersonalAddress,
+    S12_Contact? s12_Contact)    
     {   integrationService = service;
         Task.WaitAll(clearXML());
         if(Action.Equals("LineItem")){
@@ -90,7 +91,7 @@ public class EaiModel : PageModel
             s12_Contact.listOfPersonalAddress = listOfPersonalAddress;
             Task.WaitAll(clearJSONFile());
             Task.WaitAll(clearXML());
-            Message = generateS12XML.generate(order); 
+            Message = generateS12XML.generate(s12_Contact); 
             service = "S12";
             URL = Utilities.Utilities.getURL("S12");
         }
