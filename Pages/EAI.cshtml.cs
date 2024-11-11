@@ -61,6 +61,11 @@ public class EaiModel : PageModel
             Message = generateLWS8XML.generate(jETLWS8GetTransactions_1_Input);
             service = "LWS8";
             URL = Utilities.Utilities.getURL("LWS8");
+        } else if(Action.Equals("LWS10")){
+            Task.WaitAll(clearXML());
+            Message = generateLWS10XML.generate(jET_SpcLWS10_Spc_Input);
+            service = "LWS10";
+            URL = Utilities.Utilities.getURL("LWS10");
         }
          
     }
