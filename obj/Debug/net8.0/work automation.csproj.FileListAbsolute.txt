@@ -60,34 +60,3 @@ C:/Users/ov.arefev/Documents/Arena/work automation/obj/Debug/net8.0/work automat
 /media/oleg/USB-FLESH-N/work-automation/obj/Debug/net8.0/scopedcss/projectbundle/work automation.bundle.scp.css
 /media/oleg/USB-FLESH-N/work-automation/obj/Debug/net8.0/work automation.genruntimeconfig.cache
 /media/oleg/USB-FLESH-N/work-automation/obj/Debug/net8.0/ref/work automation.dll
-C:\Users\ov.arefev\Documents\Arena\work automation\obj\Debug\net8.0\work automation.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\ov.arefev\Documents\Arena\work automation\obj\Debug\net8.0\work automation.AssemblyInfoInputs.cache
-C:\Users\ov.arefev\Documents\Arena\work automation\obj\Debug\net8.0\work automation.AssemblyInfo.cs
-C:\Users\ov.arefev\Documents\Arena\work automation\obj\Debug\net8.0\work automation.csproj.CoreCompileInputs.cache
-C:\Users\ov.arefev\Documents\Arena\work automation\obj\Debug\net8.0\work automation.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\ov.arefev\Documents\Arena\work automation\obj\Debug\net8.0\work automation.RazorAssemblyInfo.cache
-C:\Users\ov.arefev\Documents\Arena\work automation\obj\Debug\net8.0\work automation.RazorAssemblyInfo.cs
-C:\Users\ov.arefev\Documents\Arena\work automation\obj\Debug\net8.0\work automation.sourcelink.json
-C:\Users\ov.arefev\Documents\Arena\work automation\obj\Debug\net8.0\work automation.dll
-C:\Users\ov.arefev\Documents\Arena\work automation\obj\Debug\net8.0\refint\work automation.dll
-C:\Users\ov.arefev\Documents\Arena\work automation\obj\Debug\net8.0\work automation.pdb
-C:\Users\ov.arefev\Documents\Arena\work automation\bin\Debug\net8.0\appsettings.Development.json
-C:\Users\ov.arefev\Documents\Arena\work automation\bin\Debug\net8.0\appsettings.json
-C:\Users\ov.arefev\Documents\Arena\work automation\bin\Debug\net8.0\work automation.staticwebassets.runtime.json
-C:\Users\ov.arefev\Documents\Arena\work automation\bin\Debug\net8.0\work automation.exe
-C:\Users\ov.arefev\Documents\Arena\work automation\bin\Debug\net8.0\work automation.deps.json
-C:\Users\ov.arefev\Documents\Arena\work automation\bin\Debug\net8.0\work automation.runtimeconfig.json
-C:\Users\ov.arefev\Documents\Arena\work automation\bin\Debug\net8.0\work automation.dll
-C:\Users\ov.arefev\Documents\Arena\work automation\bin\Debug\net8.0\work automation.pdb
-C:\Users\ov.arefev\Documents\Arena\work automation\obj\Debug\net8.0\staticwebassets.build.json
-C:\Users\ov.arefev\Documents\Arena\work automation\obj\Debug\net8.0\staticwebassets.development.json
-C:\Users\ov.arefev\Documents\Arena\work automation\obj\Debug\net8.0\staticwebassets\msbuild.work automation.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\ov.arefev\Documents\Arena\work automation\obj\Debug\net8.0\staticwebassets\msbuild.build.work automation.props
-C:\Users\ov.arefev\Documents\Arena\work automation\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.work automation.props
-C:\Users\ov.arefev\Documents\Arena\work automation\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.work automation.props
-C:\Users\ov.arefev\Documents\Arena\work automation\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\ov.arefev\Documents\Arena\work automation\obj\Debug\net8.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
-C:\Users\ov.arefev\Documents\Arena\work automation\obj\Debug\net8.0\scopedcss\bundle\work automation.styles.css
-C:\Users\ov.arefev\Documents\Arena\work automation\obj\Debug\net8.0\scopedcss\projectbundle\work automation.bundle.scp.css
-C:\Users\ov.arefev\Documents\Arena\work automation\obj\Debug\net8.0\work automation.genruntimeconfig.cache
-C:\Users\ov.arefev\Documents\Arena\work automation\obj\Debug\net8.0\ref\work automation.dll
