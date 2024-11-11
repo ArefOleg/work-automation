@@ -19,6 +19,7 @@ public class EaiModel : PageModel
     public List<LineItems> lineItems;
     public LineItems lineItem{get; set;}
     public Order order{get; set;}
+    public JET_spcLWS10_spc_Input jET_SpcLWS10_Spc_Input{get; set;}
     public JETLWS4OrderCancel_Input jETLWS4OrderCancel_Input{get; set;}
     public JETLWS8GetTransactions_1_Input jETLWS8GetTransactions_1_Input{get; set;}
     private readonly ILogger<IndexModel> _logger;

@@ -1,0 +1,33 @@
+@page
+@model EaiModel
+<h2>Получение информации по транзакциям</h2>
+<form method="post" >
+    <p>
+        <label>Введите номер карты:</label><br />
+        <label>DEV 7030040020000577</label><br />
+        <label>TEST 7030040020015959</label><br />
+        <label>PRE 7030040016723301</label><br />
+        <input type="text" name="jET_SpcLWS10_Spc_Input.CardNumber" />
+    </p>
+    <p>
+        <label>Введите тип действия. Самый частый это IssueQRAction:</label><br />
+        <input type="text" name="jET_SpcLWS10_Spc_Input.ActionName" />
+    </p>
+    <p>
+        <label>Введите аттрибут1</label><br />
+        <label>Для IssueQRAction это название для промо JET LWS10</label><br />
+        <label>All Coffee Subscription\nFuel Subscription\nTeboil - Abonement2000_cars\nPower Offer for 1st refill</label><br />     
+        <input type="text" name="jET_SpcLWS10_Spc_Input.Attrib1" />
+    </p>
+    <p>
+        <label>ВВведите аттрибут2, для кофе и абонемента это количество купонов</label><br />
+        <input type="text" name="jET_SpcLWS10_Spc_Input.Attrib2" />
+    </p>
+    <p>
+        <label>ВВведите аттрибут3</label><br />
+        <input type="text" name="jET_SpcLWS10_Spc_Input.Attrib3" />
+    </p>  
+    
+    <input type="hidden" name="Action" value="LWS10" />
+    <input type="submit" value="Отправить" />
+</form>
