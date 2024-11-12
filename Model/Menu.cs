@@ -25,6 +25,12 @@ public class Menu{
         var sort = from m in menus where m.menuType.Equals("eaiMenu") select m;
         foreach(MenuItem menu in sort) sortedMenus.Add(menu);
     }
+    public void infoMenu(){
+        sortedMenus.Clear();
+        var sort = from m in menus where m.menuType.Equals("infoMenu") select m;
+        foreach(MenuItem menu in sort) sortedMenus.Add(menu);
+    }
+
 }
 
 public class MenuItem{

@@ -13,6 +13,8 @@ public class IndexModel : PageModel
        mainMenu = new Menu();
        if(menu.Equals("eai")){
             mainMenu.eaiMenu();
+       } else if(menu.Equals("info")){
+            mainMenu.infoMenu();
        }
     }
 }
