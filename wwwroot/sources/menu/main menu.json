@@ -13,5 +13,9 @@
 {"menuName":"Доступы к средам","menuURL":"info/?about=enviroment","menuType":"infoMenu"},
 {"menuName":"Информация для апплая","menuURL":"info/?about=apply","menuType":"infoMenu"},
 {"menuName":"Как узнать расположение tns","menuURL":"info/?about=tns","menuType":"infoMenu"},
+<<<<<<< HEAD
 {"menuName":"Доступы","menuURL":"info/?about=access","menuType":"infoMenu"}
+=======
+{"menuName":"Доступы","menuURL":"info/?about=acsess","menuType":"infoMenu"}
+>>>>>>> 04aebfd4fe9bb3b9688e279580326dbcb176b7d1
 ]
