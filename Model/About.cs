@@ -23,4 +23,16 @@ public static class About{
         return about;
     }
 
+    public static async Task <string> getApplyInfo(){
+        string about = "";
+        using (FileStream fs = new FileStream("wwwroot/sources/library/apply.txt",
+         FileMode.OpenOrCreate))
+        {
+            byte[] buffer = new byte[fs.Length];
+            await fs.ReadAsync(buffer, 0, buffer.Length);
+            about = Encoding.Default.GetString(buffer);
+        }   
+        return about;
+    }
+
 }

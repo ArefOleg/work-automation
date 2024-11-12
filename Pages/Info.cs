@@ -11,13 +11,19 @@ public class InfoModel : PageModel
     {       
        aboutService = about;
        if(about.Equals("ADM")){
-            var task = Task.Run(async () => await AboutEx.About.getADMInfo());
-            task.Wait();
-            Message = task.Result;
+          var task = Task.Run(async () => await AboutEx.About.getADMInfo());
+          task.Wait();
+          Message = task.Result;
        }else if(about.Equals("access")){
-            var task = Task.Run(async () => await AboutEx.About.getEnviromentInfo());
-            task.Wait();
-            Message = task.Result;
+          var task = Task.Run(async () => await AboutEx.About.getEnviromentInfo());
+          task.Wait();
+          Message = task.Result;
+       }else if(about.Equals("apply")){
+          var task = Task.Run(async () => await AboutEx.About.getApplyInfo());
+          task.Wait();
+          Message = task.Result;  
+       }else if(about.Equals("tns")){
+          Message = ""; 
        }
     }
     public void OnPost(){
