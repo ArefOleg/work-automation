@@ -3,7 +3,7 @@ using XML_LWS2;
 static public class DateUtilities{
     public static string reverseDate;
     public static string getReverseDate(){
-       return DateTime.Now.ToString("yymmddhhmmss");
+       return DateTime.Now.ToString("yyMMddhhmmss");
     }
 
     

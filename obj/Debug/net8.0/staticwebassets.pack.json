@@ -245,6 +245,14 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "C:\\Users\\ov.arefev\\Documents\\Arena\\work automation\\wwwroot\\sources\\library\\ADM.txt",
+      "PackagePath": "staticwebassets\\sources\\library\\ADM.txt"
+    },
+    {
+      "Id": "C:\\Users\\ov.arefev\\Documents\\Arena\\work automation\\wwwroot\\sources\\library\\enviroment.txt",
+      "PackagePath": "staticwebassets\\sources\\library\\enviroment.txt"
+    },
+    {
       "Id": "C:\\Users\\ov.arefev\\Documents\\Arena\\work automation\\wwwroot\\sources\\menu\\gule.json",
       "PackagePath": "staticwebassets\\sources\\menu\\gule.json"
     },
