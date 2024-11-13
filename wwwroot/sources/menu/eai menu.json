@@ -1,0 +1,6 @@
+[{"menuName":"LWS4 отмена чека","menuURL":"EAI/?service=LWS4","menuType":"eaiMenu"},
+{"menuName":"LWS2 создание чека","menuURL":"EAI/?service=LWS2","menuType":"eaiMenu"},
+{"menuName":"LWS10 сервис принимающий от МП","menuURL":"EAI/?service=LWS10","menuType":"eaiMenu"},
+{"menuName":"LWS8 данные по транзакциям по карте","menuURL":"EAI/?service=LWS8","menuType":"eaiMenu"},
+{"menuName":"S21 получение данных","menuURL":"EAI/?service=S21","menuType":"eaiMenu"},
+{"menuName":"S12 регистрация клиента","menuURL":"EAI/?service=S12","menuType":"eaiMenu"}]

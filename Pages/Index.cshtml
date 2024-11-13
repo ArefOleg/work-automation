@@ -4,6 +4,6 @@
         
 }
 
-@foreach(var menu in Model.mainMenu.sortedMenus){
+@foreach(var menu in Model.mainMenu.menusStack){
     <a href="@menu.menuURL"><h5>@menu.menuName</h5></a>
 }

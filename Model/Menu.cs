@@ -4,31 +4,25 @@ using System.Text.Json.Serialization;
 namespace Work_Menu;
 
 public class Menu{
-    public List<MenuItem> menus;
-    public List<MenuItem> sortedMenus;
+    public List<MenuItem> menusStack;
     //public MenuItem menuItem;
     public Menu(){
-        readJSONMenu();
-        var sort = from m in menus where m.menuType.Equals("mainMenu") select m;
-        foreach(MenuItem menu in sort) sortedMenus.Add(menu);
+        readJSONMenu("wwwroot/sources/menu/main menu.json");
     }
 
-    public void readJSONMenu(){
-        string fileName = "wwwroot/sources/menu/main menu.json";
+    public void readJSONMenu(string menuPath){
+        string fileName = menuPath;
         string jsonStirng = File.ReadAllText(fileName);
-        menus = new List<MenuItem>();
-        sortedMenus = new List<MenuItem>();
-        menus = JsonSerializer.Deserialize<List<MenuItem>>(jsonStirng);        
+        menusStack = new List<MenuItem>();
+        menusStack = JsonSerializer.Deserialize<List<MenuItem>>(jsonStirng);        
     }
     public void eaiMenu(){
-        sortedMenus.Clear();
-        var sort = from m in menus where m.menuType.Equals("eaiMenu") select m;
-        foreach(MenuItem menu in sort) sortedMenus.Add(menu);
+        menusStack.Clear();
+        readJSONMenu("wwwroot/sources/menu/eai menu.json");
     }
     public void infoMenu(){
-        sortedMenus.Clear();
-        var sort = from m in menus where m.menuType.Equals("infoMenu") select m;
-        foreach(MenuItem menu in sort) sortedMenus.Add(menu);
+        menusStack.Clear();
+        readJSONMenu("wwwroot/sources/menu/info menu.json");
     }
 
 }
