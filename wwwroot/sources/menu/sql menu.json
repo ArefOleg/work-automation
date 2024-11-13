@@ -1,0 +1,6 @@
+[{"menuName":"Скрипты из задач","menuURL":"?menu=taskScripts","menuType":"mainMenu"},
+{"menuName":"Простые запросы","menuURL":"?menu=sampleScripts","menuType":"mainMenu"},
+{"menuName":"Копирование таблицы","menuURL":"?menu=copyTable","menuType":"mainMenu"},
+{"menuName":"Создать таблицу","menuURL":"?menu=createTable","menuType":"mainMenu"},
+{"menuName":"Отбор даты","menuURL":"?menu=getDate","menuType":"mainMenu"},
+{"menuName":"Declare","menuURL":"?menu=declare","menuType":"mainMenu"}]
