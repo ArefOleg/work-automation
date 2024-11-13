@@ -24,6 +24,10 @@ public class Menu{
         menusStack.Clear();
         readJSONMenu("wwwroot/sources/menu/info menu.json");
     }
+    public void sqlMenu(){
+        menusStack.Clear();
+        readJSONMenu("wwwroot/sources/menu/sql menu.json");
+    }
 
 }
 

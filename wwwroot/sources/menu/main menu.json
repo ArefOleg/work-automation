@@ -1,5 +1,5 @@
 [{"menuName":"Создать сообщение для интеграции","menuURL":"?menu=eai","menuType":"mainMenu"},
 {"menuName":"Создать папку и файл для Листа поставки","menuURL":"2","menuType":"mainMenu"},
 {"menuName":"Работы с srvmgr","menuURL":"3","menuType":"mainMenu"},
-{"menuName":"Вызвать sql скрипты","menuURL":"4","menuType":"mainMenu"},
+{"menuName":"Вызвать sql скрипты","menuURL":"?menu=sql","menuType":"mainMenu"},
 {"menuName":"Техническая информация","menuURL":"?menu=info","menuType":"mainMenu"}]
