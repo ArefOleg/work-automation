@@ -16,7 +16,7 @@ public class IndexModel : PageModel
        } else if(menu.Equals("info")){
             mainMenu.infoMenu();
        }else if(menu.Equals("sql")){
-            mainMenu.infoMenu();
+            mainMenu.sqlMenu();
        }
     }
 }

@@ -36,4 +36,15 @@ public static class SQL_Utilities{
         }
         return about;
     }
+    public static async Task <string> getCopyTable(){
+        string about = "";
+        using (FileStream fs = new FileStream("wwwroot/sources/library/sql_scripts/copy table.txt",
+         FileMode.OpenOrCreate))
+        {
+            byte[] buffer = new byte[fs.Length];
+            await fs.ReadAsync(buffer, 0, buffer.Length);
+            about = Encoding.Default.GetString(buffer);
+        }
+        return about;
+    }
 }

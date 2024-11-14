@@ -257,6 +257,22 @@
       "PackagePath": "staticwebassets\\sources\\library\\enviroment.txt"
     },
     {
+      "Id": "C:\\Users\\ov.arefev\\Documents\\Arena\\work automation\\wwwroot\\sources\\library\\sql_scripts\\Declare.txt",
+      "PackagePath": "staticwebassets\\sources\\library\\sql_scripts\\Declare.txt"
+    },
+    {
+      "Id": "C:\\Users\\ov.arefev\\Documents\\Arena\\work automation\\wwwroot\\sources\\library\\sql_scripts\\copy table.txt",
+      "PackagePath": "staticwebassets\\sources\\library\\sql_scripts\\copy table.txt"
+    },
+    {
+      "Id": "C:\\Users\\ov.arefev\\Documents\\Arena\\work automation\\wwwroot\\sources\\library\\sql_scripts\\create table.txt",
+      "PackagePath": "staticwebassets\\sources\\library\\sql_scripts\\create table.txt"
+    },
+    {
+      "Id": "C:\\Users\\ov.arefev\\Documents\\Arena\\work automation\\wwwroot\\sources\\library\\sql_scripts\\task_scripts\\call mounth report.txt",
+      "PackagePath": "staticwebassets\\sources\\library\\sql_scripts\\task_scripts\\call mounth report.txt"
+    },
+    {
       "Id": "C:\\Users\\ov.arefev\\Documents\\Arena\\work automation\\wwwroot\\sources\\menu\\eai menu.json",
       "PackagePath": "staticwebassets\\sources\\menu\\eai menu.json"
     },

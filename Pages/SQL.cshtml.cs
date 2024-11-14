@@ -15,6 +15,14 @@ public class SQLModel : PageModel
           var task = Task.Run(async () => await SQL_Utilities.getDeclare());
           task.Wait();
           Message = task.Result;
-       }else()
+       }else if(sql.Equals("createTable")){
+          var task = Task.Run(async () => await SQL_Utilities.getCreateTable());
+          task.Wait();
+          Message = task.Result;
+       }else if(sql.Equals("copyTable")){
+          var task = Task.Run(async () => await SQL_Utilities.getCopyTable());
+          task.Wait();
+          Message = task.Result;
+       }
     }
 }
