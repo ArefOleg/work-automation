@@ -1,20 +1,20 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Work_Menu;
-
+using SQL_Utils;
 namespace work_automation.Pages;
 
 public class SQLModel : PageModel
-{   public Menu mainMenu;
+{   public string Message{get; set;}
+    public string sqlService{get; set;}
     
-    
-    public void OnGet(string? menu = "main")
+    public void OnGet(string? sql = "none")
     {       
-       mainMenu = new Menu();
-       if(menu.Equals("eai")){
-            mainMenu.eaiMenu();
-       } else if(menu.Equals("info")){
-            mainMenu.infoMenu();
+       sqlService = sql;
+       if(sql.Equals("Declare")){
+          var task = Task.Run(async () => await SQL_Utilities.getDeclare());
+          task.Wait();
+          Message = task.Result;
        }
     }
 }

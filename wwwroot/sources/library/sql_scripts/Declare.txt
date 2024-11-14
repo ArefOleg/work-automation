@@ -10,5 +10,11 @@ DECLARE
   loop
    counter := counter + 1;
    insert/update/delete
-  end loop
+   if(step >= block_size) then
+    begin
+        step:=0;
+        commit;
+    end;
+  end loop;
+  commit;
  end;
