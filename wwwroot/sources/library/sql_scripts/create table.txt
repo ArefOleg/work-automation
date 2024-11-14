@@ -1,0 +1,6 @@
+CREATE TABLE SIEBEL./ТАБЛИЦА/(
+ID VARCHAR(15 CHAR),
+TYPE VARCHAR(30 CHAR)
+);
+COMMIT;
+grant select,insert,update,delete on SIEBEL./ТАБЛИЦА/ to SSE_ROLE;
