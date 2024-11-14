@@ -11,7 +11,7 @@ public class SQLModel : PageModel
     public void OnGet(string? sql = "none")
     {       
        sqlService = sql;
-       if(sql.Equals("Declare")){
+       if(sql.Equals("declare")){
           var task = Task.Run(async () => await SQL_Utilities.getDeclare());
           task.Wait();
           Message = task.Result;
