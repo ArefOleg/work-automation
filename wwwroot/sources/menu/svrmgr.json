@@ -1,0 +1,8 @@
+[{"menuName":"Установить лог","menuSvrmgr":"?svrmgr=log","menuType":"svrmgrMenu"},
+{"menuName":"Получить список сессий","menuSvrmgr":"?svrmgr=getSessions","menuType":"svrmgrMenu"},
+{"menuName":"Получить ветку с компоненты","menuURL":"?svrmgr=getBranch","menuSvrmgr":"svrmgrMenu"},
+{"menuName":"Установить ветку для компоненты","menuURL":"?svrmgr=setBranch","menuSvrmgr":"svrmgrMenu"},
+{"menuName":"Получить список параметров","menuURL":"?svrmgr=getParameters","menuSvrmgr":"svrmgrMenu"},
+{"menuName":"Сменить параметр","menuURL":"?svrmgr=changeParam","menuSvrmgr":"svrmgrMenu"},
+{"menuName":"Скомпилировать View из PLSQL","menuURL":"?svrmgr=viewToSql","menuSvrmgr":"svrmgrMenu"}
+]

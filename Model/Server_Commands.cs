@@ -1,3 +1,4 @@
+namespace svrmgr;
 public static class Server_Commands{
     public static string setLog(string compName, string serverName, stirng logLvl){
         string log = $"change evtloglvl % = {logLvl} for server {serverName} component {compName}";

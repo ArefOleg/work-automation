@@ -28,6 +28,10 @@ public class Menu{
         menusStack.Clear();
         readJSONMenu("wwwroot/sources/menu/sql menu.json");
     }
+    public void svrmgrMenu(){
+        menusStack.Clear();
+        readJSONMenu("wwwroot/sources/menu/svrmgr.json");
+    }
 
 }
 
