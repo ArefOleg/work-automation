@@ -1,9 +1,9 @@
-using svrmgr;
+using servcom;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 namespace work_automation.Pages;
 
-public class SVRMGRModel : PageModel
+public class ServManagerModel : PageModel
 {   public string Message{get; set;}
     public string svrmgrService{get; set;}
     public string operation{get; set;}
@@ -14,7 +14,7 @@ public class SVRMGRModel : PageModel
           operation = "Заполните данные о логе";
        }
     }
-    public void OnPost(string serverName, string compName, int logLevel){
-        
+    public void OnPost(string? serverName, string? compName, int? logLevel){
+        operation = "Заполните данные о логе";
     }
 }

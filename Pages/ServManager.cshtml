@@ -1,0 +1,22 @@
+@page
+@model ServManagerModel
+@{
+        
+}
+
+    <h3>@Model.operation</h2>
+    <form method="post">
+
+    <p>
+        <label>Введите страну:</label><br />
+        <input type="text" name="s12_PersonalAddress.Country" />
+    </p>
+    <p>
+        <label>Введите регион:</label><br />
+        <input type="text" name="s12_PersonalAddress.Region" />
+    </p>
+   
+    
+    <input type="hidden" name="Action" value="Address" />
+    <input type="submit" value="Отправить" />
+</form>
