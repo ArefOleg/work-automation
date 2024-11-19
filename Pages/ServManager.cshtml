@@ -3,20 +3,31 @@
 @{
         
 }
+    <h3 style="white-space: pre-line">@Model.operation</h2>
+    @if(!Model.operation.Equals("viewToSql")){
+        <form method="post">
+        <p>
+            <label>Название сервера:</label><br />
+            <input type="text" name="serverName" />
+        </p>
+        <p>
+            <label>Название компоненты:</label><br />
+            <input type="text" name="compName" />
+        </p>
 
-    <h3>@Model.operation</h2>
-    <form method="post">
+        <p>
+            <label>Уровень логирования:</label><br />
+            <input type="text" name="logLvl" />
+        </p>
 
-    <p>
-        <label>Введите страну:</label><br />
-        <input type="text" name="s12_PersonalAddress.Country" />
-    </p>
-    <p>
-        <label>Введите регион:</label><br />
-        <input type="text" name="s12_PersonalAddress.Region" />
-    </p>
-   
+         <p>
+            <label>Ветвь для подкладывания:</label><br />
+            <input type="text" name="branch" />
+        </p>
+
+        <input type="hidden" name="Action" value="Address" />
+        <input type="submit" value="Отправить" />
+        </form>
+    }
     
-    <input type="hidden" name="Action" value="Address" />
-    <input type="submit" value="Отправить" />
-</form>
+

@@ -10,11 +10,15 @@ public class ServManagerModel : PageModel
     public void OnGet(string svrmgr)
     {       
        svrmgrService = svrmgr;
-       if(svrmgr.Equals("log")){          
-          operation = "Заполните данные о логе";
+       if(svrmgr.Equals("viewToSql")){          
+          operation = "Нужно создать файл tables.txt\n"
+          + "Указать какие работы с таблицей\n"
+          + "Например EX_LOY_0000005:Update или Insert\n"
+          + "Комманда: C:\\Siebel\\Tools\\BIN\\siebdev.exe /c C:\\Siebel\\Tools\\BIN\\enu\tools.cfg /l \n"
+          + " enu /d ServerDataSrc /u arefev /p arefev /IncrementalTablePublish D:\\AREFEV\\tables.txt";
        }
     }
-    public void OnPost(string? serverName, string? compName, int? logLevel){
+    public void OnPost(string? serverName, string? compName, int? logLevel, string? branch){
         operation = "Заполните данные о логе";
     }
 }
