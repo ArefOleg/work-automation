@@ -1,12 +1,17 @@
 using servcom;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+
 namespace work_automation.Pages;
 
 public class ServManagerModel : PageModel
 {   public string Message{get; set;}
     public string svrmgrService{get; set;}
     public string operation{get; set;}
+    public string svrmgr{get; set;}
+    public string serverName{get; set;}
+    public string compName{get; set;}
+    public string logLevel{get; set;}
     public void OnGet(string svrmgr)
     {       
        svrmgrService = svrmgr;
@@ -18,7 +23,10 @@ public class ServManagerModel : PageModel
           + " enu /d ServerDataSrc /u arefev /p arefev /IncrementalTablePublish D:\\AREFEV\\tables.txt";
        }
     }
-    public void OnPost(string? serverName, string? compName, int? logLevel, string? branch){
+    public void OnPost(string? svrmgr, string? serverName, string? compName, string? logLevel, string? branch){
         operation = "Заполните данные о логе";
+        if(svrmgr.Equals("log")){
+            Message = servcom.Server_Commands.setLog(compName, serverName, logLevel);
+        }
     }
 }
