@@ -33,8 +33,10 @@ public class ServManagerModel : PageModel
             Message = servcom.Server_Commands.getSessionForComp(compName, serverName);
         } else if(svrmgr.Equals("getParameters")){
             Message = servcom.Server_Commands.getSessionForComp(compName, serverName);
-        } else if(svrmgr.Equals("getParameters")){
+        } else if(svrmgr.Equals("setBranch")){
             Message = servcom.Server_Commands.changeBrancheForComp(compName, serverName, branch);
+        } else if(svrmgr.Equals("getBranch")){
+            Message = servcom.Server_Commands.getBrancheFromComp(compName, serverName);
         }
     }
 }

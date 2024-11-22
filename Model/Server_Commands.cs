@@ -19,4 +19,9 @@ public static class Server_Commands{
         string param = $"change param WorkspaceBranchName={branch} for comp {compName} server {serverName}";
         return param;
     }
+
+    public static string getBrancheFromComp(string compName, string serverName){
+        string param = $"list param %Branch% for comp {compName} server {serverName}";
+        return param;
+    }
 }
