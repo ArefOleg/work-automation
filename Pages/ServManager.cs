@@ -20,7 +20,7 @@ public class ServManagerModel : PageModel
     {       
        svrmgrService = svrmgr;
        if(svrmgr.Equals("viewToSql")){          
-          operation = "Нужно создать файл tables.txt\n"
+          Message = "Нужно создать файл tables.txt\n"
           + "Указать какие работы с таблицей\n"
           + "Например EX_LOY_0000005:Update или Insert\n"
           + "Комманда: C:\\Siebel\\Tools\\BIN\\siebdev.exe /c C:\\Siebel\\Tools\\BIN\\enu\tools.cfg /l \n"
