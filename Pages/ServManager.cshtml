@@ -21,12 +21,12 @@
             <input type="text" name="logLvl" />
             </p>
         }
-        
-
+        @if(Model.svrmgrService.Equals("setBranch")){
         <p>
             <label>Ветвь для подкладывания:</label><br />
             <input type="text" name="branch" />
         </p>
+        }
         @if(Model.svrmgrService.Equals("changeParam")){
             <p>
                 <label>Параметр:</label><br />
