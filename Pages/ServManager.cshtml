@@ -3,7 +3,8 @@
 @{
         
 }
-    <h3 style="white-space: pre-line">@Model.Message</h2>
+    <h2 style="white-space: pre-line">@Model.Message</h2>
+    <h2 style="white-space: pre-line">@Model.warning</h2>
     @if(!Model.svrmgrService.Equals("viewToSql")){
         <form method="post">
         <p>
@@ -14,16 +15,28 @@
             <label>Название компоненты:</label><br />
             <input type="text" name="compName" />
         </p>
-
-        <p>
+        @if(Model.svrmgrService.Equals("log")){
+            <p>
             <label>Уровень логирования:</label><br />
             <input type="text" name="logLvl" />
-        </p>
+            </p>
+        }
+        
 
         <p>
             <label>Ветвь для подкладывания:</label><br />
             <input type="text" name="branch" />
         </p>
+        @if(Model.svrmgrService.Equals("changeParam")){
+            <p>
+                <label>Параметр:</label><br />
+                <input type="text" name="param" />
+            </p>
+            <p>
+                <label>Значение:</label><br />
+                <input type="text" name="value" />
+            </p>
+        }
 
         <input type="hidden" name="Action" value="Address" />
         <input type="submit" value="Отправить" />

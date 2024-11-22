@@ -24,4 +24,14 @@ public static class Server_Commands{
         string param = $"list param %Branch% for comp {compName} server {serverName}";
         return param;
     }
+
+    public static string setParamForComp(string compName, string serverName, string param,
+    string value){
+        string var = "Если для определения компоненты\n"
+        + $"change param {param} = {value} from compdef {compName}\n"
+        + "Если для компоненты\n" 
+        +$"change param {param} = {value} for {compName} server {serverName}";
+        return var;
+    }
+    
 }

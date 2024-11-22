@@ -13,6 +13,9 @@ public class ServManagerModel : PageModel
     public string compName{get; set;}
     public string logLevel{get; set;}
     public string branch{get; set;}
+    public string warning{get; set;}
+    public string param{get; set;}
+    public string value{get; set;}
     public void OnGet(string svrmgr)
     {       
        svrmgrService = svrmgr;
@@ -24,7 +27,8 @@ public class ServManagerModel : PageModel
           + " enu /d ServerDataSrc /u arefev /p arefev /IncrementalTablePublish D:\\AREFEV\\tables.txt";
        }
     }
-    public void OnPost(string? svrmgr, string? serverName, string? compName, string? logLvl, string? branch){
+    public void OnPost(string? svrmgr, string? serverName, string? compName, string? logLvl,
+     string? branch, string? param, string? value){
         svrmgrService = svrmgr;
         operation = "Заполните данные о логе";
         if(svrmgr.Equals("log")){
@@ -37,6 +41,11 @@ public class ServManagerModel : PageModel
             Message = servcom.Server_Commands.changeBrancheForComp(compName, serverName, branch);
         } else if(svrmgr.Equals("getBranch")){
             Message = servcom.Server_Commands.getBrancheFromComp(compName, serverName);
+        }else if(svrmgr.Equals("changeParam")){
+            warning = "Нужно менять на определении компоненты или самой компоненты\n" +
+            "Если поменять на определении компоненты, то поменяется сразу на всех созданных от нее компоненты";
+            Message = servcom.Server_Commands.setParamForComp(compName, serverName, param, value);
         }
+        
     }
 }
