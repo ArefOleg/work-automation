@@ -12,6 +12,7 @@ public class ServManagerModel : PageModel
     public string serverName{get; set;}
     public string compName{get; set;}
     public string logLevel{get; set;}
+    public string branch{get; set;}
     public void OnGet(string svrmgr)
     {       
        svrmgrService = svrmgr;
@@ -23,10 +24,17 @@ public class ServManagerModel : PageModel
           + " enu /d ServerDataSrc /u arefev /p arefev /IncrementalTablePublish D:\\AREFEV\\tables.txt";
        }
     }
-    public void OnPost(string? svrmgr, string? serverName, string? compName, string? logLevel, string? branch){
+    public void OnPost(string? svrmgr, string? serverName, string? compName, string? logLvl, string? branch){
+        svrmgrService = svrmgr;
         operation = "Заполните данные о логе";
         if(svrmgr.Equals("log")){
-            Message = servcom.Server_Commands.setLog(compName, serverName, logLevel);
+            Message = servcom.Server_Commands.setLog(compName, serverName, logLvl);
+        } else if(svrmgr.Equals("getSessions")){
+            Message = servcom.Server_Commands.getSessionForComp(compName, serverName);
+        } else if(svrmgr.Equals("getParameters")){
+            Message = servcom.Server_Commands.getSessionForComp(compName, serverName);
+        } else if(svrmgr.Equals("getParameters")){
+            Message = servcom.Server_Commands.changeBrancheForComp(compName, serverName, branch);
         }
     }
 }

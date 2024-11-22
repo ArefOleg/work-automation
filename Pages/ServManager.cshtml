@@ -3,8 +3,8 @@
 @{
         
 }
-    <h3 style="white-space: pre-line">@Model.operation</h2>
-    @if(!Model.operation.Equals("viewToSql")){
+    <h3 style="white-space: pre-line">@Model.Message</h2>
+    @if(!Model.svrmgrService.Equals("viewToSql")){
         <form method="post">
         <p>
             <label>Название сервера:</label><br />
@@ -20,7 +20,7 @@
             <input type="text" name="logLvl" />
         </p>
 
-         <p>
+        <p>
             <label>Ветвь для подкладывания:</label><br />
             <input type="text" name="branch" />
         </p>
