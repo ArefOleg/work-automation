@@ -1,0 +1,3 @@
+[{"menuName":"Вызовы процедур по генерации отчетов","menuURL":"/SQL?sql=taskScripts","menuType":"mainMenu"},
+{"menuName":"Простые запросы","menuURL":"/SQL?sql=sampleScripts","menuType":"mainMenu"},
+{"menuName":"Declare","menuURL":"/SQL?sql=declare","menuType":"mainMenu"}]

@@ -19,6 +19,8 @@ public class IndexModel : PageModel
             mainMenu.sqlMenu();
        }else if(menu.Equals("svrmgr")){
             mainMenu.svrmgrMenu();
+       }else if(menu.Equals("simple_sql")){
+            mainMenu.simpleSqlMenu();
        }
     }
 }

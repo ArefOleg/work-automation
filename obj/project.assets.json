@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\ov.arefev\\.nuget\\packages\\": {}
+    "/home/oleg/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ov.arefev\\Documents\\Arena\\work automation\\work automation.csproj",
+      "projectUniqueName": "/media/oleg/USB-FLESH-N/work-automation/work automation.csproj",
       "projectName": "work automation",
-      "projectPath": "C:\\Users\\ov.arefev\\Documents\\Arena\\work automation\\work automation.csproj",
-      "packagesPath": "C:\\Users\\ov.arefev\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ov.arefev\\Documents\\Arena\\work automation\\obj\\",
+      "projectPath": "/media/oleg/USB-FLESH-N/work-automation/work automation.csproj",
+      "packagesPath": "/home/oleg/.nuget/packages/",
+      "outputPath": "/media/oleg/USB-FLESH-N/work-automation/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ov.arefev\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/home/oleg/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -67,7 +67,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.404/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
