@@ -1,5 +1,8 @@
 Вызов ежемесячного запроса по списаниям начислениям
+
 call siebel.jet_tebloy_etl.generate_trans_doc_csv_stand_by('31.10.2023 21:00:00','10.11.2023 20:59:59','1-56L7FZ85','p1of3t','2023','11');
 call siebel.jet_tebloy_etl.generate_trans_doc_csv_stand_by('10.11.2023 21:00:00','20.11.2023 20:59:59','1-56L7FZ85','p2of3t','2023','11');
 call siebel.jet_tebloy_etl.generate_trans_doc_csv_stand_by('20.11.2023 21:00:00','30.11.2023 21:00:00','1-56L7FZ85','p3of3t','2023','11');
+
+
 Вызов ежемесячного запроса по сгоревшим баллам

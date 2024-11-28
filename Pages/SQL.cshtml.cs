@@ -23,6 +23,10 @@ public class SQLModel : PageModel
           var task = Task.Run(async () => await SQL_Utilities.getCopyTable());
           task.Wait();
           Message = task.Result;
+       }else if(sql.Equals("rep_generation")){
+         var task = Task.Run(async () => await SQL_Utilities.getReportGeneration());
+         task.Wait();
+         Message = task.Result;
        }
     }
 }
