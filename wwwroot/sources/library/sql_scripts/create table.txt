@@ -4,3 +4,31 @@ TYPE VARCHAR(30 CHAR)
 );
 COMMIT;
 grant select,insert,update,delete on SIEBEL./ТАБЛИЦА/ to SSE_ROLE;
+COMMIT;
+--- Индекс и тейбл спейс
+tablespace DATA01
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  )
+nologging;
+-- Create/Recreate indexes 
+create index S_ORDER_F1 on S_ORDER (ACCNT_ID)
+  tablespace INDEX01
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  )
+  nologging;
