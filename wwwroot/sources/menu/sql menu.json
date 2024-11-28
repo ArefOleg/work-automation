@@ -1,5 +1,5 @@
 [{"menuName":"Скрипты из задач","menuURL":"/SQL?sql=taskScripts","menuType":"mainMenu"},
-{"menuName":"Простые запросы","menuURL":"/SQL?sql=sampleScripts","menuType":"mainMenu"},
+{"menuName":"Простые запросы","menuURL":"?menu=simple_sql","menuType":"mainMenu"},
 {"menuName":"Копирование таблицы","menuURL":"/SQL?sql=copyTable","menuType":"mainMenu"},
 {"menuName":"Создать таблицу","menuURL":"/SQL?sql=createTable","menuType":"mainMenu"},
 {"menuName":"Отбор даты","menuURL":"/SQL?sql=getDate","menuType":"mainMenu"},
