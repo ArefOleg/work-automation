@@ -8,3 +8,9 @@ call siebel.jet_tebloy_etl.generate_trans_doc_csv_stand_by('20.11.2023 21:00:00'
 Вызов ежемесячного запроса по сгоревшим баллам
 
 call siebel.jet_tebloy_etl.expired_report('01.09.2024 20:00:00','30.11.2024 21:00:00', '1-VTK3JY', '1-VVPYNK', '1-P80ZI9', 2024, 11)
+
+Запись чека в таблицу
+call siebel.jet_tebloy_etl.insert_record_in_teb_order_rep('RRN')
+
+Обновление чека в таблице
+call siebel.jet_tebloy_etl.cancel_record_in_teb_order_rep('RRN', '700381316871233')
