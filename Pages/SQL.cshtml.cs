@@ -29,4 +29,9 @@ public class SQLModel : PageModel
          Message = task.Result;
        }
     }
+
+    public void OnPost(string? sql, string? date){
+      sqlService = sql;
+      Message = SQL_Utilities.getSMACheck(date);
+    }
 }
