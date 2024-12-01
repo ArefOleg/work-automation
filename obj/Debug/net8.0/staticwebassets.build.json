@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qlsbfFohob4AbSq9cDOX4ETHIUg1uUwaBIQnA/hggT4=",
+  "Hash": "usiXY8c0tyKrtEEaoP/yG3Zlf1sf53BAEJT3AKpfsLI=",
   "Source": "work automation",
   "BasePath": "_content/work automation",
   "Mode": "Default",
@@ -1516,6 +1516,44 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/sources/menu/xml.xml"
+    },
+    {
+      "Identity": "/media/oleg/USB-FLESH-N/work-automation/wwwroot/task/Пустой документ",
+      "SourceId": "work automation",
+      "SourceType": "Discovered",
+      "ContentRoot": "/media/oleg/USB-FLESH-N/work-automation/wwwroot/",
+      "BasePath": "_content/work automation",
+      "RelativePath": "task/Пустой документ",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/task/Пустой документ"
+    },
+    {
+      "Identity": "/media/oleg/USB-FLESH-N/work-automation/wwwroot/task/Пустой документ (копия)",
+      "SourceId": "work automation",
+      "SourceType": "Discovered",
+      "ContentRoot": "/media/oleg/USB-FLESH-N/work-automation/wwwroot/",
+      "BasePath": "_content/work automation",
+      "RelativePath": "task/Пустой документ (копия)",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/task/Пустой документ (копия)"
     }
   ]
 }
