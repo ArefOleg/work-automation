@@ -23,7 +23,7 @@ public class InfoModel : PageModel
           task.Wait();
           Message = task.Result;  
        }else if(about.Equals("tns")){
-          Message = ""; 
+          Message = AboutEx.About.tnsInfo(); 
        }
     }
     public void OnPost(){

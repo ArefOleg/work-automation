@@ -35,4 +35,9 @@ public static class About{
         return about;
     }
 
+    public static string tnsInfo(){
+        string output = "В PL SQL открыть SupportInfo";
+        return output;
+    }
+
 }
