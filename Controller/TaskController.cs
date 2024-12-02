@@ -9,6 +9,13 @@ public class TaskEntityController{
             db.SaveChanges();
         }
     }
+    public List<TaskEntity> getTaskEntities(){
+        var entities = new List<TaskEntity>();
+        using(ApplicationContext db = new ApplicationContext()){
+            entities = (from entity in db.taskEntities select entity).ToList();
+        }
+        return entities;
+    }
     public void createTaskObject(){
 
     }
