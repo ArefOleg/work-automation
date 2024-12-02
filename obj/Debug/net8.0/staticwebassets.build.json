@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "PIwns1V9xpEp408ie3l10InMXWwqLd1A8UvqZfBO2FY=",
+  "Hash": "67nnALpVeLjCjPWgjK555FAROf9GFjjA6lrKj8bDnqQ=",
   "Source": "work automation",
   "BasePath": "_content/work automation",
   "Mode": "Default",
@@ -1212,6 +1212,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\ov.arefev\\Documents\\Arena\\work automation\\wwwroot\\sources\\db\\prod.db",
+      "SourceId": "work automation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ov.arefev\\Documents\\Arena\\work automation\\wwwroot\\",
+      "BasePath": "_content/work automation",
+      "RelativePath": "sources/db/prod.db",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\sources\\db\\prod.db"
     },
     {
       "Identity": "C:\\Users\\ov.arefev\\Documents\\Arena\\work automation\\wwwroot\\sources\\library\\ADM.txt",

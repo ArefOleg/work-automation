@@ -249,6 +249,10 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "C:\\Users\\ov.arefev\\Documents\\Arena\\work automation\\wwwroot\\sources\\db\\prod.db",
+      "PackagePath": "staticwebassets\\sources\\db\\prod.db"
+    },
+    {
       "Id": "C:\\Users\\ov.arefev\\Documents\\Arena\\work automation\\wwwroot\\sources\\library\\ADM.txt",
       "PackagePath": "staticwebassets\\sources\\library\\ADM.txt"
     },

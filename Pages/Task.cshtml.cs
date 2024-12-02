@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Work_Menu;
 
+
 namespace work_automation.Pages;
 
 public class TaskModel : PageModel
@@ -11,5 +12,7 @@ public class TaskModel : PageModel
     public void OnGet()
     {
         taskCount = Directory.GetFiles("wwwroot/task", "*", SearchOption.TopDirectoryOnly).Length;
+        TaskEntityController taskEntityController = new TaskEntityController();
+        taskEntityController.createTaskEntity("TASK-01", "Отладка чего то там");
     }
 }
