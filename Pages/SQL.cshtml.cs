@@ -31,6 +31,11 @@ public class SQLModel : PageModel
        else if(sql.Equals("getDate")){         
          Message = SQL_Utilities.toDate();
        }
+       else if(sql.Equals("createUser")){
+         var task = Task.Run(async () => await SQL_Utilities.userCreation());
+         task.Wait();
+         Message = task.Result;
+       }
     }
 
     public void OnPost(string? sql, string? date){

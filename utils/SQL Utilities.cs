@@ -60,6 +60,18 @@ public static class SQL_Utilities{
         return about;
     }
 
+    public static async Task <string> userCreation(){
+        string output = "";
+        using(FileStream fs = new 
+        FileStream("wwwroot/sources/library/sql_scripts/create user.txt",
+        FileMode.OpenOrCreate)){
+            byte [] buffer = new byte[fs.Length];
+            await fs.ReadAsync(buffer, 0, buffer.Length);
+            output = Encoding.Default.GetString(buffer);
+        }
+        return output;
+    }
+
     public static string toDate(){
         string output = "TO_DATE('2024/10/17 12:00:00', 'yyyy/mm/dd HH24:MI:SS')";
         return output;

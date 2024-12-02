@@ -1,4 +1,5 @@
 [{"menuName":"Вызовы процедур по генерации отчетов","menuURL":"/SQL?sql=rep_generation","menuType":"mainMenu"},
 {"menuName":"Лог по процессингу","menuURL":"/SQL?sql=get_eai_proc_log","menuType":"mainMenu"},
 {"menuName":"Лог по eai_anon","menuURL":"/SQL?sql=get_eai_anon_log","menuType":"mainMenu"},
-{"menuName":"Проверка перед СМА","menuURL":"/SQL?sql=sma_check","menuType":"mainMenu"}]
+{"menuName":"Проверка перед СМА","menuURL":"/SQL?sql=sma_check","menuType":"mainMenu"},
+{"menuName":"Создать пользователя","menuURL":"/SQL?sql=createUser","menuType":"mainMenu"}]
