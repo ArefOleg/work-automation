@@ -1,9 +1,13 @@
 using Microsoft.Data.Sqlite;
+using Microsoft.EntityFrameworkCore;
 
-class BDConnection{
-    public BDConnection(){
-        using (var connection = new SqliteConnection("Data Source=task.db")){
-            connection.Open();
-        }
-    }
+public class ApplicationContext : DbContext {
+    public DbSet<TaskEntity> taskEntities {get; set;} = null;
+    public DbSet<TaskObject> taskObjects {get; set;} = null;
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        optionsBuilder.UseSqlite("Data Source=helloapp.db");
+    }    
 }
+
+
