@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "C:\\Users\\ov.arefev\\Documents\\Arena\\work automation\\wwwroot\\css\\task.css",
+      "PackagePath": "staticwebassets\\css\\task.css"
+    },
+    {
       "Id": "C:\\Users\\ov.arefev\\Documents\\Arena\\work automation\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
@@ -269,8 +273,16 @@
       "PackagePath": "staticwebassets\\sources\\library\\sql_scripts\\create table.txt"
     },
     {
+      "Id": "C:\\Users\\ov.arefev\\Documents\\Arena\\work automation\\wwwroot\\sources\\library\\sql_scripts\\create user.txt",
+      "PackagePath": "staticwebassets\\sources\\library\\sql_scripts\\create user.txt"
+    },
+    {
       "Id": "C:\\Users\\ov.arefev\\Documents\\Arena\\work automation\\wwwroot\\sources\\library\\sql_scripts\\task_scripts\\call mounth report.txt",
       "PackagePath": "staticwebassets\\sources\\library\\sql_scripts\\task_scripts\\call mounth report.txt"
+    },
+    {
+      "Id": "C:\\Users\\ov.arefev\\Documents\\Arena\\work automation\\wwwroot\\sources\\library\\sql_scripts\\task_scripts\\tmp.sql",
+      "PackagePath": "staticwebassets\\sources\\library\\sql_scripts\\task_scripts\\tmp.sql"
     },
     {
       "Id": "C:\\Users\\ov.arefev\\Documents\\Arena\\work automation\\wwwroot\\sources\\menu\\eai menu.json",
@@ -313,19 +325,15 @@
       "PackagePath": "staticwebassets\\sources\\menu\\xml.xml"
     },
     {
-<<<<<<< HEAD
+      "Id": "C:\\Users\\ov.arefev\\Documents\\Arena\\work automation\\wwwroot\\task\\Пустой документ",
+      "PackagePath": "staticwebassets\\task"
+    },
+    {
+      "Id": "C:\\Users\\ov.arefev\\Documents\\Arena\\work automation\\wwwroot\\task\\Пустой документ (копия)",
+      "PackagePath": "staticwebassets\\task"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.work automation.props",
-=======
-      "Id": "/media/oleg/USB-FLESH-N/work-automation/wwwroot/task/Пустой документ",
-      "PackagePath": "staticwebassets/task"
-    },
-    {
-      "Id": "/media/oleg/USB-FLESH-N/work-automation/wwwroot/task/Пустой документ (копия)",
-      "PackagePath": "staticwebassets/task"
-    },
-    {
-      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.work automation.props",
->>>>>>> 5d25319f10ecfde18303b513755688f9a126aed1
       "PackagePath": "build\\work automation.props"
     },
     {

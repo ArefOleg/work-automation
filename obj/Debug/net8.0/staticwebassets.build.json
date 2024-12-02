@@ -1,10 +1,6 @@
 {
   "Version": 1,
-<<<<<<< HEAD
-  "Hash": "7G0rfp0idaf9szAgifokiNXqUP2RDXtJNx2EqvVhNJs=",
-=======
-  "Hash": "usiXY8c0tyKrtEEaoP/yG3Zlf1sf53BAEJT3AKpfsLI=",
->>>>>>> 5d25319f10ecfde18303b513755688f9a126aed1
+  "Hash": "PIwns1V9xpEp408ie3l10InMXWwqLd1A8UvqZfBO2FY=",
   "Source": "work automation",
   "BasePath": "_content/work automation",
   "Mode": "Default",
@@ -76,6 +72,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\ov.arefev\\Documents\\Arena\\work automation\\wwwroot\\css\\task.css",
+      "SourceId": "work automation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ov.arefev\\Documents\\Arena\\work automation\\wwwroot\\",
+      "BasePath": "_content/work automation",
+      "RelativePath": "css/task.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\task.css"
     },
     {
       "Identity": "C:\\Users\\ov.arefev\\Documents\\Arena\\work automation\\wwwroot\\favicon.ico",
@@ -1294,6 +1309,25 @@
       "OriginalItemSpec": "wwwroot\\sources\\library\\sql_scripts\\create table.txt"
     },
     {
+      "Identity": "C:\\Users\\ov.arefev\\Documents\\Arena\\work automation\\wwwroot\\sources\\library\\sql_scripts\\create user.txt",
+      "SourceId": "work automation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ov.arefev\\Documents\\Arena\\work automation\\wwwroot\\",
+      "BasePath": "_content/work automation",
+      "RelativePath": "sources/library/sql_scripts/create user.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\sources\\library\\sql_scripts\\create user.txt"
+    },
+    {
       "Identity": "C:\\Users\\ov.arefev\\Documents\\Arena\\work automation\\wwwroot\\sources\\library\\sql_scripts\\Declare.txt",
       "SourceId": "work automation",
       "SourceType": "Discovered",
@@ -1330,6 +1364,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\sources\\library\\sql_scripts\\task_scripts\\call mounth report.txt"
+    },
+    {
+      "Identity": "C:\\Users\\ov.arefev\\Documents\\Arena\\work automation\\wwwroot\\sources\\library\\sql_scripts\\task_scripts\\tmp.sql",
+      "SourceId": "work automation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ov.arefev\\Documents\\Arena\\work automation\\wwwroot\\",
+      "BasePath": "_content/work automation",
+      "RelativePath": "sources/library/sql_scripts/task_scripts/tmp.sql",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\sources\\library\\sql_scripts\\task_scripts\\tmp.sql"
     },
     {
       "Identity": "C:\\Users\\ov.arefev\\Documents\\Arena\\work automation\\wwwroot\\sources\\menu\\eai menu.json",
@@ -1519,16 +1572,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-<<<<<<< HEAD
       "OriginalItemSpec": "wwwroot\\sources\\menu\\xml.xml"
-=======
-      "OriginalItemSpec": "wwwroot/sources/menu/xml.xml"
     },
     {
-      "Identity": "/media/oleg/USB-FLESH-N/work-automation/wwwroot/task/Пустой документ",
+      "Identity": "C:\\Users\\ov.arefev\\Documents\\Arena\\work automation\\wwwroot\\task\\Пустой документ",
       "SourceId": "work automation",
       "SourceType": "Discovered",
-      "ContentRoot": "/media/oleg/USB-FLESH-N/work-automation/wwwroot/",
+      "ContentRoot": "C:\\Users\\ov.arefev\\Documents\\Arena\\work automation\\wwwroot\\",
       "BasePath": "_content/work automation",
       "RelativePath": "task/Пустой документ",
       "AssetKind": "All",
@@ -1541,13 +1591,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/task/Пустой документ"
+      "OriginalItemSpec": "wwwroot\\task\\Пустой документ"
     },
     {
-      "Identity": "/media/oleg/USB-FLESH-N/work-automation/wwwroot/task/Пустой документ (копия)",
+      "Identity": "C:\\Users\\ov.arefev\\Documents\\Arena\\work automation\\wwwroot\\task\\Пустой документ (копия)",
       "SourceId": "work automation",
       "SourceType": "Discovered",
-      "ContentRoot": "/media/oleg/USB-FLESH-N/work-automation/wwwroot/",
+      "ContentRoot": "C:\\Users\\ov.arefev\\Documents\\Arena\\work automation\\wwwroot\\",
       "BasePath": "_content/work automation",
       "RelativePath": "task/Пустой документ (копия)",
       "AssetKind": "All",
@@ -1560,8 +1610,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/task/Пустой документ (копия)"
->>>>>>> 5d25319f10ecfde18303b513755688f9a126aed1
+      "OriginalItemSpec": "wwwroot\\task\\Пустой документ (копия)"
     }
   ]
 }
