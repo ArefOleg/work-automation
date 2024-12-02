@@ -9,8 +9,7 @@ public class TaskModel : PageModel
     
     
     public void OnGet()
-    {       
-        //System.IO.Directory directory = GetMyDirectoryForTheExample();
+    {
         taskCount = Directory.GetFiles("wwwroot/task", "*", SearchOption.TopDirectoryOnly).Length;
     }
 }
