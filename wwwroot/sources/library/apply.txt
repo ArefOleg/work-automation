@@ -1,0 +1,3 @@
+Table space DATA01
+Index space INDEX01
+SIEBEL/WseJ3oid

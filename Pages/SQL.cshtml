@@ -5,3 +5,14 @@
 }
 
 <h4 style="white-space: pre-line">@Model.Message</h4>
+@if(@Model.sqlService.Equals("sma_check")){
+    <form method="post">
+    <p>
+        <label>Введите дату в формате yyyy/mm/dd HH24:MI:SS, например 2024/10/17 12:00:00</label><br />
+        <input type="text" name="date" />
+    </p>       
+
+    <input type="hidden" name="Action"/>
+    <input type="submit" value="Отправить" />
+    </form>
+}

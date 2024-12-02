@@ -313,7 +313,19 @@
       "PackagePath": "staticwebassets\\sources\\menu\\xml.xml"
     },
     {
+<<<<<<< HEAD
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.work automation.props",
+=======
+      "Id": "/media/oleg/USB-FLESH-N/work-automation/wwwroot/task/Пустой документ",
+      "PackagePath": "staticwebassets/task"
+    },
+    {
+      "Id": "/media/oleg/USB-FLESH-N/work-automation/wwwroot/task/Пустой документ (копия)",
+      "PackagePath": "staticwebassets/task"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.work automation.props",
+>>>>>>> 5d25319f10ecfde18303b513755688f9a126aed1
       "PackagePath": "build\\work automation.props"
     },
     {

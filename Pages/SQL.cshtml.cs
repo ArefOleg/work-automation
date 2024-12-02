@@ -28,5 +28,13 @@ public class SQLModel : PageModel
          task.Wait();
          Message = task.Result;
        }
+       else if(sql.Equals("getDate")){         
+         Message = SQL_Utilities.toDate();
+       }
+    }
+
+    public void OnPost(string? sql, string? date){
+      sqlService = sql;
+      Message = SQL_Utilities.getSMACheck(date);
     }
 }
