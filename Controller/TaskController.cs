@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using TaskEntitys;
 public class TaskEntityController{
     public void createTaskEntity(string name, string about){        
@@ -15,6 +16,11 @@ public class TaskEntityController{
             entities = (from entity in db.taskEntities select entity).ToList();
         }
         return entities;
+    }
+    public void deleteTaskEntity(int Id){
+        using(ApplicationContext db = new ApplicationContext()){
+            db.taskEntities.Where(p => p.Id == Id).ExecuteDelete();
+        }
     }
     public void createTaskObject(){
 

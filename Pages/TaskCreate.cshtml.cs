@@ -13,8 +13,9 @@ public class TaskCreateModel : PageModel
     {
         
     }
-    public void OnPost(string name, string about){
+    public IActionResult OnPost(string name, string about){
         TaskEntityController taskEntityController = new TaskEntityController();
         taskEntityController.createTaskEntity(name, about);
+        return RedirectToPage("/Task");
     }
 }
