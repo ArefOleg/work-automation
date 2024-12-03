@@ -1,0 +1,18 @@
+@page
+@model TaskCreateModel
+@{
+        
+}
+<form method="post">
+    <p>
+        <label>Задача</label><br />
+        <input type="text" name="name" />
+    </p> 
+    <p>
+        <label>Описание</label><br />
+        <input type="text" name="about" />
+    </p>      
+
+    <input type="hidden" name="Action"/>
+    <input type="submit" value="Отправить" />
+    </form>

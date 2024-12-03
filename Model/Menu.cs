@@ -37,6 +37,7 @@ public class Menu{
         menusStack.Clear();
         readJSONMenu("wwwroot/sources/menu/svrmgr.json");
     }
+    
 
 }
 
