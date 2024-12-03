@@ -31,8 +31,13 @@ public class TaskEntityController{
         }
         return taskEntity;
     }
-    public void createTaskObject(){
-
+    public void createTaskObject(TaskEntity taskEntity, string type, string name, string about){
+        using (ApplicationContext db = new ApplicationContext()){            
+            TaskObject taskObject = new TaskObject { name = name, about = about,
+             type = type, TaskEntity = taskEntity};            
+            db.taskEntities.AddRange(taskEntity);
+            db.SaveChanges();
+        }
     }
 
     

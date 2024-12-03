@@ -7,18 +7,22 @@ namespace work_automation.Pages;
 
 public class TaskEntityObjectCreateModel : PageModel
 {   public TaskObject taskObject{get; set;}
-    
-    public void OnGet(int id)
-    {
+    public taskEntityId{get; set;}
+    public TaskEntity taskEntity{get; set;}
+    public void OnGet(int taskEntityIdInput, int? id)
+    {   TaskEntityController taskEntityController = new TaskEntityController();
+        taskEntityId = taskEntityIdInput;
         if(id != null){
             // обновить
-        }        
+        }
+        
     }
 
-    public void OnPost(){
+    public void OnPost(string TaskEntityId, string about, string name, string type){
         TaskEntityController taskEntityController = new TaskEntityController();
-        taskEntityController.createTaskEntity(name, about);
-        return RedirectToPage("/Task");
+        taskEntity = taskEntityController.getTaskEntityById(TaskEntityId);
+        taskEntityController.createTaskObject(taskEntity, type, name, about);
+        return RedirectToPage("/TaskEntitySingleRecord?");
     }
     
 }

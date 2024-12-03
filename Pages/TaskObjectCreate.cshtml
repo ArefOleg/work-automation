@@ -1,0 +1,26 @@
+@page
+@model TaskObjectCreateModel
+@{
+        
+}
+
+<form method="post">
+    <p>
+        <label>Тип файла</label><br />
+        <select name = "type">
+            <option value="">Выберите объект</option>
+            <option value="1">Applet</option>
+        </select>
+    </p> 
+    <p>
+        <label>Название объекта</label><br />
+        <input type="text" name="name" />
+    </p>
+    <p>
+        <label>Какие были правки</label><br />
+        <input type="text" name="about" />
+    </p>       
+
+    <input type="hidden" name="TaskEntityId" value ="@Model.taskEntityId"/>
+    <input type="submit" value="Отправить" />
+    </form>
