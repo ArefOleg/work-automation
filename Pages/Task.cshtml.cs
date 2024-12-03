@@ -7,14 +7,14 @@ namespace work_automation.Pages;
 
 public class TaskModel : PageModel
 {   public int taskCount{get; set;}
-    
+    public List<TaskEntity> taskEntities{get; set;}
     
     public void OnGet()
     {
         taskCount = Directory.GetFiles("wwwroot/task", "*", SearchOption.TopDirectoryOnly).Length;
         TaskEntityController taskEntityController = new TaskEntityController();
-        List<TaskEntity> special = taskEntityController.getTaskEntities();
-        foreach (TaskEntity taskon in special){
+        taskEntities = taskEntityController.getTaskEntities();
+        foreach (TaskEntity taskon in taskEntities){
             Console.WriteLine(taskon.name);
         }
     }
