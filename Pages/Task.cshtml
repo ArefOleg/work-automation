@@ -3,5 +3,9 @@
 @{
         
 }
+<a href="TaskCreate"><img src="plus button.jpg" height="40px" width="40px" /></a>
 
-<h1>@Model.taskCount</h1>
+@foreach(var taskEntity in @Model.taskEntities){
+    <h5>@taskEntity.name</h5>
+    <h5>@taskEntity.about</h5>
+}

@@ -11,11 +11,7 @@ public class TaskModel : PageModel
     
     public void OnGet()
     {
-        taskCount = Directory.GetFiles("wwwroot/task", "*", SearchOption.TopDirectoryOnly).Length;
         TaskEntityController taskEntityController = new TaskEntityController();
-        taskEntities = taskEntityController.getTaskEntities();
-        foreach (TaskEntity taskon in taskEntities){
-            Console.WriteLine(taskon.name);
-        }
+        taskEntities = taskEntityController.getTaskEntities();        
     }
 }
