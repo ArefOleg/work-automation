@@ -6,9 +6,12 @@
 <a href="TaskCreate"><img src="img/plus button.jpg" height="40px" width="40px" /></a>
 
 @foreach(var taskEntity in @Model.taskEntities){
+    
     <div>
+        <a href="TaskEntitySingleRecord?Id=@taskEntity.Id">
         <h5>@taskEntity.name</h5>
         <h5>@taskEntity.about</h5>
+        </a>
         <a href="Task?deleteId=@taskEntity.Id">
             <img src="img/red minus button.png" height="40px" width="40px" />
             </a>

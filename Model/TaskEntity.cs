@@ -4,7 +4,7 @@ public class TaskEntity{
     public DateTime created{get; set;}
     public string name{get; set;}
     public string? about{get; set;}
-    public List<TaskObject> taskObject{get; set;} = new();  
+    public List<TaskObject> TaskObject{get; set;} = new();  
 
 }
 
@@ -13,11 +13,7 @@ public class TaskObject{
     public string name{get; set;}
     public string type{get; set;}
     public string about{get; set;}
-    public int taskId{get; set;}
+    public int TaskEntityId{get; set;}
     public TaskEntity? TaskEntity {get; set;}
-    /*public TaskObject(string name, string type, string about){
-        this.name = name;
-        this.type = type;
-        this.about = about;
-    }*/
+    
 }

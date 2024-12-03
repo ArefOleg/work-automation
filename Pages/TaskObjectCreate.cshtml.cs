@@ -5,9 +5,9 @@ using TaskEntitys;
 
 namespace work_automation.Pages;
 
-public class TaskEntityObjectCreateModel : PageModel
+public class TaskObjectCreateModel : PageModel
 {   public TaskObject taskObject{get; set;}
-    public taskEntityId{get; set;}
+    public int taskEntityId{get; set;}
     public TaskEntity taskEntity{get; set;}
     public void OnGet(int taskEntityIdInput, int? id)
     {   TaskEntityController taskEntityController = new TaskEntityController();
@@ -18,11 +18,11 @@ public class TaskEntityObjectCreateModel : PageModel
         
     }
 
-    public void OnPost(string TaskEntityId, string about, string name, string type){
+    public IActionResult OnPost(int TaskEntityIdPost, string about, string name, string type){
         TaskEntityController taskEntityController = new TaskEntityController();
-        taskEntity = taskEntityController.getTaskEntityById(TaskEntityId);
+        taskEntity = taskEntityController.getTaskEntityById(TaskEntityIdPost);
         taskEntityController.createTaskObject(taskEntity, type, name, about);
-        return RedirectToPage("/TaskEntitySingleRecord?");
+        return RedirectToPage("/TaskEntitySingleRecord?Id="+TaskEntityIdPost);
     }
     
 }
