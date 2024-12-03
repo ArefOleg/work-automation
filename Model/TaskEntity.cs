@@ -4,8 +4,7 @@ public class TaskEntity{
     public DateTime created{get; set;}
     public string name{get; set;}
     public string? about{get; set;}
-    public List<TaskObject> taskObject{get; set;} = new();
-   
+    public List<TaskObject> taskObject{get; set;} = new();  
 
 }
 

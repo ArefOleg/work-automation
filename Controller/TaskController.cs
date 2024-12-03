@@ -23,6 +23,14 @@ public class TaskEntityController{
             db.taskEntities.Where(p => p.Id == Id).ExecuteDelete();
         }
     }
+
+    public TaskEntity getTaskEntityById(int Id){
+        TaskEntity taskEntity;
+        using(ApplicationContext db = new ApplicationContext()){
+            taskEntity = db.taskEntities.Find(Id);
+        }
+        return taskEntity;
+    }
     public void createTaskObject(){
 
     }
