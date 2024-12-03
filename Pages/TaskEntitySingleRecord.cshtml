@@ -1,0 +1,20 @@
+@page
+@model TaskEntitySingleRecordModel
+@{
+        
+}
+<label>Название задачи</label><br />
+<h5>@Model.taskEntity.name</h5>
+<br>
+<label>Описание</label><br />
+<h5>@Model.taskEntity.about</h5>
+@foreach(var taskEntityObject in @Model.taskEntity.taskObject){
+    <div>
+        <h5>@taskEntityObject.name</h5>
+        <h5>@taskEntityObject.about</h5>
+        <a href="TaskObject?deleteId=@taskEntityObject.Id">
+            <img src="img/red minus button.png" height="40px" width="40px" />
+            </a>
+    </div>    
+    
+}
