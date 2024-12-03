@@ -2,20 +2,20 @@ using Microsoft.EntityFrameworkCore;
 using TaskEntitys;
 public class TaskEntityController{
     public void createTaskEntity(string name, string about){        
-        using (ApplicationContext db = new ApplicationContext()){
-            db.Database.EnsureDeleted();
-            db.Database.EnsureCreated();
+        using (ApplicationContext db = new ApplicationContext()){            
             TaskEntity taskEntity = new TaskEntity { name = name, about = about, created = DateTime.Now};
             db.taskEntities.AddRange(taskEntity);
             db.SaveChanges();
         }
     }
-    public List<TaskEntity> getTaskEntities(){
+    public List<TaskEntity> getTaskEntities(){        
         var entities = new List<TaskEntity>();
         using(ApplicationContext db = new ApplicationContext()){
+            //db.Database.EnsureDeleted();
+            //db.Database.EnsureCreated();
             entities = (from entity in db.taskEntities select entity).ToList();            
         }
-        entities = entities.OrderBy(e=>e.created).ToList();
+        entities = entities.OrderByDescending(e=>e.created).ToList();
         return entities;
     }
     public void deleteTaskEntity(int Id){
