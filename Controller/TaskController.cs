@@ -3,9 +3,9 @@ using TaskEntitys;
 public class TaskEntityController{
     public void createTaskEntity(string name, string about){        
         using (ApplicationContext db = new ApplicationContext()){
-            //db.Database.EnsureDeleted();
-            //db.Database.EnsureCreated();
-            TaskEntity taskEntity = new TaskEntity { name = name, about = about};
+            db.Database.EnsureDeleted();
+            db.Database.EnsureCreated();
+            TaskEntity taskEntity = new TaskEntity { name = name, about = about, created = DateTime.Now};
             db.taskEntities.AddRange(taskEntity);
             db.SaveChanges();
         }
@@ -13,8 +13,9 @@ public class TaskEntityController{
     public List<TaskEntity> getTaskEntities(){
         var entities = new List<TaskEntity>();
         using(ApplicationContext db = new ApplicationContext()){
-            entities = (from entity in db.taskEntities select entity).ToList();
+            entities = (from entity in db.taskEntities select entity).ToList();            
         }
+        entities = entities.OrderBy(e=>e.created).ToList();
         return entities;
     }
     public void deleteTaskEntity(int Id){
