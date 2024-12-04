@@ -9,11 +9,13 @@ public class TaskCreateModel : PageModel
 {   public TaskEntity taskEntity{get; set;}
     public string Action {get; set;}
     
-    public void OnGet(TaskEntity? taskEntityInput)
-    {
-        taskEntity = taskEntityInput;
-        if(taskEntity != null){
+    public void OnGet(int? TaskEntityId)
+    {   
+        TaskEntityController taskEntityController = new TaskEntityController();
+        
+        if(TaskEntityId != null){
             Action = "update";
+            taskEntity = taskEntityController.getTaskEntityById((int)TaskEntityId);
         }
     }
     public IActionResult OnPost(string name, string about, string Action, int id){
