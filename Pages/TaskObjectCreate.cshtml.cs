@@ -22,7 +22,7 @@ public class TaskObjectCreateModel : PageModel
         TaskEntityController taskEntityController = new TaskEntityController();
         taskEntity = taskEntityController.getTaskEntityById(TaskEntityIdPost);
         taskEntityController.createTaskObject(taskEntity, type, name, about);
-        return RedirectToPage("/TaskEntitySingleRecord?Id="+TaskEntityIdPost);
+        return new RedirectToPageResult("/TaskEntitySingleRecord?Id="+TaskEntityIdPost);
     }
     
 }
