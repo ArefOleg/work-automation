@@ -73,7 +73,7 @@ public class TaskEntityController{
         return taskObject;
     }
 
-    public void updateTaskObject(string name, string about, string type, int id){
+    public void updateTaskObject(string name, string about, string? type, int id){
         using(ApplicationContext db = new ApplicationContext()){
             db.taskObjects.Where(te=>te.Id == id).
             ExecuteUpdate(te=>te.SetProperty(t=>t.name, t => name)

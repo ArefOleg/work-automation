@@ -22,10 +22,10 @@ public class TaskObjectCreateModel : PageModel
     }
 
     public IActionResult OnPost(int TaskEntityIdPost, string about, string name, string type,
-    string? Action, int? TaskObjectIdPost){
+    string? ActionInput, int? TaskObjectIdPost){
         TaskEntityController taskEntityController = new TaskEntityController();
         taskEntity = taskEntityController.getTaskEntityById(TaskEntityIdPost);
-        if(Action.Equals("update")){
+        if(ActionInput.Equals("update")){
             taskEntityController.updateTaskObject(name, about, type, (int)TaskObjectIdPost);
         }else{
             taskEntityController.createTaskObject(taskEntity, type, name, about);
