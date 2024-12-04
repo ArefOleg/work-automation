@@ -11,8 +11,8 @@ public class TaskEntityController{
     public List<TaskEntity> getTaskEntities(){        
         var entities = new List<TaskEntity>();
         using(ApplicationContext db = new ApplicationContext()){
-            //db.Database.EnsureDeleted();
-            //db.Database.EnsureCreated();
+           // db.Database.EnsureDeleted();
+           // db.Database.EnsureCreated();
             entities = (from entity in db.taskEntities select entity).ToList();            
         }
         entities = entities.OrderByDescending(e=>e.created).ToList();
@@ -28,17 +28,26 @@ public class TaskEntityController{
         TaskEntity taskEntity;
         using(ApplicationContext db = new ApplicationContext()){
             taskEntity = db.taskEntities.Find(Id);
+            taskEntity.TaskObject =  getTaskObjetctsByEntityId(Id);    
         }
         return taskEntity;
     }
     public void createTaskObject(TaskEntity taskEntity, string type, string name, string about){
         using (ApplicationContext db = new ApplicationContext()){            
             TaskObject taskObject = new TaskObject { name = name, about = about,
-             type = type, TaskEntity = taskEntity};       
+             type = type, TaskEntityId = taskEntity.Id};       
             db.taskObjects.AddRange(taskObject);
             db.SaveChanges();
         }
     }
 
-    
+    public List<TaskObject> getTaskObjetctsByEntityId(int taskEntityId){
+        List<TaskObject> taskObjects;
+        using(ApplicationContext db = new ApplicationContext()){
+            taskObjects = (from entityObject in db.taskObjects
+             where entityObject.TaskEntityId == taskEntityId
+             select entityObject).ToList();  
+        }
+        return taskObjects;
+    }
 }
