@@ -50,4 +50,10 @@ public class TaskEntityController{
         }
         return taskObjects;
     }
+
+    public void deleteTaskObject(int Id){
+        using(ApplicationContext db = new ApplicationContext()){
+            db.taskObjects.Where(p => p.Id == Id).ExecuteDelete();
+        }
+    }
 }

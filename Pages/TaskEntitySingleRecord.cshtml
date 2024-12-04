@@ -15,7 +15,7 @@
     <div>
         <h5>@taskEntityObject.type: @taskEntityObject.name</h5>
         <h5>@taskEntityObject.about</h5>
-        <a href="TaskObject?deleteId=@taskEntityObject.Id">
+        <a href="TaskEntitySingleRecord?id=@Model.taskEntity.Id&deleteTaskObjectById=@taskEntityObject.Id">
             <img src="img/red minus button.png" height="40px" width="40px" />
             </a>
     </div>    
