@@ -13,10 +13,11 @@ public class TaskObjectCreateModel : PageModel
     public void OnGet(int taskEntityIdInput, int? id)
     {   TaskEntityController taskEntityController = new TaskEntityController();
         taskEntityId = taskEntityIdInput;
+        
         if(id != null){
             Action = "update";
             taskObject = taskEntityController.getTaskObjectById((int)id);
-        }
+        } else Action = "insert";
         
     }
 
