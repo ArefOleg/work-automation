@@ -32,6 +32,14 @@ public class TaskEntityController{
         }
         return taskEntity;
     }
+
+    public void updateTaskEntity(string name, string about, int id){
+        using(ApplicationContext db = new ApplicationContext()){
+            db.taskEntities.Where(te=>te.Id == id).
+            ExecuteUpdate(te=>te.SetProperty(t=>t.name, t => name)
+            .SetProperty(t=>t.about, t => about));
+        }
+    }
     public void createTaskObject(TaskEntity taskEntity, string type, string name, string about){
         using (ApplicationContext db = new ApplicationContext()){            
             TaskObject taskObject = new TaskObject { name = name, about = about,

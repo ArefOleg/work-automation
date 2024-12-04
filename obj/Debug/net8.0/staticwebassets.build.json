@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "f6Suu2aPd8RdKTVWlsVFAeKmVGXQ/apM0Gs8+M7yFtU=",
+  "Hash": "2TkoHR/CvvcvxIvn1RixMOarvjjXvVMB+zzQ9gGdJgY=",
   "Source": "work automation",
   "BasePath": "_content/work automation",
   "Mode": "Default",
@@ -110,6 +110,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\ov.arefev\\Documents\\Arena\\work automation\\wwwroot\\img\\edit.png",
+      "SourceId": "work automation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ov.arefev\\Documents\\Arena\\work automation\\wwwroot\\",
+      "BasePath": "_content/work automation",
+      "RelativePath": "img/edit.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\edit.png"
     },
     {
       "Identity": "C:\\Users\\ov.arefev\\Documents\\Arena\\work automation\\wwwroot\\img\\plus button.jpg",

@@ -6,16 +6,24 @@ using TaskEntitys;
 namespace work_automation.Pages;
 
 public class TaskCreateModel : PageModel
-{   
+{   public TaskEntity taskEntity{get; set;}
+    public string Action {get; set;}
     
-    
-    public void OnGet()
+    public void OnGet(TaskEntity? taskEntityInput)
     {
-        
+        taskEntity = taskEntityInput;
+        if(taskEntity != null){
+            Action = "update";
+        }
     }
-    public IActionResult OnPost(string name, string about){
+    public IActionResult OnPost(string name, string about, string Action, int id){
         TaskEntityController taskEntityController = new TaskEntityController();
-        taskEntityController.createTaskEntity(name, about);
+        if(Action.Equals("update")){
+            taskEntityController.updateTaskEntity(name, about, id);
+        } else{
+            taskEntityController.createTaskEntity(name, about);
+        }
+        
         return RedirectToPage("/Task");
     }
 }

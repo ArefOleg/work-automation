@@ -3,6 +3,25 @@
 @{
         
 }
+
+
+@if(Model.Action.Equals("update")){
+    @Model.taskEntity.name
+    <form method="post">
+    <p>
+        <label>Задача</label><br />
+        <input type="text" name="name" value="@Model.taskEntity.name" />
+    </p> 
+    <p>
+        <label>Описание</label><br />
+        <input type="text" name="about" value="@Model.taskEntity.about"/>
+    </p>      
+
+    <input type="hidden" name="Action" value="update"/>
+    <input type="hidden" name="id" value="@Model.taskEntity.Id"/>
+    <input type="submit" value="Отправить" />
+    </form>
+}else{
 <form method="post">
     <p>
         <label>Задача</label><br />
@@ -16,3 +35,4 @@
     <input type="hidden" name="Action"/>
     <input type="submit" value="Отправить" />
     </form>
+}
