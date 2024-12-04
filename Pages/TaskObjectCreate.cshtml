@@ -3,8 +3,47 @@
 @{
         
 }
+@if(Model.Action.Equals("update")){
+    <form method="post">
+    <p>
+        <label>Тип файла</label><br />
+        <select name = "type" text = "type" value="@Model.taskObject.type" >
+            <option value="">Выберите объект</option>
+            <option value="Applet">Applet</option>
+            <option value="Application">Application</option>
+            <option value="Business component">Business component</option>
+            <option value="Business object">Business object</option>
+            <option value="Business service">Business service</option>
+            <option value="Import Object">Import Object</option>
+            <option value="Integration object">Integration object</option>
+            <option value="Link">Link</option>
+            <option value="Outbound REST Web Service">Outbound REST Web Service</option>
+            <option value="Outbound  WSDL Web Service">Outbound  WSDL Web Service</option>
+            <option value="Pick List">Pick List</option>
+            <option value="Screen">Screen</option>
+            <option value="Task">Task</option>
+            <option value="Table">Table</option>
+            <option value="View">View</option>
+            <option value="Web Template">Web Template</option>
+            <option value="Workflow Policy">Workflow Policy</option>
+            <option value="Workflow Policy Program">Workflow Policy Program</option>
+            <option value="Workflow Process">Workflow Process</option>
+        </select>
+    </p> 
+    <p>
+        <label>Название объекта</label><br />
+        <input type="text" name="name" value="@Model.taskObject.name" />
+    </p>
+    <p>
+        <label>Какие были правки</label><br />
+        <input type="text" name="about" value="@Model.taskObject.about" />
+    </p>       
 
-<form method="post">
+    <input type="hidden" name="TaskObjectIdPost" value ="@Model.taskObject.Id"/>
+    <input type="submit" value="Отправить" />
+    </form>
+} else{
+    <form method="post">
     <p>
         <label>Тип файла</label><br />
         <select name = "type" text = "type" >
@@ -42,3 +81,4 @@
     <input type="hidden" name="TaskEntityIdPost" value ="@Model.taskEntityId"/>
     <input type="submit" value="Отправить" />
     </form>
+}

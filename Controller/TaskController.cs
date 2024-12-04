@@ -64,4 +64,21 @@ public class TaskEntityController{
             db.taskObjects.Where(p => p.Id == Id).ExecuteDelete();
         }
     }
+
+    public TaskObject getTaskObjectById(int Id){
+        TaskObject taskObject;
+        using(ApplicationContext db = new ApplicationContext()){
+            taskObject = db.taskObjects.Find(Id);
+        }
+        return taskObject;
+    }
+
+    public void updateTaskObject(string name, string about, string type, int id){
+        using(ApplicationContext db = new ApplicationContext()){
+            db.taskObjects.Where(te=>te.Id == id).
+            ExecuteUpdate(te=>te.SetProperty(t=>t.name, t => name)
+            .SetProperty(t=>t.about, t => about)
+            .SetProperty(t=>t.type, t => type));
+        }
+    }
 }
