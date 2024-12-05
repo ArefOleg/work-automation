@@ -16,11 +16,13 @@ public class TaskCreateModel : PageModel
         if(TaskEntityId != null){
             Action = "update";
             taskEntity = taskEntityController.getTaskEntityById((int)TaskEntityId);
+        }else{
+            Action = "insert";
         }
     }
-    public IActionResult OnPost(string name, string about, string Action, int id){
+    public IActionResult OnPost(string name, string about, string ActionInsert, int id){
         TaskEntityController taskEntityController = new TaskEntityController();
-        if(Action.Equals("update")){
+        if(ActionInsert.Equals("update")){
             taskEntityController.updateTaskEntity(name, about, id);
         } else{
             taskEntityController.createTaskEntity(name, about);
