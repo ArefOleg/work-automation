@@ -28,6 +28,7 @@
             <option value="Workflow Policy">Workflow Policy</option>
             <option value="Workflow Policy Program">Workflow Policy Program</option>
             <option value="Workflow Process">Workflow Process</option>
+            <option value="Product">Product</option>
         </select>
     </p> 
     <p>
@@ -36,7 +37,7 @@
     </p>
     <p>
         <label>Какие были правки</label><br />
-        <input type="text" name="about" value="@Model.taskObject.about" />
+        <textarea type="text" name="about" value="@Model.taskObject.about" >@Model.taskObject.about</textarea>
     </p>       
 
     <input type="hidden" name="TaskObjectIdPost" value ="@Model.taskObject.Id"/>
@@ -69,6 +70,7 @@
             <option value="Workflow Policy">Workflow Policy</option>
             <option value="Workflow Policy Program">Workflow Policy Program</option>
             <option value="Workflow Process">Workflow Process</option>
+            <option value="Product">Product</option>
         </select>
     </p> 
     <p>
@@ -77,7 +79,7 @@
     </p>
     <p>
         <label>Какие были правки</label><br />
-        <input type="text" name="about" />
+        <textarea type="text" name="about" ></textarea>
     </p>       
 
     <input type="hidden" name="TaskEntityIdPost" value ="@Model.taskEntityId"/>
