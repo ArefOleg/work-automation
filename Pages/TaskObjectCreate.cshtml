@@ -40,7 +40,8 @@
     </p>       
 
     <input type="hidden" name="TaskObjectIdPost" value ="@Model.taskObject.Id"/>
-    <input type="hidden" name="TaskEntityIdPost" value ="@Model.taskObject.TaskEntityId"/>    
+    <input type="hidden" name="TaskEntityIdPost" value ="@Model.taskObject.TaskEntityId"/>
+    <input type="hidden" name="ActionInput" value ="update"/> 
     <input type="submit" value="Отправить" />
     </form>
 } else{
@@ -80,6 +81,7 @@
     </p>       
 
     <input type="hidden" name="TaskEntityIdPost" value ="@Model.taskEntityId"/>
+    <input type="hidden" name="ActionInput" value ="insert"/> 
     <input type="submit" value="Отправить" />
     </form>
 }
