@@ -17,6 +17,11 @@
     height: 200px;
     border-top: 1px solid #18b237;
 }
+.taskName{
+    height: 35px;
+    border-bottom: 2px solid #18b237;
+    margin-bottom: 5px;
+}
 .about{
     width: 1200px;
     border: 1px solid #1d17dd
