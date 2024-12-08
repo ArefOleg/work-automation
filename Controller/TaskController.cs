@@ -41,7 +41,8 @@ public class TaskEntityController{
         }
     }
     public void createTaskObject(TaskEntity taskEntity, string type, string name, string about){
-        using (ApplicationContext db = new ApplicationContext()){            
+        using (ApplicationContext db = new ApplicationContext()){  
+                      
             TaskObject taskObject = new TaskObject { name = name, about = about,
              type = type, TaskEntityId = taskEntity.Id};       
             db.taskObjects.AddRange(taskObject);
