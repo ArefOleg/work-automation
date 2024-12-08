@@ -14,6 +14,7 @@ public class TaskObject{
     public string type{get; set;}
     public string about{get; set;}
     public int TaskEntityId{get; set;}
+    public string color{get; set;}
     public TaskEntity? TaskEntity {get; set;}
     
 }
