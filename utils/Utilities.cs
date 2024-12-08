@@ -35,11 +35,55 @@ static public class Utilities{
     }
 
     public static string setColor(string type){
-        switch(type):
-        case "Applet":
-
-        default:
-        break; 
+        string color;
+        switch(type){
+            case "Applet":
+                color="#18b237";
+            case "Application":
+                color="#b29118";
+            case "Business component":
+                color="#1844b2";
+            case "Business object":
+                color="#1844b2";
+            case "Business service":
+                color="#7da60e";
+            case "Import Object":
+                color="#b29118";
+            case "Integration object":
+                color="#c60808";
+            case "Job":
+                color="#525216";
+            case "Link":
+                color="#133da9";
+            case "Outbound REST Web Service":
+                color="#c60808";
+            case "Outbound  WSDL Web Service":
+                color="#c60808";
+            case "Pick List":
+                color="#1844b2";
+            case "Screen":
+                color="#18b237";
+            case "Task":
+                color="#ad6a05";
+            case "Table":
+                color="#b29118";
+            case "View":
+                color="#18b237";
+            case "Web Template":
+                color="#b29118";
+            case "Workflow Policy":
+                color="#640764";
+            case "Workflow Policy Program":
+                color="#640764";
+            case "Workflow Process":
+                color="#3a0764";
+            case "Product":
+                color="#929213";
+            default:
+            break;
+        }
+        
+        return color;
     }
 }
 
