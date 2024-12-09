@@ -38,7 +38,9 @@
     </p>
     <p>
         <label>Какие были правки</label><br />
-        <textarea type="text" name="about" value="@Model.taskObject.about" >@Model.taskObject.about</textarea>
+        <textarea class="inputTextArea" type="text" name="about" value="@Model.taskObject.about" >
+            @Model.taskObject.about
+        </textarea>
     </p>       
 
     <input type="hidden" name="TaskObjectIdPost" value ="@Model.taskObject.Id"/>
@@ -81,7 +83,7 @@
     </p>
     <p>
         <label>Какие были правки</label><br />
-        <textarea type="text" name="about" ></textarea>
+        <textarea class="inputTextArea" type="text" name="about" ></textarea>
     </p>       
 
     <input type="hidden" name="TaskEntityIdPost" value ="@Model.taskEntityId"/>
