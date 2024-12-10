@@ -17,20 +17,13 @@ public class LineItems{
     public string QuantityRequested { get; set; }
     public LineItems(string PumpNum, string LineNumber, string Product,
     string NetPrice, string QuantityRequested){
-        //Console.WriteLine("Введите порядковый номер колонки");
         this.PumpNum = PumpNum;
-        //Console.WriteLine("Введите номер позиции");
-        this.LineNumber = LineNumber;
-        //Console.WriteLine("Введите продукт \nТопливо 51ff4750-d485-11e5-8102-00155d0d2201 \n" + 
-        //"Топливо + e0d8dfdb-958f-11ec-8470-000c290469ea \n" +
-        //"НТУ 079b7231-d4ec-11eb-845c-000c290469ea");        
-        this.Product = Product;        
-        //Console.WriteLine("Введите цену за 1 шт товара");        
+        this.LineNumber = LineNumber;    
+        this.Product = Product;       
         this.NetPrice = NetPrice;        
-        //Console.WriteLine("Введите количество");
         this.QuantityRequested = QuantityRequested;
         this.AmountAdjusted = Convert.ToString(Convert.ToInt32(this.QuantityRequested) * Convert.ToInt32(this.NetPrice));
-        //Console.WriteLine($"Итоговая цена за всю позицию: {this.AmountAdjusted}");                
+                       
     }
     public void setAmountAdjusted(){
         this.AmountAdjusted = Convert.ToString(Convert.ToInt32(this.QuantityRequested) * Convert.ToInt32(this.NetPrice));
@@ -78,11 +71,8 @@ public class Order{
     public Order(string lineItemAmount, string CardNumber, string OrderType,
     string Attrib1, string DiscountCUR, string TerminalId, string AcquiringId){        
         this.OrderNumber = "OV" + DateTime.Now.ToString("h:mm:ss dd");
-        //Console.WriteLine("Введите номер карты");
-        //Console.WriteLine("DEV 7030040020000577\nTEST 7030040020015959\nPRE 7030040016723301");
         this.CardNumber = CardNumber;
         this.OrderDate = Utilities.DateUtilities.getReverseDate(); 
-        //Console.WriteLine("Введите тип чека, например QR-code");
         this.OrderType = OrderType;
         Console.WriteLine("Введите Аттрибут 1");
         this.Attrib1 = Attrib1;

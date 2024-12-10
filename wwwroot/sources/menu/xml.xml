@@ -14,21 +14,20 @@
           <jet:CardAcceptorId>CardAcceptorId</jet:CardAcceptorId>
           <jet:LineItems>
             <jet:PumpNum>1</jet:PumpNum>
-            <jet:AmountAdjusted>1</jet:AmountAdjusted>
+            <jet:AmountAdjusted>540</jet:AmountAdjusted>
             <jet:LineNumber>1</jet:LineNumber>
-            <jet:NetPrice>1</jet:NetPrice>
-            <jet:Product>1</jet:Product>
-            <jet:QuantityRequested>1</jet:QuantityRequested>
+            <jet:NetPrice>54</jet:NetPrice>
+            <jet:Product>51ff4750-d485-11e5-8102-00155d0d2201</jet:Product>
+            <jet:QuantityRequested>10</jet:QuantityRequested>
           </jet:LineItems>
-          <jet:OrderNumber>OV6:57:53 11</jet:OrderNumber>
-          <jet:CardNumber>1</jet:CardNumber>
-          <jet:OrderDate>245811065833</jet:OrderDate>
-          <jet:OrderType>1</jet:OrderType>
-          <jet:Attrib1>1</jet:Attrib1>
-          <jet:RRN>OV6:57:53 11</jet:RRN>
-          <jet:DiscountCUR>1</jet:DiscountCUR>
-          <jet:TerminalId>1</jet:TerminalId>
-          <jet:AcquiringId>1</jet:AcquiringId>
+          <jet:OrderNumber>OV3:07:58 10</jet:OrderNumber>
+          <jet:CardNumber>7030040020000577</jet:CardNumber>
+          <jet:OrderDate>241210030758</jet:OrderDate>
+          <jet:OrderType>QR-code</jet:OrderType>
+          <jet:Attrib1>a1</jet:Attrib1>
+          <jet:RRN>OV3:07:58 10</jet:RRN>
+          <jet:TerminalId>0000549309031095</jet:TerminalId>
+          <jet:AcquiringId>ac1</jet:AcquiringId>
         </jet:Order>
       </jet:ListOfJetorderaccrualredemptionrequest>
     </cus:JETLWS2OrderAccrualRedemption_1_Input>
