@@ -25,7 +25,7 @@ public class SQLController{
         return entities;
     }
 
-    public SQLEntity getSQLEntity(){
+    public SQLEntity getSQLEntity(int Id){
         SQLEntity sQLEntity;
         using(ApplicationContext db = new ApplicationContext()){
             sQLEntity = db.sqlEntities.Find(Id);  

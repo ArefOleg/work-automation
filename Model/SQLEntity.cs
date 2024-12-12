@@ -1,4 +1,6 @@
+using TaskEntitys;
 namespace SQLSpace;
+
 public class SQLEntity{
     public int Id{get; set;}
     public string name{get; set;}
