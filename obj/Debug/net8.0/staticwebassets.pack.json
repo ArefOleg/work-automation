@@ -29,6 +29,10 @@
       "PackagePath": "staticwebassets/img/red minus button.png"
     },
     {
+      "Id": "/media/oleg/USB-FLESH-N/work-automation/wwwroot/img/sql.jpg",
+      "PackagePath": "staticwebassets/img/sql.jpg"
+    },
+    {
       "Id": "/media/oleg/USB-FLESH-N/work-automation/wwwroot/js/site.js",
       "PackagePath": "staticwebassets/js/site.js"
     },

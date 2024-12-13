@@ -1,13 +1,13 @@
 using Microsoft.EntityFrameworkCore;
 using SQLSpace;
-
+using TaskEntitys;
 public class SQLController{
     public void createSQLRec(string name, string about, string sqlBody, int TaskEntityId){
         using (ApplicationContext db = new ApplicationContext()){            
             SQLEntity sQLEntity = new SQLEntity
              { name = name, about = about, sqlBody = sqlBody,
               created = DateTime.Now, TaskEntityId = TaskEntityId};
-            db.taskEntities.AddRange(taskEntity);
+            db.sqlEntities.AddRange(sQLEntity);
             db.SaveChanges();
         }
     }

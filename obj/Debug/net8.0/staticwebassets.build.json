@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "WVuD8cPw4iKxy/59z8iQUIIzefJiFBaXqW1/1IxsVD4=",
+  "Hash": "Bba9mWnUYpMKJ7ZrQnJVHrF5Iypw4HZJdtG/EW+cWJY=",
   "Source": "work automation",
   "BasePath": "_content/work automation",
   "Mode": "Default",
@@ -167,6 +167,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/img/red minus button.png"
+    },
+    {
+      "Identity": "/media/oleg/USB-FLESH-N/work-automation/wwwroot/img/sql.jpg",
+      "SourceId": "work automation",
+      "SourceType": "Discovered",
+      "ContentRoot": "/media/oleg/USB-FLESH-N/work-automation/wwwroot/",
+      "BasePath": "_content/work automation",
+      "RelativePath": "img/sql.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/img/sql.jpg"
     },
     {
       "Identity": "/media/oleg/USB-FLESH-N/work-automation/wwwroot/js/site.js",
