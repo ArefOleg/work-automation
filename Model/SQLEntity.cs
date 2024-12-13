@@ -7,5 +7,7 @@ public class SQLEntity{
     public string about{get; set;}
     public string sqlBody{get; set;}
     public DateTime created{get; set;}
+    public int TaskEntityId{get; set;}
+    public TaskEntity? TaskEntity {get; set;}
 
 }

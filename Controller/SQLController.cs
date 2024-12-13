@@ -2,10 +2,11 @@ using Microsoft.EntityFrameworkCore;
 using SQLSpace;
 
 public class SQLController{
-    public void createSQLRec(string name, string about, string sqlBody){
+    public void createSQLRec(string name, string about, string sqlBody, int TaskEntityId){
         using (ApplicationContext db = new ApplicationContext()){            
             SQLEntity sQLEntity = new SQLEntity
-             { name = name, about = about, sqlBody = sqlBody, created = DateTime.Now};
+             { name = name, about = about, sqlBody = sqlBody,
+              created = DateTime.Now, TaskEntityId = TaskEntityId};
             db.taskEntities.AddRange(taskEntity);
             db.SaveChanges();
         }
@@ -31,5 +32,16 @@ public class SQLController{
             sQLEntity = db.sqlEntities.Find(Id);  
         }
         return sQLEntity;
+    }
+
+    public string getTaskEntityName(int TaskEntityId){
+        string name = "";
+        TaskEntity taskEntity;
+        using(ApplicationContext db = new ApplicationContext()){
+            taskEntity = db.taskEntities.Find(TaskEntityId); 
+        }
+        name = taskEntity.name;
+        return name;
+
     }
 }
