@@ -1,0 +1,28 @@
+@page
+@model TaskModel
+@{
+        
+}
+<a href="TaskCreate"><img src="img/plus button.jpg" height="40px" width="40px" /></a>
+<div class="mainContainer">
+@foreach(var taskEntity in @Model.taskEntities){
+    
+    <div class="taskContainer">
+        <div class="taskInfo">
+            <a href="TaskEntitySingleRecord?Id=@taskEntity.Id">
+            <div class="taskName">
+                <h5>@taskEntity.name</h5>
+            </div>            
+            <h5>@taskEntity.about</h5>
+            </a>
+        </div>        
+        <a href="Task?deleteId=@taskEntity.Id">
+            <img src="img/red minus button.png" height="40px" width="40px" />
+            </a>
+        <a href="TaskCreate?TaskEntityId=@taskEntity.Id">
+            <img src="img/edit.png" height="40px" width="40px" />
+            </a>
+    </div>    
+    
+}
+</div>
