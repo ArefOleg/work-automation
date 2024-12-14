@@ -2,6 +2,16 @@ using Microsoft.EntityFrameworkCore;
 using SQLSpace;
 using TaskEntitys;
 public class SQLController{
+    public List<SQLEntity> getAllSQL(){
+        var entities = new List<TaskEntity>();
+        using(ApplicationContext db = new ApplicationContext()){
+           // db.Database.EnsureDeleted();
+           // db.Database.EnsureCreated();
+            entities = (from entity in db.sqlEntities select entity).ToList();            
+        }
+        entities = entities.OrderByDescending(e=>e.created).ToList();
+        return entities;
+    }
     public void createSQLRec(string name, string about, string sqlBody, int TaskEntityId){
         using (ApplicationContext db = new ApplicationContext()){            
             SQLEntity sQLEntity = new SQLEntity
