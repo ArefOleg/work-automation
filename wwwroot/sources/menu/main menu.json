@@ -3,4 +3,5 @@
 {"menuName":"Работы с srvmgr","menuURL":"?menu=svrmgr","menuType":"mainMenu"},
 {"menuName":"Вызвать sql скрипты","menuURL":"?menu=sql","menuType":"mainMenu"},
 {"menuName":"Техническая информация","menuURL":"?menu=info","menuType":"mainMenu"},
-{"menuName":"Работа по задачам","menuURL":"/Task","menuType":"mainMenu"}]
+{"menuName":"Работа по задачам","menuURL":"/Task","menuType":"mainMenu"},
+{"menuName":"SQL скрипты из задач","menuURL":"/SQLTask/SQLTaskAll","menuType":"mainMenu"}]
