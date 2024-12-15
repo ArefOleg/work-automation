@@ -5,8 +5,8 @@ public class SQLController{
     public List<SQLEntity> getAllSQL(){
         var entities = new List<SQLEntity>();
         using(ApplicationContext db = new ApplicationContext()){
-            //db.Database.EnsureDeleted();
-            //db.Database.EnsureCreated();
+            db.Database.EnsureDeleted();
+            db.Database.EnsureCreated();
             entities = (from entity in db.sqlEntities select entity).ToList();            
         }
         entities = entities.OrderByDescending(e=>e.created).ToList();
