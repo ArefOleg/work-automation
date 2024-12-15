@@ -15,7 +15,8 @@ public class SQLTaskAllModel : PageModel
             sqlController.deleteSQLRec((int)deleteId);
         }
         
-        sqlEntities = SQLController.getAllSQL();        
+        sqlEntities = sqlController.getAllSQL();
+             
     }
     
 }
