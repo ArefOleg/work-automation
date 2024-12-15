@@ -3,10 +3,10 @@ using SQLSpace;
 using TaskEntitys;
 public class SQLController{
     public List<SQLEntity> getAllSQL(){
-        var entities = new List<TaskEntity>();
+        var entities = new List<SQLEntity>();
         using(ApplicationContext db = new ApplicationContext()){
-           // db.Database.EnsureDeleted();
-           // db.Database.EnsureCreated();
+            //db.Database.EnsureDeleted();
+            //db.Database.EnsureCreated();
             entities = (from entity in db.sqlEntities select entity).ToList();            
         }
         entities = entities.OrderByDescending(e=>e.created).ToList();
@@ -27,14 +27,6 @@ public class SQLController{
         }
     }
 
-    public List<SQLEntity> getSQLRecs(){
-        var entities = new List<SQLEntity>();
-        using(ApplicationContext db = new ApplicationContext()){
-            entities = (from entity in db.sqlEntities select entity).ToList();            
-        }
-        entities = entities.OrderByDescending(e=>e.created).ToList();
-        return entities;
-    }
 
     public SQLEntity getSQLEntity(int Id){
         SQLEntity sQLEntity;
