@@ -82,20 +82,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU1FMVGFzay9TUUxUYXNrQWxsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/media/oleg/USB-FLESH-N/work-automation/Pages/Task.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVGFzay5jc2h0bWw=
+[/media/oleg/USB-FLESH-N/work-automation/Pages/TaskEnviroment/Task.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVGFza0Vudmlyb21lbnQvVGFzay5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/media/oleg/USB-FLESH-N/work-automation/Pages/TaskCreate.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVGFza0NyZWF0ZS5jc2h0bWw=
+[/media/oleg/USB-FLESH-N/work-automation/Pages/TaskEnviroment/TaskCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVGFza0Vudmlyb21lbnQvVGFza0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/media/oleg/USB-FLESH-N/work-automation/Pages/TaskEntitySingleRecord.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVGFza0VudGl0eVNpbmdsZVJlY29yZC5jc2h0bWw=
+[/media/oleg/USB-FLESH-N/work-automation/Pages/TaskEnviroment/TaskEntitySingleRecord.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVGFza0Vudmlyb21lbnQvVGFza0VudGl0eVNpbmdsZVJlY29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/media/oleg/USB-FLESH-N/work-automation/Pages/TaskObjectCreate.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVGFza09iamVjdENyZWF0ZS5jc2h0bWw=
+[/media/oleg/USB-FLESH-N/work-automation/Pages/TaskEnviroment/TaskObjectCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVGFza0Vudmlyb21lbnQvVGFza09iamVjdENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/media/oleg/USB-FLESH-N/work-automation/Pages/test.cshtml]
