@@ -1,6 +1,7 @@
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using TaskEntitys;
+using SQLSpace;
 public class ApplicationContext : DbContext {
     public DbSet<TaskEntity> taskEntities {get; set;} = null!;
     public DbSet<TaskObject> taskObjects {get; set;} = null!;
