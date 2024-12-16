@@ -15,7 +15,9 @@
     </p> 
     <p>
         <label>Описание</label><br />
-        <textarea type="text" name="about" value="@Model.taskEntity.about">@Model.taskEntity.about</textarea>
+        <textarea class="inputTextArea" type="text" name="about" value="@Model.taskEntity.about">
+            @Model.taskEntity.about
+        </textarea>
     </p>      
 
     <input type="hidden" name="ActionInsert" value="update"/>
@@ -31,7 +33,7 @@
     </p> 
     <p>
         <label>Описание</label><br />
-        <textarea class="inputAbout" type="text" name="about"></textarea>
+        <textarea class="inputTextArea" type="text" name="about"></textarea>
     </p>      
 
     <input type="hidden" name="ActionInsert" value="insert"/>

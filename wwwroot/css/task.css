@@ -1,7 +1,3 @@
-.inputAbout{
-    width: 350px;
-    height: 120px;
-}
 .mainContainer{
     display: flex;
     flex-direction: row;
@@ -13,8 +9,20 @@
     height: 250px;
     border: thick double #18b237;
 }
+.taskInfo{
+    height: 200px;
+    border-top: 1px solid #18b237;
+}
+.taskName{
+    height: 35px;
+    border-bottom: 2px solid #18b237;
+    margin-bottom: 5px;
+}
 .about{
+    margin-top: 5px;
     width: 1200px;
-    height: 600x;
-    border: 1px solid #1d17dd
+}
+.inputTextArea{
+    width: 550px;
+    height: 620px;
 }
