@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/media/oleg/USB-FLESH-N/work-automation/work automation.csproj": {}
+    "C:\\Users\\ov.arefev\\Documents\\Arena\\work automation\\work automation.csproj": {}
   },
   "projects": {
-    "/media/oleg/USB-FLESH-N/work-automation/work automation.csproj": {
+    "C:\\Users\\ov.arefev\\Documents\\Arena\\work automation\\work automation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/media/oleg/USB-FLESH-N/work-automation/work automation.csproj",
+        "projectUniqueName": "C:\\Users\\ov.arefev\\Documents\\Arena\\work automation\\work automation.csproj",
         "projectName": "work automation",
-        "projectPath": "/media/oleg/USB-FLESH-N/work-automation/work automation.csproj",
-        "packagesPath": "/home/oleg/.nuget/packages/",
-        "outputPath": "/media/oleg/USB-FLESH-N/work-automation/obj/",
+        "projectPath": "C:\\Users\\ov.arefev\\Documents\\Arena\\work automation\\work automation.csproj",
+        "packagesPath": "C:\\Users\\ov.arefev\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ov.arefev\\Documents\\Arena\\work automation\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/oleg/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\ov.arefev\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -75,7 +75,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.404/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
