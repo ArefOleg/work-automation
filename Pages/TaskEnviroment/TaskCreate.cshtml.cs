@@ -28,6 +28,6 @@ public class TaskCreateModel : PageModel
             taskEntityController.createTaskEntity(name, about);
         }
         
-        return RedirectToPage("TaskEnviroment/Task");
+        return RedirectToPage("Task");
     }
 }

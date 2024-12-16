@@ -9,17 +9,17 @@
 <label>Описание</label><br />
 <h5 class="about">@Model.taskEntity.about</h5>
 <a href="TaskObjectCreate?taskEntityIdInput=@Model.taskEntity.Id">
-    <img src="img/plus button.jpg" height="40px" width="40px" />
+    <img src="/img/plus button.jpg" height="40px" width="40px" />
     </a>
 @foreach(var taskEntityObject in @Model.taskEntity.TaskObject){
     <div class="about" style="border: 2px solid @Utilities.Utilities.setColor(taskEntityObject.type);">
         <h5>@taskEntityObject.type: @taskEntityObject.name</h5>
         <h5>@taskEntityObject.about</h5>
         <a href="TaskEntitySingleRecord?id=@Model.taskEntity.Id&deleteTaskObjectById=@taskEntityObject.Id">
-            <img src="img/red minus button.png" height="40px" width="40px" />
+            <img src="/img/red minus button.png" height="40px" width="40px" />
             </a>
         <a href="TaskObjectCreate?id=@taskEntityObject.Id">
-            <img src="img/edit.png" height="40px" width="40px" />
+            <img src="/img/edit.png" height="40px" width="40px" />
             </a>
     </div>    
 }
