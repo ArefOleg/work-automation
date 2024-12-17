@@ -26,11 +26,11 @@ public class SQLCreateModel : PageModel
     string ActionInput){
         SQLController sQLController = new SQLController();
         if(ActionInput.Equals("update")){
-            taskEntityController.updateTaskObject(name, about, type, (int)TaskObjectIdPost);
+            //taskEntityController.updateTaskObject(name, about, type, (int)TaskObjectIdPost);
         }else{
             sQLController.createSQLRec(name, about, sqlBody, (int)TaskEntityId);
         }        
-        return new RedirectToPageResult("/TaskEntitySingleRecord", new {Id = TaskEntityIdPost});
+        return new RedirectToPageResult("/TaskEntitySingleRecord", new {Id = TaskEntityId});
     }
     
 }
