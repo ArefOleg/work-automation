@@ -7,7 +7,6 @@
 
 @if(Model.Action.Equals("update")){
     @Model.taskEntity.name
-    <label>Создание задачи</label><br />
     <form method="post">
     <p>
         <label>Задача</label><br />
@@ -25,7 +24,6 @@
     <input type="submit" value="Отправить" />
     </form>
 }else{
-    <label>Обновление задачи</label><br />
     <form method="post">
     <p>
         <label>Задача</label><br />

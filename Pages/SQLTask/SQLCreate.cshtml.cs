@@ -20,17 +20,16 @@ public class SQLCreateModel : PageModel
         } else Action = "insert";
         
     }
+    public void OnCreate(){
+        Action = "insert";
+    }
 
     public IActionResult OnPost(string? name, string? about, 
-    string? sqlBody, int? TaskEntityId, int? Id,
-    string ActionInput){
+    string? sqlBody, int? TaskEntityId){
         SQLController sQLController = new SQLController();
-        if(ActionInput.Equals("update")){
-            //taskEntityController.updateTaskObject(name, about, type, (int)TaskObjectIdPost);
-        }else{
-            sQLController.createSQLRec(name, about, sqlBody, (int)TaskEntityId);
-        }        
+        sQLController.createSQLRec(name, about, sqlBody, (int)TaskEntityId);        
         return new RedirectToPageResult("/TaskEntitySingleRecord", new {Id = TaskEntityId});
     }
+    
     
 }

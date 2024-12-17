@@ -1,0 +1,27 @@
+@page "{id?}"
+@model SQLCreateModel
+@{
+        
+}
+
+<label>Создание SQL запроса</label><br />
+<form method="post">
+<p>
+    <label>Имя запроса</label><br/>
+    <input type="text" name="name"/>
+</p> 
+<p>
+    <label>Описание</label><br />
+    <textarea class="inputTextArea" type="text" name="about">
+        
+    </textarea>
+</p>
+<p>
+    <label>Тело запроса</label><br />
+    <textarea class="inputTextArea" type="text" name="sqlBody">
+        
+    </textarea>
+</p>    
+<input type="hidden" name="TaskEntityId" value="@Request.RouteValues["id"]"/>
+<input type="submit" value="Отправить" />
+</form>

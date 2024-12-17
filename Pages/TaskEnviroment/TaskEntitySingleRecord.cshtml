@@ -1,4 +1,5 @@
 @page
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @model TaskEntitySingleRecordModel
 @{
         
@@ -11,7 +12,7 @@
 <a href="TaskObjectCreate?taskEntityIdInput=@Model.taskEntity.Id">
     <img src="/img/plus button.jpg" height="40px" width="40px" />
     </a>
-<a href="SQLTask/SQLCreate?taskEntityIdInput=@Model.taskEntity.Id">
+<a asp-page="/SQLTask/SQLCreate" asp-page-handler="OnCreate" asp-route-id="@Model.taskEntity.Id">
     <img src="/img/sql.jpg" height="40px" width="40px" />
     </a>
 @foreach(var taskEntityObject in @Model.taskEntity.TaskObject){
