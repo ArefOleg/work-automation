@@ -4,11 +4,10 @@
         
 }
 <div class="mainContainer">
-@foreach(var sqlEntity in @Model.sqlEntities){
-    
+@foreach(var sqlEntity in @Model.sqlEntities){    
     <div class="taskContainer">
         <div class="taskInfo">
-            <a href="TaskEntitySingleRecord?Id=@sqlEntity.TaskEntity.name">
+            <a href="TaskEntitySingleRecord?Id=@sqlEntity.TaskEntityId">
             <div class="taskName">
                 <h5>@sqlEntity.TaskEntity.name</h5>
             </div>            

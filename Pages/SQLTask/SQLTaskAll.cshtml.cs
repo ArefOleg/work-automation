@@ -8,15 +8,11 @@ namespace work_automation.Pages;
 
 public class SQLTaskAllModel : PageModel
 {   public List<SQLEntity> sqlEntities{get; set;}
-    public void OnGet(int? deleteId)
+    public void OnGet()
     {
         SQLController sqlController = new SQLController();
-        if(deleteId != null){
-            sqlController.deleteSQLRec((int)deleteId);
-        }
+        sqlEntities = sqlController.getAllSQL();                    
         
-        sqlEntities = sqlController.getAllSQL();
-             
     }
     
 }

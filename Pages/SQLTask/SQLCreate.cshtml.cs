@@ -28,7 +28,7 @@ public class SQLCreateModel : PageModel
     string? sqlBody, int? TaskEntityId){
         SQLController sQLController = new SQLController();
         sQLController.createSQLRec(name, about, sqlBody, (int)TaskEntityId);        
-        return new RedirectToPageResult("/TaskEntitySingleRecord", new {Id = TaskEntityId});
+        return new RedirectToPageResult("/TaskEnviroment/TaskEntitySingleRecord", new {Id = TaskEntityId});
     }
     
     
