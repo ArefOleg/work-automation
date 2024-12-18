@@ -67,6 +67,12 @@ public class TaskEntityController{
         }
     }
 
+    public void deleteSQLRec(int Id){
+        using(ApplicationContext db = new ApplicationContext()){
+            db.sqlEntities.Where(p => p.Id == Id).ExecuteDelete();
+        }
+    }
+
     public TaskObject getTaskObjectById(int Id){
         TaskObject taskObject;
         using(ApplicationContext db = new ApplicationContext()){

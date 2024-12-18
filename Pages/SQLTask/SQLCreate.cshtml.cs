@@ -22,7 +22,7 @@ public class SQLCreateModel : PageModel
     }
     public void OnCreate(){
         Action = "insert";
-    }
+    }    
 
     public IActionResult OnPost(string? name, string? about, 
     string? sqlBody, int? TaskEntityId){

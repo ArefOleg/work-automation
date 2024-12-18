@@ -1,4 +1,4 @@
-@page
+@page "{TaskId}/{TaskObjectId?}/{SQLId?}"
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @model TaskEntitySingleRecordModel
 @{
@@ -39,7 +39,8 @@
         <h5>@sql.about</h5>
         <label>Тело скрипта</label>
         <h5>@sql.sqlBody</h5>
-        <a href="TaskEntitySingleRecord?id=@Model.taskEntity.Id&deleteTaskObjectById=@taskEntityObject.Id">
+        <a asp-area="/Task/TaskEntitySingleRecord" asp-page-handler="OnDeleteSQL"
+         asp-route-id="@sql.Id">
             <img src="/img/red minus button.png" height="40px" width="40px" />
             </a>
         <a href="TaskObjectCreate?id=@taskEntityObject.Id">
