@@ -13,11 +13,18 @@ public class SQLEntity{
         string TaskEntityName = sQLController.getTaskEntityName(this.TaskEntityId);
         return TaskEntityName;
     }
-
 }
 
 public class SQLEntityExtended : SQLEntity{
-    public string taskEntityName(get; set;)
+    public string taskEntityName{get; set;}
+    public SQLEntityExtended(SQLController sQLController, SQLEntity sQLEntity){
+        this.about = sQLEntity.about;
+        this.name = sQLEntity.name;
+        this.created = sQLEntity.created;
+        this.Id = sQLEntity.Id;
+        this.sqlBody = sQLEntity.sqlBody;
+        this.taskEntityName = sQLController.getTaskEntityName(sQLEntity.TaskEntityId);
+    }
     public void setTaskEntityName(SQLController sQLController){
         this.taskEntityName = sQLController.getTaskEntityName(this.TaskEntityId);
     }

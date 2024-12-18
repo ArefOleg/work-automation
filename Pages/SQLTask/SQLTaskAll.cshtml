@@ -4,21 +4,21 @@
         
 }
 <div class="mainContainer">
-@foreach(var sqlEntity in @Model.sqlEntities){    
+@foreach(var sqlEntity in @Model.sQLEntityExtendeds){    
     <div class="taskContainer">
         <div class="taskInfo">
             <a href="TaskEntitySingleRecord?Id=@sqlEntity.TaskEntityId">
             <div class="taskName">
-                <h5>@sqlEntity.TaskEntity.name</h5>
+                <h5>@sqlEntity.taskEntityName</h5>
             </div>            
             <h5>@sqlEntity.name</h5>
             </a>
         </div>        
         <a href="Task?deleteId=@sqlEntity.name">
-            <img src="img/red minus button.png" height="40px" width="40px" />
+            <img src="/img/red minus button.png" height="40px" width="40px" />
             </a>
         <a href="TaskCreate?TaskEntityId=@sqlEntity.name">
-            <img src="img/edit.png" height="40px" width="40px" />
+            <img src="/img/edit.png" height="40px" width="40px" />
             </a>
     </div>    
     
