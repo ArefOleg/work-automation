@@ -31,3 +31,19 @@
 <br />
 <label>SQL запросы</label>
 <br />
+@foreach(var sql in @Model.taskEntity.SQL){
+    <div class="about" style="border: 2px solid #70058b;">
+        <label>Название скрипта</label>
+        <h5>@sql.name</h5>
+        <label>Описание скрипта</label>
+        <h5>@sql.about</h5>
+        <label>Тело скрипта</label>
+        <h5>@sql.sqlBody</h5>
+        <a href="TaskEntitySingleRecord?id=@Model.taskEntity.Id&deleteTaskObjectById=@taskEntityObject.Id">
+            <img src="/img/red minus button.png" height="40px" width="40px" />
+            </a>
+        <a href="TaskObjectCreate?id=@taskEntityObject.Id">
+            <img src="/img/edit.png" height="40px" width="40px" />
+            </a>
+    </div> 
+}
