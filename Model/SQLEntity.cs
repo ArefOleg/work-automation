@@ -17,5 +17,8 @@ public class SQLEntity{
 }
 
 public class SQLEntityExtended : SQLEntity{
-    public 
+    public string taskEntityName(get; set;)
+    public void setTaskEntityName(SQLController sQLController){
+        this.taskEntityName = sQLController.getTaskEntityName(this.TaskEntityId);
+    }
 }
