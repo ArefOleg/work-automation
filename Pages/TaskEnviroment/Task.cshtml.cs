@@ -8,14 +8,17 @@ namespace work_automation.Pages;
 public class TaskModel : PageModel
 {   public List<TaskEntity> taskEntities{get; set;}
     
-    public void OnGet(int? deleteId)
+    public void OnGet()
     {
         TaskEntityController taskEntityController = new TaskEntityController();
-        if(deleteId != null){
-            taskEntityController.deleteTaskEntity((int)deleteId);
-        }
-        
         taskEntities = taskEntityController.getTaskEntities();        
+    }
+
+    public void OnGetDelete(){
+        TaskEntityController taskEntityController = new TaskEntityController();
+        Console.WriteLine("DELETE");
+        taskEntityController.deleteTaskEntity(Convert.ToInt32(RouteData.Values["TaskId"]));
+        taskEntities = taskEntityController.getTaskEntities();
     }
     
 }

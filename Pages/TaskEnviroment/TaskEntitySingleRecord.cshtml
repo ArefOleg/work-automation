@@ -12,7 +12,7 @@
 <a href="TaskObjectCreate?taskEntityIdInput=@Model.taskEntity.Id">
     <img src="/img/plus button.jpg" height="40px" width="40px" />
     </a>
-<a asp-page="/SQLTask/SQLCreate" asp-page-handler="OnCreate" asp-route-id="@Model.taskEntity.Id">
+<a asp-page="/SQLTask/SQLCreate" asp-page-handler="Create" asp-route-id="@Model.taskEntity.Id">
     <img src="/img/sql.jpg" height="40px" width="40px" />
     </a>
 <label>Объекты</label><br />
@@ -42,9 +42,6 @@
         <a asp-area="/Task/TaskEntitySingleRecord" asp-page-handler="OnDeleteSQL"
          asp-route-id="@sql.Id">
             <img src="/img/red minus button.png" height="40px" width="40px" />
-            </a>
-        <a href="TaskObjectCreate?id=@taskEntityObject.Id">
-            <img src="/img/edit.png" height="40px" width="40px" />
-            </a>
+            </a>        
     </div> 
 }

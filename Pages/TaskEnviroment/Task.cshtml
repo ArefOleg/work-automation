@@ -1,25 +1,26 @@
-@page
+@page "{TaskId?}"
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @model TaskModel
 @{
         
 }
-<a href="TaskCreate"><img src="/img/plus button.jpg" height="40px" width="40px" /></a>
+<a asp-page="TaskCreate"><img src="/img/plus button.jpg" height="40px" width="40px" /></a>
 <div class="mainContainer">
 @foreach(var taskEntity in @Model.taskEntities){
     
     <div class="taskContainer">
         <div class="taskInfo">
-            <a href="TaskEntitySingleRecord?Id=@taskEntity.Id">
+            <a asp-page="TaskEntitySingleRecord" asp-route-TaskId="@taskEntity.Id">
             <div class="taskName">
                 <h5>@taskEntity.name</h5>
             </div>            
             <h5>@taskEntity.about</h5>
             </a>
         </div>        
-        <a href="Task?deleteId=@taskEntity.Id">
+        <a asp-page="Task" asp-page-handler="Delete" asp-route-TaskId="@taskEntity.Id">
             <img src="/img/red minus button.png" height="40px" width="40px" />
             </a>
-        <a href="TaskCreate?TaskEntityId=@taskEntity.Id">
+        <a asp-page="TaskCreate" >
             <img src="/img/edit.png" height="40px" width="40px" />
             </a>
     </div>    
