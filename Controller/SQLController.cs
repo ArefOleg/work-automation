@@ -12,6 +12,12 @@ public class SQLController{
         entities = entities.OrderByDescending(e=>e.created).ToList();
         return entities;
     }
+    public void createSQL(SQLEntity sQLEntity){
+        using (ApplicationContext db = new ApplicationContext()){                        
+            db.sqlEntities.AddRange(sQLEntity);
+            db.SaveChanges();
+        }
+    }
     public void createSQLRec(string name, string about, string sqlBody, int TaskEntityId){
         using (ApplicationContext db = new ApplicationContext()){            
             SQLEntity sQLEntity = new SQLEntity

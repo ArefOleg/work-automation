@@ -1,0 +1,22 @@
+@page "{Id}"
+@model TaskUpdateModel
+@{
+        
+}
+<label>Изменение описания задачи</label><br />
+<form method="post" asp-antiforgery="true">
+<p>
+    <label>Задача</label><br />
+    <input type="text" name="name" asp-for="taskEntity.name" value="@Model.taskEntity.name" />
+</p> 
+<p>
+    <label>Описание</label><br />
+    <textarea class="inputTextArea" asp-for="taskEntity.about"
+     type="text" name="about" value="@Model.taskEntity.about">
+        @Model.taskEntity.about
+    </textarea>
+</p>
+
+<input type="hidden" name="id" asp-for="TaskId" value="@Model.taskEntity.Id"/>
+<input type="submit" value="Отправить" />
+</form>

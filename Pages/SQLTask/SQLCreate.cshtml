@@ -1,25 +1,49 @@
-@page "{id?}"
+@page "{id?}/{}"
 @model SQLCreateModel
 @{
         
 }
+@if(@Model.Action.Equals("insert")){
+    <label>Создание SQL запроса</label><br />
+    <form method="post">
+    <p>
+        <label>Имя запроса</label><br/>
+        <input type="text" name="name"/>
+    </p> 
+    <p>
+        <label>Описание</label><br />
+        <textarea class="inputTextArea" type="text" name="about">        
+        </textarea>
+    </p>
+    <p>
+        <label>Тело запроса</label><br />
+        <textarea class="inputTextArea" type="text" name="sqlBody">        
+        </textarea>
+    </p>    
+    <input type="hidden" name="TaskEntityId" value="@Request.RouteValues["id"]"/>
+    <input type="submit" value="Отправить" />
+    </form>
+} else{
+    <label>Обновление SQL запроса</label><br />
+    <form method="post">
+    <p>
+        <label>Имя запроса</label><br/>
+        <input type="text" name="name" value="@Model.sQLEntity.name">
+    </p> 
+    <p>
+        <label>Описание</label><br />
+        <textarea class="inputTextArea" type="text" name="about">
+            @Model.sQLEntity.about       
+        </textarea>
+    </p>
+    <p>
+        <label>Тело запроса</label><br />
+        <textarea class="inputTextArea" type="text" name="sqlBody">
+            @Model.sQLEntity.sqlBody        
+        </textarea>
+    </p>    
+    <input type="hidden" name="TaskEntityId" value="@Request.RouteValues["id"]"/>
+    <input type="submit" value="Отправить" />
+    </form>
+}
 
-<label>Создание SQL запроса</label><br />
-<form method="post">
-<p>
-    <label>Имя запроса</label><br/>
-    <input type="text" name="name"/>
-</p> 
-<p>
-    <label>Описание</label><br />
-    <textarea class="inputTextArea" type="text" name="about">        
-    </textarea>
-</p>
-<p>
-    <label>Тело запроса</label><br />
-    <textarea class="inputTextArea" type="text" name="sqlBody">        
-    </textarea>
-</p>    
-<input type="hidden" name="TaskEntityId" value="@Request.RouteValues["id"]"/>
-<input type="submit" value="Отправить" />
-</form>

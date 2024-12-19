@@ -6,30 +6,23 @@ using SQLSpace;
 namespace work_automation.Pages;
 
 public class SQLCreateModel : PageModel
-{   public SQLEntity sQLEntity{get; set;}
-    public int taskEntityId{get; set;}
-    public TaskEntity taskEntity{get; set;}
+{   
+    [BindProperty]
+    public SQLSpace.SQLEntity sQLEntity{get; set;} = new();    
     public string Action{get; set;}
-    public void OnGet(int taskEntityIdInput, int? id)
-    {   SQLController sQLController = new SQLController();
-        taskEntityId = taskEntityIdInput;
+    public void OnGet()
+    {   
         
-        if(id != null){
-            Action = "update";
-            sQLEntity = sQLController.getSQLEntity((int)id);
-        } else Action = "insert";
-        
-    }
-    public void OnCreate(){
-        Action = "insert";
     }    
+    /*public void OnUpdate(){
+        /*SQLController sQLController = new SQLController();
+        Action = "update";
+        sQLEntity = sQLController.getSQLEntity(Convert.ToInt32(RouteData.Values["id"]));
+    }    */
 
-    public IActionResult OnPost(string? name, string? about, 
-    string? sqlBody, int? TaskEntityId){
+    public IActionResult OnPost(){
         SQLController sQLController = new SQLController();
-        sQLController.createSQLRec(name, about, sqlBody, (int)TaskEntityId);        
+        sQLController.createSQL(sQLEntity);
         return new RedirectToPageResult("/TaskEnviroment/TaskEntitySingleRecord", new {Id = TaskEntityId});
-    }
-    
-    
+    }   
 }
